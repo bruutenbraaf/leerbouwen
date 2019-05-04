@@ -1186,7 +1186,7 @@ header {
         .logo-small {
             width:52px;
             height: 52px;
-            background-size: 70%;
+            background-size: 60%;
             background-position: center center;
             background-repeat: no-repeat;
             background-color: #FAFAFA;
@@ -1195,7 +1195,7 @@ header {
             margin-right:20px;
         }
         &:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
         &:after {
             content: '';

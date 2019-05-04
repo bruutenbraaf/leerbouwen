@@ -1007,7 +1007,7 @@ header {
     #vacancies .vacancie-item .logo-small {
       width: 52px;
       height: 52px;
-      background-size: 70%;
+      background-size: 60%;
       background-position: center center;
       background-repeat: no-repeat;
       background-color: #FAFAFA;
@@ -1015,7 +1015,7 @@ header {
       border-radius: 100%;
       margin-right: 20px; }
     #vacancies .vacancie-item:hover {
-      transform: scale(1.02); }
+      transform: scale(1.01); }
     #vacancies .vacancie-item:after {
       content: '';
       width: 16px;
