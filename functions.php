@@ -6,7 +6,7 @@ add_image_size( 'ccta', 1000, 300, true );
 add_image_size( 'smallfeatured', 470, 250, true );
 add_image_size( 'serviceshome', 250, 350, true );
 add_image_size( 'partnershome', 150, 150, true );
-add_image_size( 'vacaturesmall', 50, 50, true );
+add_image_size( 'vacaturesmall', 50, 50, false);
 
 
 function leerbouwen_scripts() {
