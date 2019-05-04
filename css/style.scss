@@ -507,6 +507,7 @@ header {
         margin-bottom:20px;
         border-radius: $borderradius;
         background-size:cover;
+        background-position: center center;
         position: relative;
         border:1px solid #fff;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -546,6 +547,7 @@ header {
         height: 100%;
         margin-bottom:20px;
         background-size:cover;
+        background-position: center center;
         border:1px solid #fff;
         border-radius: $borderradius;
         position: relative;
