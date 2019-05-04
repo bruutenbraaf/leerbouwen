@@ -1213,6 +1213,9 @@ footer {
 
 @media screen and (min-width: 1500px) {
   .container {
-    max-width: 80%; } }
+    max-width: 80%; }
+
+  #featured_educations .featured-item {
+    min-height: 300px; } }
 
 /*# sourceMappingURL=style.css.map */
