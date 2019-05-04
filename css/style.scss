@@ -1091,6 +1091,7 @@ header {
         }
     }
     .news-item {
+        margin:0px 15px;
         .inner {
             border-radius: 10px;
             box-shadow: $boxshadow;
@@ -1456,4 +1457,71 @@ footer {
         }
     }
   }
+
+
+
+@media screen and (max-width: 768px) {
+    #services { 
+
+        .services-main {
+            .services-items {
+                width: 150%;
+                margin-left: -15px;
+            }
+        }
+    }
+    #b-cta {
+        .container {
+            border-radius: 0px;
+        }
+    }
+    #reviews {
+        .review-items:after {
+            border-radius: 0px;
+        }
+    }
+    #c-cta {
+        padding: 60px 0;
+        margin-left: -15px;
+        margin-right: -15px;
+        .inner {
+            border-radius: 0px;
+        }
+    }
+    .vacancie-item {
+        .info {
+            padding-right: 15px;
+        }
+    }
+
+    footer {
+        .widgets {
+            padding: 50px 15px;
+            display: block;
+            .widget-block {
+                margin-bottom:30px;
+            }
+        }
+    }
+    #socket {
+        .disclaimer {
+             ul {
+                 float:left;
+                 margin:20px 0px;
+             }
+             .by {
+                 float:left;
+             }
+        }
+    }
+    #featured_educations {
+        .featured-item-big {
+            min-height: 250px;
+            margin-top:20px;
+        }
+    }
+  }
+  
+
+
   

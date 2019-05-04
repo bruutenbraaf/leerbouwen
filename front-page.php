@@ -225,9 +225,9 @@ get_header(); ?>
                                                 }
                                                 },
                                                 {
-                                                breakpoint: 480,
+                                                breakpoint: 768,
                                                 settings: {
-                                                    slidesToShow: 1,
+                                                    slidesToShow: 2,
                                                     slidesToScroll: 1
                                                 }
                                              }
@@ -406,6 +406,35 @@ get_header(); ?>
                     slidesToScroll: 1,
                     autoPlay: true,
                     accessibility: false,
+                    responsive: [
+                        {
+                        breakpoint: 1500,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                            autoPlay: true,
+                            arrows: false,
+                        }
+                        },
+                        {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            autoPlay: true,
+                            arrows: false,
+                        }
+                        },
+                        {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            autoPlay: true,
+                            arrows: false,
+                        }
+                        }
+                    ]
                 });
             });
         </script>
@@ -428,34 +457,80 @@ get_header(); ?>
                                 <?php } ?>
                             </div>
                         </div>
-                        <?php $loop = new WP_Query( array(
-                            'post_type' => 'nieuws',
-                            'posts_per_page' => 3,
-                            'order'=> 'DESC'
-                        ) ); ?>
-                        <?php if ( $loop->have_posts() ) : ?>
-                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                <div class="col-md-3 news-item">
-                                    <div class="inner">
-                                        <?php if ( have_rows( 'informatie_nieuws' ) ) : ?>
-                                            <?php while ( have_rows( 'informatie_nieuws' ) ) : the_row(); ?>
-                                                <?php $afbeelding = get_sub_field( 'afbeelding' ); ?>
-                                                <div class="news-img" <?php if ( $afbeelding ) { ?>style="background-image:url(<?php echo $afbeelding['sizes']['medium']; ?>); <?php } ?>"></div>
-                                            <?php endwhile; ?>
-                                        <?php endif; ?>
-                                        <div class="information">
-                                            <span class="date"><?php the_time( 'd-m-Y' );?></span>
-                                            <span class="title"><?php the_title(); ?></span>
+                        <div class="col-md-9">
+                            <div class="news">
+                                <?php $loop = new WP_Query( array(
+                                    'post_type' => 'nieuws',
+                                    'posts_per_page' => 3,
+                                    'order'=> 'DESC'
+                                ) ); ?>
+                                <?php if ( $loop->have_posts() ) : ?>
+                                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                        <div class="news-item">
+                                            <div class="inner">
+                                                <?php if ( have_rows( 'informatie_nieuws' ) ) : ?>
+                                                    <?php while ( have_rows( 'informatie_nieuws' ) ) : the_row(); ?>
+                                                        <?php $afbeelding = get_sub_field( 'afbeelding' ); ?>
+                                                        <div class="news-img" <?php if ( $afbeelding ) { ?>style="background-image:url(<?php echo $afbeelding['sizes']['medium']; ?>); <?php } ?>"></div>
+                                                    <?php endwhile; ?>
+                                                <?php endif; ?>
+                                                <div class="information">
+                                                    <span class="date"><?php the_time( 'd-m-Y' );?></span>
+                                                    <span class="title"><?php the_title(); ?></span>
+                                                </div>
+                                                <a class="the-link" href="<?php the_permalink();?>"></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <a class="the-link" href="<?php the_permalink();?>"></a>
-                                </div>
-                            <?php endwhile; ?>    
-                        <?php wp_reset_postdata(); ?>
-                        <?php endif; ?>
+                                    <?php endwhile; ?>    
+                                <?php wp_reset_postdata(); ?>
+                                <?php endif; ?>
+                            </div>
+                            <div class="next-slide">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 8.06307V4.94019C0 4.50754 0.334338 4.15947 0.749916 4.15947H6.99922V0.782856C6.99922 0.0867145 7.80538 -0.261356 8.28033 0.229847L13.7797 5.94862C14.0734 6.2544 14.0734 6.74885 13.7797 7.05464L8.28033 12.7702C7.8085 13.2614 6.99922 12.9133 6.99922 12.2171V8.84379H0.749916C0.334338 8.84379 0 8.49571 0 8.06307Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
                     <div>
                 </div>
             </section>
+            <script>
+                jQuery(document).ready(function() {
+                    jQuery('.news').slick({
+                        infinite: true,
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        autoPlay: false,
+                        dots: false,
+                        accessibility: false,
+                        prevArrow: $('.prev-slide'),
+                        nextArrow: $('.more-reviews'),
+                        responsive: [
+                            {
+                            breakpoint: 1500,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                            }
+                            },
+                            {
+                            breakpoint: 991,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                            },
+                            {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                            }
+                        ]
+                    });
+                });
+            </script>
         <?php elseif ( get_row_layout() == 'vacatures' ) : ?>
             <?php $selected_vacatures = get_sub_field( 'selected_vacatures' ); ?><?php if ( $selected_vacatures ): ?><?php $items = 0;?><?php foreach ( $selected_vacatures as $post ):  ?><?php $items++ ?><?php endforeach; ?>
             <section id="vacancies" class="<?php if ( $items > 3 ) { ?>has_four<?php } ?>">
