@@ -66,7 +66,6 @@ header {
   position: fixed;
   width: 100%;
   margin-top: 26px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -226,7 +225,7 @@ header {
 
 .has_scrolled {
   margin-top: 0px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -333,7 +332,7 @@ header {
     background-position: center center;
     position: relative;
     border: 1px solid #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
     #featured_educations .featured-item:last-child {
       margin-bottom: 0px; }
     #featured_educations .featured-item:after {
@@ -487,7 +486,7 @@ header {
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       -webkit-transition: all .1s ease-in-out;
       -moz-transition: all .1s ease-in-out;
       -o-transition: all .1s ease-in-out;
@@ -722,7 +721,7 @@ header {
       margin: 15px; }
       #reviews .review-items .review .inner {
         background: #FFFFFF;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px; }
         #reviews .review-items .review .inner .information {
           padding: 20px;
@@ -885,7 +884,7 @@ header {
         margin-left: 14px; }
   #news .news-item .inner {
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
     #news .news-item .inner .news-img {
       width: 100%;
       height: 150px;
@@ -982,7 +981,7 @@ header {
       margin-left: 14px; }
   #vacancies .vacancie-item {
     background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 20px;
@@ -1072,7 +1071,7 @@ footer {
     align-items: center;
     padding: 50px 10px 0px 15px; }
     footer .f-contact .fbtn {
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       font-family: 'avenir-bold', sans-serif;
       font-weight: bold;
       padding: 15px 32px;
