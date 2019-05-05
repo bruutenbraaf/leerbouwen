@@ -809,24 +809,24 @@ header {
     opacity: 0.5; }
 
 #news {
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 30px 0px; }
   #news .news {
     width: 135%; }
-  #news .slick-list {
-    padding: 10px 0px; }
-  #news .row {
+  #news .container {
     position: relative; }
-    #news .row:before {
+    #news .container:before {
       content: '';
-      top: -50px;
+      top: -30px;
       right: 0;
       width: 200%;
-      height: calc(100% + 100px);
+      height: calc(100% + 60px);
       position: absolute;
       background: #f8f8f8;
       border-radius: 10px;
       padding: 19px; }
+  #news .slick-list {
+    padding: 10px 0px; }
   #news .more {
     position: relative; }
     #news .more .small-btn {
