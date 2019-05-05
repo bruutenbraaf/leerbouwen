@@ -10,20 +10,20 @@ $iteminfo:rgba(3, 49, 76, 0.5);
 
 @font-face {
     font-family: 'avenir-bold', sans-serif;
-    src: url('./fonts/AvenirNext-Boldeot');
-    src: url('./fonts/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/AvenirNext-Bold.woff2') format('woff2'),
-         url('./fonts/aAvenirNext-Bold.woff') format('woff'),
-         url('./fonts/AvenirNext-Bold.ttf')  format('truetype'),
+    src: url('../fonts/AvenirNext-Boldeot');
+    src: url('../fonts/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AvenirNext-Bold.woff2') format('woff2'),
+         url('../fonts/aAvenirNext-Bold.woff') format('woff'),
+         url('../fonts/AvenirNext-Bold.ttf')  format('truetype'),
 }
 
 @font-face {
     font-family: 'avenir', sans-serif;
-    src: url('./fonts/AvenirNext-Regular');
-    src: url('./fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/AvenirNext-Regular.woff2') format('woff2'),
-         url('./fonts/AvenirNext-Regular.woff') format('woff'),
-         url('./fonts/AvenirNext-Regular.ttf')  format('truetype'),
+    src: url('../fonts/AvenirNext-Regular');
+    src: url('../fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/AvenirNext-Regular.woff2') format('woff2'),
+         url('../fonts/AvenirNext-Regular.woff') format('woff'),
+         url('../fonts/AvenirNext-Regular.ttf')  format('truetype'),
 }
 
 // Font family's
