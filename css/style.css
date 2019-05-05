@@ -1314,9 +1314,9 @@ footer {
         margin-bottom: 10px;
         position: relative; }
         .mobile-navigation ul li a {
-          font-family: Muli ExtraBold;
+          font-family: "Muli", sans-serif;
           font-style: normal;
-          font-weight: bold;
+          font-weight: 800;
           font-size: 20px;
           color: #03314C; }
           .mobile-navigation ul li a:after {

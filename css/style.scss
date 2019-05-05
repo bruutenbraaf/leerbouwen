@@ -1569,9 +1569,9 @@ footer {
                 margin-bottom: 10px;
                 position: relative;
                 a {
-                    font-family: Muli ExtraBold;
+                    font-family: $links;
                     font-style: normal;
-                    font-weight: bold;
+                    font-weight: 800;
                     font-size: 20px;
                     color: $main;
                     &:after {
