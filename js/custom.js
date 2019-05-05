@@ -51,7 +51,7 @@ $(document).ready(function() {
       
         let absoluteOffsetX = 0, absoluteOffsetY = 0, relativeOffsetX = 0, relativeOffsetY = 0;
       
-        $('#services .services-main .services-items .item, .news-item, .featured-item, .featured-item-big').on('mouseenter', function(e) {
+        $('#services .services-main .services-items .item, .featured-item, .featured-item-big').on('mouseenter', function(e) {
           el = $(this);
           children = el.children();
           w = el.outerWidth();

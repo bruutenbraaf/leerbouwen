@@ -468,7 +468,7 @@ get_header(); ?>
                             <div class="news">
                                 <?php $loop = new WP_Query( array(
                                     'post_type' => 'nieuws',
-                                    'posts_per_page' => 3,
+                                    'posts_per_page' => 8,
                                     'order'=> 'DESC'
                                 ) ); ?>
                                 <?php if ( $loop->have_posts() ) : ?>
@@ -478,7 +478,7 @@ get_header(); ?>
                                                 <?php if ( have_rows( 'informatie_nieuws' ) ) : ?>
                                                     <?php while ( have_rows( 'informatie_nieuws' ) ) : the_row(); ?>
                                                         <?php $afbeelding = get_sub_field( 'afbeelding' ); ?>
-                                                        <div class="news-img" <?php if ( $afbeelding ) { ?>style="background-image:url(<?php echo $afbeelding['sizes']['medium']; ?>); <?php } ?>"></div>
+                                                        <div class="news-img" style="background-image:url(<?php if ( $afbeelding ) { ?><?php echo $afbeelding['sizes']['medium']; ?>); <?php } else {  ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?>); background-size: 50%; background-color: #EEEEEE;<?php } ?>"></div>
                                                     <?php endwhile; ?>
                                                 <?php endif; ?>
                                                 <div class="information">
@@ -492,7 +492,7 @@ get_header(); ?>
                                 <?php wp_reset_postdata(); ?>
                                 <?php endif; ?>
                             </div>
-                            <div class="next-slide">
+                            <div class="more-news">
                                 <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 8.06307V4.94019C0 4.50754 0.334338 4.15947 0.749916 4.15947H6.99922V0.782856C6.99922 0.0867145 7.80538 -0.261356 8.28033 0.229847L13.7797 5.94862C14.0734 6.2544 14.0734 6.74885 13.7797 7.05464L8.28033 12.7702C7.8085 13.2614 6.99922 12.9133 6.99922 12.2171V8.84379H0.749916C0.334338 8.84379 0 8.49571 0 8.06307Z" fill="white"/>
                                 </svg>
@@ -505,19 +505,21 @@ get_header(); ?>
                 jQuery(document).ready(function() {
                     jQuery('.news').slick({
                         infinite: true,
-                        slidesToShow: 4,
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                         autoPlay: false,
                         dots: false,
                         accessibility: false,
                         prevArrow: $('.prev-slide'),
-                        nextArrow: $('.more-reviews'),
+                        nextArrow: $('.more-news'),
                         responsive: [
                             {
                             breakpoint: 1500,
                             settings: {
-                                slidesToShow: 3,
+                                slidesToShow: 4,
                                 slidesToScroll: 1,
+                                prevArrow: $('.prev-slide'),
+                                nextArrow: $('.more-news'),
                             }
                             },
                             {
@@ -530,7 +532,7 @@ get_header(); ?>
                             {
                             breakpoint: 768,
                             settings: {
-                                slidesToShow: 1,
+                                slidesToShow: 2,
                                 slidesToScroll: 1
                             }
                             }

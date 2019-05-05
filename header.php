@@ -28,6 +28,13 @@
                     <div class="main-nav">
                         <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
                     </div>
+                    <div class="mobile-nav">
+                        <div class="hamburger">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                   </div>
                     <?php if ( have_rows( 'menu', 'option' ) ) : ?>
                         <?php while ( have_rows( 'menu', 'option' ) ) : the_row(); ?>
                             <?php if ( have_rows( 'cta_knoppen_menu' ) ) : ?>
