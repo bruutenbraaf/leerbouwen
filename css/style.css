@@ -1273,7 +1273,7 @@ footer {
   .btn:hover:after {
     transform: scale(18); }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1600px) {
   .container {
     max-width: 80%; }
 
