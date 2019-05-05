@@ -18,6 +18,15 @@ $(window).scroll(function() {
 });
 
 
+$( "body" ).on('click', '.hamburger', function() {
+  $('.mobile-navigation').animate({'width': 'toggle'}, 200);
+  $('main').toggleClass('blurred');
+  $('.menu-toggle div:nth-child(1)').toggleClass('first');
+  $('.menu-toggle div:nth-child(2)').toggleClass('middle');
+  $('.menu-toggle div:nth-child(3)').toggleClass('last');
+});
+
+
 $(window).scroll(function(event) {
   var scrollTop = $(window).scrollTop();
   docHeight = $(document).height(),

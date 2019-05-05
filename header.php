@@ -58,4 +58,13 @@
         </div>
     </div>
     <div class="reading-progress"></div>
+    <div class="mobile-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
