@@ -1331,6 +1331,33 @@ footer {
           transform: translateY(-50%);
           position: absolute;
           background-image: url(../img/arrow-mob.svg); }
+    .mobile-navigation .mt-btns {
+      position: absolute;
+      bottom: 0px;
+      width: 100%; }
+      .mobile-navigation .mt-btns ul li {
+        border: 0px;
+        padding: 0;
+        margin: 0; }
+        .mobile-navigation .mt-btns ul li a {
+          width: 100%;
+          text-align: center;
+          font-family: "Muli", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 20px;
+          display: block;
+          align-items: center;
+          color: #FFFFFF;
+          background: #00A651;
+          padding: 15px; }
+          .mobile-navigation .mt-btns ul li a:after {
+            display: none; }
+        .mobile-navigation .mt-btns ul li a.secondair {
+          background: #03314C; }
+        .mobile-navigation .mt-btns ul li:after {
+          display: none; }
 
   .blurred {
     filter: blur(4px); }

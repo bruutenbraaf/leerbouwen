@@ -1591,6 +1591,41 @@ footer {
                 }
             }
         }
+        .mt-btns {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            ul {
+                li {
+                    border:0px;
+                    padding:0;
+                    margin:0;
+                    a {
+                        width:100%;
+                        text-align: center;
+                        font-family: $links;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 20px;
+                        display: block;
+                        align-items: center;
+                        color: #FFFFFF;
+                        background: #00A651;
+                        padding:15px;
+                        &:after {
+                            display:none;
+                        }
+                    }
+                    a.secondair {
+                        background: $main;
+                    }
+                    &:after {
+                        display:none;
+                    }
+                }
+            }
+        }
     }
 
     .blurred {

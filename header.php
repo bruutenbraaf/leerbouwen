@@ -66,5 +66,23 @@
                 </div>
             </div>
         </div>
+        <?php if ( have_rows( 'menu', 'option' ) ) : ?>
+            <?php while ( have_rows( 'menu', 'option' ) ) : the_row(); ?>
+                <?php if ( have_rows( 'cta_knoppen_menu' ) ) : ?>
+                    <div class="mt-btns">
+                        <ul>
+                            <?php $i = 0;?>
+                            <?php while ( have_rows( 'cta_knoppen_menu' ) ) : the_row(); ?>
+                                <?php $i++;?>
+                                <?php $knop = get_sub_field( 'knop' ); ?>
+                                <?php if ( $knop ) { ?>
+                                    <li><a class="<?php if ($i < 1) { ?>singular<?php } ?> menu-btn <?php if ( get_sub_field( 'secondaire_kleur_gebruiken' ) == 1 ) { ?>secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a></li>
+                                <?php } ?>
+                            <?php endwhile; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </div>
 </header>
