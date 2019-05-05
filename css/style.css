@@ -858,6 +858,7 @@ header {
     display: flex;
     align-items: center; }
     #news .news-items .inner p {
+      padding-right: 15px;
       font-family: "avenir", sans-serif;
       font-style: normal;
       font-weight: normal;
@@ -1422,6 +1423,8 @@ footer {
     padding-right: 15px; }
   #vacancies .vacancies-items {
     order: 1; }
+    #vacancies .vacancies-items .inner p {
+      padding-right: 15px; }
     #vacancies .vacancies-items .inner .small-btn {
       display: none; }
   #vacancies .more {
