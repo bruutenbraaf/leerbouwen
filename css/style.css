@@ -479,7 +479,7 @@ header {
       -webkit-transform: translateY(50%);
       transform: translateY(-30px); }
   #services .services-main .services-items {
-    width: 120%;
+    width: 130%;
     margin-left: -15px; }
     #services .services-main .services-items .item {
       margin: 0px 15px;
@@ -1273,7 +1273,7 @@ footer {
   .btn:hover:after {
     transform: scale(18); }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1560px) {
   .container {
     max-width: 80%; }
 

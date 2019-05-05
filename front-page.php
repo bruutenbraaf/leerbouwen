@@ -211,7 +211,7 @@ get_header(); ?>
                                             nextArrow: $('.next-slide'),
                                             responsive: [
                                                 {
-                                                breakpoint: 1600,
+                                                breakpoint: 1560,
                                                 settings: {
                                                     slidesToShow: 4,
                                                     slidesToScroll: 1,
@@ -344,7 +344,7 @@ get_header(); ?>
                                         nextArrow: $('.more-reviews'),
                                         responsive: [
                                             {
-                                            breakpoint: 1600,
+                                            breakpoint: 1560,
                                             settings: {
                                                 slidesToShow: 3,
                                                 slidesToScroll: 1,
@@ -415,7 +415,7 @@ get_header(); ?>
                     accessibility: false,
                     responsive: [
                         {
-                        breakpoint: 1600,
+                        breakpoint: 1560,
                         settings: {
                             slidesToShow: 4,
                             slidesToScroll: 1,
@@ -514,7 +514,7 @@ get_header(); ?>
                         nextArrow: $('.more-news'),
                         responsive: [
                             {
-                            breakpoint: 1600,
+                            breakpoint: 1560,
                             settings: {
                                 slidesToShow: 4,
                                 slidesToScroll: 1,
