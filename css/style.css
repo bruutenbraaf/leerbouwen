@@ -1437,6 +1437,8 @@ footer {
     min-height: 250px;
     margin-top: 20px; }
 
+  #news .container:before {
+    border-radius: 0px; }
   #news .more {
     display: none; }
   #news .news {
