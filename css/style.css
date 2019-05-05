@@ -1339,7 +1339,7 @@ footer {
     transform-origin: left; }
 
   .middle {
-    width: 0px; }
+    width: 0px !important; }
 
   .last {
     transform: rotate(-45deg);
