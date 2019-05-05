@@ -1282,7 +1282,7 @@ footer {
 
   #news .news {
     width: 120%; } }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 768px) {
   header nav .main-nav {
     display: none; }
 
@@ -1380,6 +1380,8 @@ footer {
     .counters:last-child {
       border-bottom: 0px; }
 
+  #services .container:before {
+    right: 15px; }
   #services .more .small-btn {
     position: initial;
     padding-bottom: 10px;
@@ -1389,21 +1391,33 @@ footer {
     margin-left: -15px; }
 
   #b-cta .container {
-    border-radius: 0px; }
+    border-radius: 0px;
+    max-width: 100%; }
 
-  #reviews .review-items:after {
-    border-radius: 0px; }
+  #reviews {
+    overflow: hidden; }
+    #reviews .review-items:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 200%;
+      -webkit-transform: matrix(1, 0, 0, -1, 0, 0) translateX(-50%);
+      transform: matrix(1, 0, 0, -1, 0, 0) translateX(-50%); }
 
-  #c-cta #c-cta {
+  #c-cta {
     padding: 60px 0;
     margin-left: initial;
     margin-right: initial;
     overflow: hidden; }
-  #c-cta .inner {
-    border-radius: 0px;
-    margin-left: -15px;
-    margin-right: -15px; }
+    #c-cta .container {
+      max-width: 100%; }
+    #c-cta .inner {
+      border-radius: 0px;
+      margin-left: -15px;
+      margin-right: -15px; }
 
+  #vacancies .vac-row:before {
+    right: 15px; }
   #vacancies .vacancie-item .info {
     padding-right: 15px; }
   #vacancies .vacancies-items {
@@ -1438,7 +1452,8 @@ footer {
     margin-top: 20px; }
 
   #news .container:before {
-    border-radius: 0px; }
+    border-radius: 10px;
+    right: 15px; }
   #news .more {
     display: none; }
   #news .news {

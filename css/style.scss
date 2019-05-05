@@ -1534,7 +1534,7 @@ footer {
 
 
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 768px) {
     header nav .main-nav {
         display:none;
     }
@@ -1652,6 +1652,11 @@ footer {
     }
 
     #services { 
+        .container {
+            &:before {
+                right:15px;
+            }
+        }
         .more {
             .small-btn {
                 position: initial;
@@ -1669,19 +1674,27 @@ footer {
     #b-cta {
         .container {
             border-radius: 0px;
+            max-width: 100%;
         }
     }
     #reviews {
+        overflow: hidden;
         .review-items:after {
-            border-radius: 0px;
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 200%;
+            -webkit-transform: matrix(1,0,0,-1,0,0) translateX(-50%);
+            transform: matrix(1,0,0,-1,0,0) translateX(-50%);
         }
     }
     #c-cta {
-        #c-cta {
-            padding: 60px 0;
-            margin-left:initial;
-            margin-right: initial;
-            overflow: hidden;
+        padding: 60px 0;
+        margin-left:initial;
+        margin-right: initial;
+        overflow: hidden;
+        .container {
+            max-width:100%;
         }
         .inner {
             border-radius: 0px;
@@ -1690,6 +1703,11 @@ footer {
         }
     }
     #vacancies {
+        .vac-row {
+            &:before {
+                right:15px;
+            }
+        }
         .vacancie-item {
             .info {
                 padding-right: 15px;
@@ -1750,7 +1768,8 @@ footer {
     #news {
         .container {
             &:before {
-                border-radius: 0px;
+                border-radius: 10px;
+                right: 15px;
             }
         }
         .more {
