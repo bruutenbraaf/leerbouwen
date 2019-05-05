@@ -620,7 +620,7 @@ header {
     align-items: center; }
   #b-cta .cta p {
     color: #fff;
-    font-family: Proxima Nova;
+    font-family: "avenir", sans-serif;
     font-size: 16px;
     line-height: 28px; }
   #b-cta .cta .small-btn {
