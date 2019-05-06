@@ -218,7 +218,7 @@ header {
     bottom: -2px;
     background: #03314C;
     display: block;
-    height: 2px;
+    height: 3px;
     transition-property: width;
     transition-duration: 0.1s;
     opacity: 0; }
