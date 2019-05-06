@@ -343,9 +343,9 @@ header {
     &:after {
         content: '';
         width: 100%;
-        height: calc(100% + 2px);
+        height: calc(100% + 3px);
         border-radius: 0px;
-        border-bottom:2px solid #eeeeee;
+        border-bottom:3px solid #eeeeee;
     }
 }
 
