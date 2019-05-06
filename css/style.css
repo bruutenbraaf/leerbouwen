@@ -215,7 +215,7 @@ header {
   header .reading-progress {
     position: absolute;
     left: 0px;
-    bottom: -2px;
+    bottom: -3px;
     background: #03314C;
     display: block;
     height: 3px;
