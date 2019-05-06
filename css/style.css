@@ -112,19 +112,63 @@ header {
         list-style: none;
         float: right; }
         header nav .main-nav ul li {
-          float: left; }
+          float: left;
+          position: relative;
+          font-family: "Muli", sans-serif;
+          font-weight: 600;
+          color: #03314C; }
+          header nav .main-nav ul li ul.sub-menu {
+            position: absolute;
+            padding-top: 50px;
+            padding-bottom: 10px;
+            margin-left: -10px;
+            margin-right: -10px;
+            top: -10px;
+            z-index: -1;
+            white-space: nowrap;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background: #fff;
+            opacity: 0;
+            pointer-events: none;
+            -webkit-transition: all .1s ease-in-out;
+            -moz-transition: all .1s ease-in-out;
+            -o-transition: all .1s ease-in-out;
+            transition: all .1 ease-in-out; }
+            header nav .main-nav ul li ul.sub-menu li {
+              padding: 5px 10px; }
+              header nav .main-nav ul li ul.sub-menu li a {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                color: #03314C; }
+                header nav .main-nav ul li ul.sub-menu li a:hover {
+                  color: #00A651 !important; }
+            header nav .main-nav ul li ul.sub-menu:before {
+              content: '';
+              position: absolute;
+              top: 45px;
+              width: 100%;
+              min-height: 1px;
+              background: #F8F8F8; }
+            header nav .main-nav ul li ul.sub-menu:hover > .menu-item-has-children a {
+              color: blue !important; }
           header nav .main-nav ul li a {
-            font-family: "Muli", sans-serif;
-            font-weight: 600;
-            color: #03314C;
+            color: inherit;
             padding: 5px 15px;
             -webkit-transition: all .2s ease-in-out;
             -moz-transition: all .2s ease-in-out;
             -o-transition: all .2s ease-in-out;
             transition: all .2 ease-in-out; }
             header nav .main-nav ul li a:hover {
-              color: #00A651;
               text-decoration: none; }
+        header nav .main-nav ul .menu-item-has-children:hover {
+          color: #00A651;
+          z-index: 4; }
+        header nav .main-nav ul .menu-item-has-children:hover > ul.sub-menu {
+          opacity: 1;
+          pointer-events: all; }
     header nav .ct-btns {
       position: absolute;
       right: 0px;
