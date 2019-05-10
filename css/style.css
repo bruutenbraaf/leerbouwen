@@ -1431,7 +1431,9 @@ footer {
       width: 20px;
       height: 20px;
       float: right;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative;
+      top: -3px; }
       .mobile-nav .hamburger div {
         height: 2px;
         width: 100%;
