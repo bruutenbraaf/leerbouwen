@@ -59,6 +59,7 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'main_menu' => __( 'Hoofd Menu' ),
+      'mobile_menu' => __( 'Mobiele Menu' ),
       'socket_menu' => __( 'Socket Menu' )
     )
   );
