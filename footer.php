@@ -1,36 +1,37 @@
 <footer>
 	<div class="container">
-	<div class="row f-contact">
-		<div class="col-md-3 offset-md-1 branding">
-			<?php $logo_full = get_field( 'logo_full', 'option' ); ?>
-			<?php if ( $logo_full ) { ?>
-				<img src="<?php echo $logo_full['url']; ?>" alt="<?php echo $logo_full['alt']; ?>" />
-			<?php } ?>
+		<div class="row f-contact">
+			<div class="col-md-3 offset-md-1 branding">
+				<?php $logo_full = get_field( 'logo_full', 'option' ); ?>
+				<?php if ( $logo_full ) { ?>
+					<img src="<?php echo $logo_full['url']; ?>" alt="<?php echo $logo_full['alt']; ?>" />
+				<?php } ?>
+			</div>
+			<div class="col-md-7">
+				<?php if ( have_rows( 'contactgegevens', 'option' ) ) : ?>
+					<?php while ( have_rows( 'contactgegevens', 'option' ) ) : the_row(); ?>
+						<?php if (get_sub_field( 'telefoonnummer' )){ ?><a class="fbtn" href="tel:<?php the_sub_field( 'telefoonnummer' ); ?>"><?php the_sub_field( 'telefoonnummer' ); ?></a><?php } ?>
+						<?php if (get_sub_field( 'emailadres' )){ ?><a class="fbtn" href="mailto:<?php the_sub_field( 'emailadres' ); ?>"><?php the_sub_field( 'emailadres' ); ?></a><?php } ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
 		</div>
-		<div class="col-md-7">
-			<?php if ( have_rows( 'contactgegevens', 'option' ) ) : ?>
-				<?php while ( have_rows( 'contactgegevens', 'option' ) ) : the_row(); ?>
-					<?php if (get_sub_field( 'telefoonnummer' )){ ?><a class="fbtn" href="tel:<?php the_sub_field( 'telefoonnummer' ); ?>"><?php the_sub_field( 'telefoonnummer' ); ?></a><?php } ?>
-					<?php if (get_sub_field( 'emailadres' )){ ?><a class="fbtn" href="mailto:<?php the_sub_field( 'emailadres' ); ?>"><?php the_sub_field( 'emailadres' ); ?></a><?php } ?>
-				<?php endwhile; ?>
-			<?php endif; ?>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-10 offset-md-1 widgets">
-			<?php if(is_active_sidebar('footer_1')){
-				dynamic_sidebar('footer_1');
-			} ?>
-			<?php if(is_active_sidebar('footer_2')){
-				dynamic_sidebar('footer_2');
-			} ?>
+		<div class="row">
+			<div class="col-md-10 offset-md-1 widgets">
+				<?php if(is_active_sidebar('footer_1')){
+					dynamic_sidebar('footer_1');
+				} ?>
+				<?php if(is_active_sidebar('footer_2')){
+					dynamic_sidebar('footer_2');
+				} ?>
 
-			<?php if(is_active_sidebar('footer_3')){
-				dynamic_sidebar('footer_3');
-			} ?>
-			<?php if(is_active_sidebar('footer_4')){
-				dynamic_sidebar('footer_4');
-			} ?>
+				<?php if(is_active_sidebar('footer_3')){
+					dynamic_sidebar('footer_3');
+				} ?>
+				<?php if(is_active_sidebar('footer_4')){
+					dynamic_sidebar('footer_4');
+				} ?>
+			</div>
 		</div>
 	</div>
 </footer>
