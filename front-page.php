@@ -498,7 +498,7 @@ get_header(); ?>
                                     </svg>
                                 </div>
                             </div>
-                        <div>
+                        </div>
                     </div>
                 </section>
                 <script>
