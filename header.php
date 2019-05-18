@@ -6,7 +6,7 @@
     <meta name="author" content="Bruut en Braaf">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-    <title><?php wp_title(''); ?></title>
+    <title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
 	<?php wp_head(); ?>
 </head>
 
