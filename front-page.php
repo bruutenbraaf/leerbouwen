@@ -19,7 +19,7 @@ get_header(); ?>
                                 <p><?php the_sub_field( 'subtitel' ); ?></p>
                                 <?php $knop = get_sub_field( 'knop' ); ?>
                                 <?php if ( $knop ) { ?>
-                                    <a class="btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                 <?php } ?>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ get_header(); ?>
                             <div class="col-md-6 more">
                             <?php $knop = get_sub_field( 'knop' ); ?>
                                 <?php if ( $knop ) { ?>
-                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                 <?php } ?>
                             </div>
 
@@ -164,7 +164,7 @@ get_header(); ?>
                             <div class="col-md-6 more">
                                 <?php $knop = get_sub_field( 'knop' ); ?>
                                 <?php if ( $knop ) { ?>
-                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                 <?php } ?>
                             </div>
                         
@@ -252,7 +252,7 @@ get_header(); ?>
                                     <?php the_sub_field( 'rechter_tekst' ); ?>
                                     <?php $knop = get_sub_field( 'knop' ); ?>
                                     <?php if ( $knop ) { ?>
-                                        <a class="small-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -272,7 +272,7 @@ get_header(); ?>
                                             <h2><?php the_sub_field( 'grote_titel' ); ?></h2>
                                             <?php $knop = get_sub_field( 'knop' ); ?>
                                             <?php if ( $knop ) { ?>
-                                                <a class="btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                                <a class="btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                             <?php } ?>
                                         </div>
                                     </div>
@@ -452,7 +452,7 @@ get_header(); ?>
                             <?php $knop = get_sub_field( 'knop' ); ?>
                             <?php if ( $knop ) { ?>
                                 <div class="col-md-12 more">
-                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                 </div>
                             <?php } ?>
                             <div class="col-md-3 news-items">
@@ -550,7 +550,7 @@ get_header(); ?>
                             <?php $knop = get_sub_field( 'knop' ); ?>
                             <?php if ( $knop ) { ?>
                                 <div class="col-md-12 more">
-                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>"><?php echo $knop['title']; ?></a>
                                 </div>
                             <?php } ?>
                             <div class="col-md-4 vacancies-items">
@@ -559,7 +559,7 @@ get_header(); ?>
                                     <p class="info"><?php the_sub_field( 'text_info' ); ?></p>
                                     <?php $knop_onder_tekst = get_sub_field( 'knop_onder_tekst' ); ?>
                                     <?php if ( $knop_onder_tekst ) { ?>
-                                        <a class="small-btn" href="<?php echo $knop_onder_tekst['url']; ?>" target="<?php echo $knop_onder_tekst['target']; ?>"><?php echo $knop_onder_tekst['title']; ?></a>
+                                    <a class="small-btn" href="<?php echo $knop_onder_tekst['url']; ?>" <?php if ($knop_onder_tekst['target']){ ?>target="<?php echo $knop_onder_tekst['target']; ?>"<?php } ?>><?php echo $knop_onder_tekst['title']; ?></a>
                                     <?php } ?>
                                 </div>
                             </div>
