@@ -45,7 +45,7 @@
                                             <?php $i++;?>
                                             <?php $knop = get_sub_field( 'knop' ); ?>
                                             <?php if ( $knop ) { ?>
-                                                <li><a class="<?php if ($i < 1) { ?>singular<?php } ?> menu-btn <?php if ( get_sub_field( 'secondaire_kleur_gebruiken' ) == 1 ) { ?>secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a></li>
+                                            <li><a class="<?php if ($i < 1) { ?>singular<?php } ?> menu-btn <?php if ( get_sub_field( 'secondaire_kleur_gebruiken' ) == 1 ) { ?>secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a></li>
                                             <?php } ?>
                                         <?php endwhile; ?>
                                     </ul>
@@ -76,7 +76,7 @@
                                 <?php $i++;?>
                                 <?php $knop = get_sub_field( 'knop' ); ?>
                                 <?php if ( $knop ) { ?>
-                                    <li><a class="<?php if ($i < 1) { ?>singular<?php } ?> menu-btn <?php if ( get_sub_field( 'secondaire_kleur_gebruiken' ) == 1 ) { ?>secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a></li>
+                                    <li><a class="<?php if ($i < 1) { ?>singular<?php } ?> menu-btn <?php if ( get_sub_field( 'secondaire_kleur_gebruiken' ) == 1 ) { ?>secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a></li>
                                 <?php } ?>
                             <?php endwhile; ?>
                         </ul>

@@ -550,7 +550,7 @@ get_header(); ?>
                             <?php $knop = get_sub_field( 'knop' ); ?>
                             <?php if ( $knop ) { ?>
                                 <div class="col-md-12 more">
-                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']){ ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                 </div>
                             <?php } ?>
                             <div class="col-md-4 vacancies-items">
