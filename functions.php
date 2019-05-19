@@ -16,8 +16,11 @@ function leerbouwen_scripts() {
   wp_enqueue_script( 'bootjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'slickslider', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
+	wp_enqueue_script( 'niceselect', get_template_directory_uri() . '/js/jquery.nice-select.min.js', array(), '1.0.0', true);
+	
 	
 	wp_enqueue_style( 'bootcss', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'niceselectcss', get_template_directory_uri() . '/css/nice-select.css' );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
 }
 add_action('wp_enqueue_scripts', 'leerbouwen_scripts');
@@ -33,7 +36,12 @@ acf_add_options_page( array(
   'icon_url' => 'dashicons-universal-access-alt',
   'position' => 3
   
-  ) );
+	) );
+	
+	function my_cpt_support_author() {
+    add_post_type_support( 'nieuws', 'author' );
+}
+add_action('init', 'my_cpt_support_author');
 
 
 if (!function_exists('get_archive_link')) {
@@ -150,17 +158,25 @@ function content($limit) {
 // Uitgelicht toevoegen aan opleidingen
 add_filter( 'manage_opleidingen_posts_columns', 'set_custom_edit_opleidingen_columns' );
 function set_custom_edit_opleidingen_columns($columns) {
-    	$columns['uitgelicht'] = __( 'Uitgelicht', 'uitgelicht' );
+			$columns['uitgelicht'] = __( 'Uitgelicht', 'leerbouwen' );
+			$columns['meestgekozen'] = __( 'Meest gekozen', 'leerbouwen' );
     return $columns;
 }
 
 add_action( 'manage_opleidingen_posts_custom_column' , 'custom_opleidingen_column', 10, 2 );
 function custom_opleidingen_column( $column, $post_id ) {
     switch ( $column ) {
-        case 'uitgelicht' :
+      case 'uitgelicht' :
             if ( get_field( 'maak_uitgelicht', $post_id ) == 1 ) 
 				echo 'Ja';
 			 else 
+				echo 'Nee';
+			break;
+
+			case 'meestgekozen' :
+			if ( get_field( 'maak_meest_gekozen', $post_id ) == 1 ) 
+				echo 'Ja';
+			else 
 				echo 'Nee';
 			break;
     }
@@ -169,7 +185,8 @@ function custom_opleidingen_column( $column, $post_id ) {
 // Uitgelicht toevoegen aan cursussen
 add_filter( 'manage_cursussen_posts_columns', 'set_custom_edit_cursussen_columns' );
 function set_custom_edit_cursussen_columns($columns) {
-    	$columns['uitgelicht'] = __( 'Uitgelicht', 'uitgelicht' );
+			$columns['uitgelicht'] = __( 'Uitgelicht', 'uitgelicht' );
+			$columns['meestgekozen'] = __( 'Meest gekozen', 'leerbouwen' );
     return $columns;
 }
 
@@ -182,8 +199,115 @@ function custom_cursussen_column( $column, $post_id ) {
 			 else 
 				echo 'Nee';
 			break;
+		case 'meestgekozen' :
+			if ( get_field( 'maak_meest_gekozen', $post_id ) == 1 ) 
+				echo 'Ja';
+			else 
+				echo 'Nee';
+			break;
     }
 }
+
+
+// Option pages for archive + auto fields (titel, intro)
+function option_page_posttypes() 
+{
+	$args  = array('public'   => true,'_builtin' => false );
+    $excluded_post_types = array('participation', 'partners');
+	$custom_post_types = get_post_types($args);
+    foreach ( $custom_post_types as $custom_post_type ) 
+	{
+        if ( in_array( $custom_post_type, $excluded_post_types ) ) 
+		{
+          
+        } 
+		else 
+		{
+			if(function_exists('acf_add_options_page')) 
+			{
+
+				$formated_string = str_replace('_', " ", $custom_post_type);
+
+				acf_add_options_sub_page(array(
+				  'page_title'     => 'Archive options '.$formated_string.'',
+				  'menu_title'    => 'Archive options '.$formated_string.'',
+				  'parent_slug'    => 'edit.php?post_type='.$custom_post_type.'',
+				));
+
+				$prefix = str_replace("_","-", $custom_post_type);
+				$acf_pre = 'acf-options-archive-options-';
+				$compiled_acf = $acf_pre .= $prefix;
+
+				acf_add_local_field_group(array (
+					'key' => 'archive_options_'.$custom_post_type.'',
+					'title' => 'Archive options '.$formated_string.'',
+					'fields' => array (
+						array (
+						  'key' => ''.$custom_post_type.'_archive_title',
+						  'label' => 'Archief titel',
+						  'name' => ''.$custom_post_type.'_archive_title',
+						  'type' => 'text',
+						  'prefix' => '',
+						  'instructions' => 'Voor de programmeur, dit veld is te plaatsen met the_field("'.$custom_post_type.'_archive_title", "option")',
+						  'required' => 0,
+						  'conditional_logic' => 0,
+						  'wrapper' => array (
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						  ),
+						  'default_value' => '',
+						  'placeholder' => '',
+						  'prepend' => '',
+						  'append' => '',
+						  'maxlength' => '',
+						  'readonly' => 0,
+						  'disabled' => 0,
+						),
+						array (
+						  'key' => ''.$custom_post_type.'_archive_intro',
+						  'label' => 'Archief intro',
+						  'name' => ''.$custom_post_type.'_archive_intro',
+						  'type' => 'wysiwyg',
+						  'prefix' => '',
+						  'instructions' => 'Voor de programmeur, dit veld is te plaatsen met the_field("'.$custom_post_type.'_archive_intro", "option")',
+						  'required' => 0,
+						  'conditional_logic' => 0,
+						  'wrapper' => array (
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						  ),
+						  'default_value' => '',
+						  'placeholder' => '',
+						  'prepend' => '',
+						  'append' => '',
+						  'maxlength' => '',
+						  'readonly' => 0,
+						  'disabled' => 0,
+						),
+					),
+					'location' => array (
+						array (
+						  array (
+							'param' => 'options_page',
+							'operator' => '==',
+							'value' => $compiled_acf,
+						  ),
+						),
+					),
+					'menu_order' => 0,
+					'position' => 'normal',
+					'style' => 'default',
+					'label_placement' => 'top',
+					'instruction_placement' => 'label',
+					'hide_on_screen' => '',
+				));
+			}
+		}
+    }
+}
+add_action( 'init', 'option_page_posttypes');
 
 
 ?>

@@ -17,6 +17,13 @@ $(window).scroll(function() {
   }
 });
 
+// Opleiding tabs
+
+$('.content-title').click(function(){
+  $(this).toggleClass('open');
+  $(this).next('.edu-content').slideToggle(300);
+});
+
 
 $( "body" ).on('click', '.hamburger', function() {
   $('.mobile-navigation').animate({'width': 'toggle'}, 200);
@@ -60,7 +67,7 @@ $(document).ready(function() {
       
         let absoluteOffsetX = 0, absoluteOffsetY = 0, relativeOffsetX = 0, relativeOffsetY = 0;
       
-        $('#services .services-main .services-items .item, .featured-item, .featured-item-big').on('mouseenter', function(e) {
+        $('#services .services-main .services-items .item, .featured-item, .featured-item-big, .news-item').on('mouseenter', function(e) {
           el = $(this);
           children = el.children();
           w = el.outerWidth();
