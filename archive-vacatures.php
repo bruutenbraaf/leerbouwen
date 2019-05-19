@@ -2,7 +2,6 @@
 get_header(); ?>
 
 <?php $afbeelding_geen_logo = get_field( 'afbeelding_geen_logo', 'option' ); ?>
-<?php $featured = get_field( 'upload_featured_afbeelding' ); ?>
 <?php $logo = get_field( 'logo' ); ?>
 
 
@@ -52,6 +51,7 @@ get_header(); ?>
                 <?php if ( $loop->have_posts() ) : ?>
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="vacansie featured">
+                            <?php $featured = get_field( 'upload_featured_afbeelding' ); ?>
                             <div class="image" style="background-image:url(<?php if ( $featured ) { ?><?php echo $featured['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
                                <div class="featured"><?php _e('Aanbevolen','leerbouwen');?></div>
                             </div>
