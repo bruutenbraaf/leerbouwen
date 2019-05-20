@@ -96,30 +96,31 @@ get_header(); ?>
                 <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
             </div>
-        <div class="col-md-5 side">          
-            <?php if ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : ?>
-                <?php while ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : the_row(); ?>
-                    <?php if ( get_sub_field( 'opleidingen_toon_de_widget' ) == 1 ) { ?>
-                        <div class="help-needed">
-                            <div class="heading">
-                                <?php $werknemerwidget = get_sub_field( 'opleiding_afbeelding_werknemer' ); ?>
-                                <div class="image" style="background-image:url(<?php if ( $werknemerwidget ) { ?><?php echo $werknemerwidget['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
+            <div class="col-md-5 side">          
+                <?php if ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : ?>
+                    <?php while ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : the_row(); ?>
+                        <?php if ( get_sub_field( 'opleidingen_toon_de_widget' ) == 1 ) { ?>
+                            <div class="help-needed">
+                                <div class="heading">
+                                    <?php $werknemerwidget = get_sub_field( 'opleiding_afbeelding_werknemer' ); ?>
+                                    <div class="image" style="background-image:url(<?php if ( $werknemerwidget ) { ?><?php echo $werknemerwidget['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
+                                    </div>
+                                    <h3><?php the_sub_field( 'opleidingen_titel' ); ?></h3>
                                 </div>
-                                <h3><?php the_sub_field( 'opleidingen_titel' ); ?></h3>
+                                <?php the_sub_field( 'opleidingen_tekst' ); ?>
+                                <?php if ( have_rows( 'opleidingen_knoppen' ) ) : ?>
+                                    <?php while ( have_rows( 'opleidingen_knoppen' ) ) : the_row(); ?>
+                                        <?php $knop = get_sub_field( 'knop' ); ?>
+                                        <?php if ( $knop ) { ?>
+                                            <a class="btn<?php if ( get_sub_field( 'secondair' ) == 1 ) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                        <?php } ?>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
                             </div>
-                            <?php the_sub_field( 'opleidingen_tekst' ); ?>
-                            <?php if ( have_rows( 'opleidingen_knoppen' ) ) : ?>
-                                <?php while ( have_rows( 'opleidingen_knoppen' ) ) : the_row(); ?>
-                                    <?php $knop = get_sub_field( 'knop' ); ?>
-                                    <?php if ( $knop ) { ?>
-                                        <a class="btn<?php if ( get_sub_field( 'secondair' ) == 1 ) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
-                                    <?php } ?>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
-                    <?php } ?>
-                <?php endwhile; ?>
-            <?php endif; ?>         
+                        <?php } ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>         
+            </div>
         </div>
     </div>
 </section>
