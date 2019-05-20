@@ -105,70 +105,71 @@
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-        <div class="col-md-5 offset-md-1 side">    
-            <?php if ( have_rows( 'kosten_opleidingcursus' ) ) : ?>
-                <select class="cost-select">
-                    <?php while ( have_rows( 'kosten_opleidingcursus' ) ) : the_row(); ?>
-                        <option value="<?php the_sub_field( 'kosten_groep' ); ?>"><?php _e('Ik ben','leerbouwen');?> <?php the_sub_field( 'kosten_groep' ); ?></option>
-                    <?php endwhile; ?>
-                </select>
-            <?php endif; ?>
-            <?php if ( have_rows( 'kosten_opleidingcursus' ) ) : ?>
-                <div class="costgroups">
-                    <?php while ( have_rows( 'kosten_opleidingcursus' ) ) : the_row(); ?>
-                        <div class="box <?php the_sub_field( 'kosten_groep' ); ?>" id="<?php the_sub_field( 'kosten_groep' ); ?>">
-                            <div class="row">
-                                <div class="col-6 heading"><?php _e('Periode','leerbouwen');?></div><div class="col-6 heading"><?php _e('Kosten','leerbouwen');?></div>                           
-                                <?php if ( have_rows( 'kosten_voor_de_kosten_groep' ) ) : ?>
-                                    <?php while ( have_rows( 'kosten_voor_de_kosten_groep' ) ) : the_row(); ?>
-                                        <div class="col-6"><?php the_sub_field( 'periode' ); ?></div>
-                                        <div class="col-6"><?php _e('&euro;','leerbouwen')?> <?php the_sub_field( 'kosten' ); ?></div>
+            <div class="col-md-5 offset-md-1 side">    
+                <?php if ( have_rows( 'kosten_opleidingcursus' ) ) : ?>
+                    <select class="cost-select">
+                        <?php while ( have_rows( 'kosten_opleidingcursus' ) ) : the_row(); ?>
+                            <option value="<?php the_sub_field( 'kosten_groep' ); ?>"><?php _e('Ik ben','leerbouwen');?> <?php the_sub_field( 'kosten_groep' ); ?></option>
+                        <?php endwhile; ?>
+                    </select>
+                <?php endif; ?>
+                <?php if ( have_rows( 'kosten_opleidingcursus' ) ) : ?>
+                    <div class="costgroups">
+                        <?php while ( have_rows( 'kosten_opleidingcursus' ) ) : the_row(); ?>
+                            <div class="box <?php the_sub_field( 'kosten_groep' ); ?>" id="<?php the_sub_field( 'kosten_groep' ); ?>">
+                                <div class="row">
+                                    <div class="col-6 heading"><?php _e('Periode','leerbouwen');?></div><div class="col-6 heading"><?php _e('Kosten','leerbouwen');?></div>                           
+                                    <?php if ( have_rows( 'kosten_voor_de_kosten_groep' ) ) : ?>
+                                        <?php while ( have_rows( 'kosten_voor_de_kosten_groep' ) ) : the_row(); ?>
+                                            <div class="col-6"><?php the_sub_field( 'periode' ); ?></div>
+                                            <div class="col-6"><?php _e('&euro;','leerbouwen')?> <?php the_sub_field( 'kosten' ); ?></div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+                <script type="text/javascript">
+                $(document).ready(function(){
+                    jQuery('select').niceSelect();
+                    $("select").change(function(){
+                        $(this).find("option:selected").each(function(){
+                            var optionValue = $(this).attr("value");
+                            if(optionValue){
+                                $(".box").not("." + optionValue).hide();
+                                $("." + optionValue).show();
+                            } else{
+                                $(".box").hide();
+                            }
+                        });
+                    }).change();
+                });
+                </script>
+                <?php if ( get_field( 'toon_hulp_nodig_widget' ) == 1 ) { ?>      
+                    <?php if ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : ?>
+                        <?php while ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : the_row(); ?>
+                            <div class="help-needed">
+                                <div class="heading">
+                                    <?php $werknemerwidget = get_sub_field( 'opleiding_afbeelding_werknemer' ); ?>
+                                    <div class="image" style="background-image:url(<?php if ( $werknemerwidget ) { ?><?php echo $werknemerwidget['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
+                                    </div>
+                                    <h3><?php the_sub_field( 'opleidingen_titel' ); ?></h3>
+                                </div>
+                                <?php the_sub_field( 'opleidingen_tekst' ); ?>
+                                <?php if ( have_rows( 'opleidingen_knoppen' ) ) : ?>
+                                    <?php while ( have_rows( 'opleidingen_knoppen' ) ) : the_row(); ?>
+                                        <?php $knop = get_sub_field( 'knop' ); ?>
+                                        <?php if ( $knop ) { ?>
+                                            <a class="btn<?php if ( get_sub_field( 'secondair' ) == 1 ) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                        <?php } ?>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
                             </div>
-                        </div>
-                    <?php endwhile; ?>
-                </div>
-            <?php endif; ?>
-            <script type="text/javascript">
-            $(document).ready(function(){
-                jQuery('select').niceSelect();
-                $("select").change(function(){
-                    $(this).find("option:selected").each(function(){
-                        var optionValue = $(this).attr("value");
-                        if(optionValue){
-                            $(".box").not("." + optionValue).hide();
-                            $("." + optionValue).show();
-                        } else{
-                            $(".box").hide();
-                        }
-                    });
-                }).change();
-            });
-            </script>
-            <?php if ( get_field( 'toon_hulp_nodig_widget' ) == 1 ) { ?>      
-                <?php if ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : ?>
-                    <?php while ( have_rows( 'opleidingen_hulp_nodig_widget', 'option' ) ) : the_row(); ?>
-                        <div class="help-needed">
-                            <div class="heading">
-                                <?php $werknemerwidget = get_sub_field( 'opleiding_afbeelding_werknemer' ); ?>
-                                <div class="image" style="background-image:url(<?php if ( $werknemerwidget ) { ?><?php echo $werknemerwidget['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
-                                </div>
-                                <h3><?php the_sub_field( 'opleidingen_titel' ); ?></h3>
-                            </div>
-                            <?php the_sub_field( 'opleidingen_tekst' ); ?>
-                            <?php if ( have_rows( 'opleidingen_knoppen' ) ) : ?>
-                                <?php while ( have_rows( 'opleidingen_knoppen' ) ) : the_row(); ?>
-                                    <?php $knop = get_sub_field( 'knop' ); ?>
-                                    <?php if ( $knop ) { ?>
-                                        <a class="btn<?php if ( get_sub_field( 'secondair' ) == 1 ) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
-                                    <?php } ?>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>   
-            <?php } ?>      
+                        <?php endwhile; ?>
+                    <?php endif; ?>   
+                <?php } ?>      
+            </div>
         </div>
     </div>
 </section>
