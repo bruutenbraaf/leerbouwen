@@ -97,7 +97,7 @@
                                 <?php while ( have_rows( 'knoppen_toevoegen' ) ) : the_row(); ?>
                                     <?php $knop = get_sub_field( 'knop' ); ?>
                                     <?php if ( $knop ) { ?>
-                                        <a class="btn <?php if ( get_sub_field( 'is_secondair' ) == 1 ) { ?>secondair<?php }?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <a class="btn <?php if ( get_sub_field( 'is_secondair' ) == 1 ) { ?>secondair<?php }?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                     <?php } ?>
                                 <?php endwhile; ?>
                             <?php endif; ?>
@@ -161,7 +161,7 @@
                                     <?php while ( have_rows( 'opleidingen_knoppen' ) ) : the_row(); ?>
                                         <?php $knop = get_sub_field( 'knop' ); ?>
                                         <?php if ( $knop ) { ?>
-                                            <a class="btn<?php if ( get_sub_field( 'secondair' ) == 1 ) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                        <a class="btn<?php if ( get_sub_field( 'secondair' ) == 1 ) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                         <?php } ?>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
