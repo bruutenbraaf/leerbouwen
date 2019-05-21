@@ -1946,6 +1946,171 @@ footer {
   #sngl-news .inside {
     width: 100%; }
 
+.more-posts {
+  overflow-x: hidden;
+  padding: 30px 0px; }
+  .more-posts h2:after {
+    content: '.';
+    color: #00A651; }
+  .more-posts .post-carousel {
+    width: 135%;
+    margin-left: -15px; }
+  .more-posts .container {
+    position: relative; }
+    .more-posts .container:before {
+      content: '';
+      top: -30px;
+      right: 0;
+      width: 200%;
+      height: calc(100% + 60px);
+      position: absolute;
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 19px; }
+  .more-posts .slick-list {
+    padding: 10px 0px; }
+  .more-posts .more {
+    position: relative; }
+    .more-posts .more .small-btn {
+      position: relative;
+      bottom: 0px;
+      margin-bottom: 1rem;
+      font-family: Muli,sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #03314c;
+      float: right; }
+      .more-posts .more .small-btn:after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        margin-left: 10px;
+        background-image: url(../img/arrow.svg);
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; }
+      .more-posts .more .small-btn:hover {
+        text-decoration: none; }
+      .more-posts .more .small-btn:hover:after {
+        margin-left: 14px; }
+  .more-posts .post-items {
+    display: flex;
+    align-items: center; }
+    .more-posts .post-items .inner p {
+      padding-right: 15px;
+      font-family: "avenir", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      /* or 175% */
+      letter-spacing: -0.02em;
+      color: #4F4F4F; }
+    .more-posts .post-items .inner .small-btn {
+      position: relative;
+      bottom: 0px;
+      margin-bottom: 1rem;
+      font-family: Muli,sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #03314c; }
+      .more-posts .post-items .inner .small-btn:after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        margin-left: 10px;
+        background-image: url(../img/arrow.svg);
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; }
+      .more-posts .post-items .inner .small-btn:hover {
+        text-decoration: none; }
+      .more-posts .post-items .inner .small-btn:hover:after {
+        margin-left: 14px; }
+  .more-posts .post-item {
+    margin: 0px 15px; }
+    .more-posts .post-item .inner {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+      .more-posts .post-item .inner .post-img {
+        width: 100%;
+        height: 150px;
+        border-radius: 10px 10px 0px 0px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .more-posts .post-item .inner .information {
+        padding: 15px; }
+        .more-posts .post-item .inner .information .date {
+          display: block;
+          font-family: "Muli", sans-serif;
+          font-size: 14px;
+          color: #00A651;
+          padding-bottom: 5px; }
+        .more-posts .post-item .inner .information .title {
+          font-family: "Muli", sans-serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 20px;
+          color: #03314C; }
+  .more-posts .more-posts-btn {
+    width: 52px;
+    height: 52px;
+    background-color: #00A651;
+    border-radius: 10px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    padding: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transform: translateX(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+    .more-posts .more-posts-btn svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%); }
+    .more-posts .more-posts-btn:before {
+      content: '';
+      position: absolute;
+      background: #00A651;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      left: 0;
+      top: 0; }
+    .more-posts .more-posts-btn:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      min-height: 50px;
+      z-index: -2;
+      left: -50px;
+      bottom: -50px;
+      border-radius: 100%;
+      background: #008d45;
+      -webkit-transition: all .4s ease-in-out;
+      -moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out; }
+    .more-posts .more-posts-btn:hover {
+      color: #fff; }
+    .more-posts .more-posts-btn:hover:after {
+      transform: scale(18); }
+
 #sngl-vacansie {
   padding: 60px 0px; }
   #sngl-vacansie section {
@@ -2063,6 +2228,42 @@ footer {
     #sngl-vacansie .companyinfo .btn {
       width: 100%;
       margin-bottom: 10px; }
+
+.faq {
+  padding: 60px 0px; }
+  .faq .faq-section {
+    margin-bottom: 60px; }
+  .faq h2:after {
+    content: '.';
+    color: #00A651; }
+  .faq ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .faq ul li {
+      border: 1px solid #EEEEEE;
+      border-radius: 10px;
+      margin: 10px 0px; }
+      .faq ul li h4 {
+        padding: 20px;
+        margin: 0px;
+        position: relative;
+        cursor: pointer; }
+        .faq ul li h4 svg {
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+          right: 20px;
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out; }
+      .faq ul li .open svg {
+        transform: rotate(180deg);
+        transform-origin: center center; }
+      .faq ul li .faq-info {
+        display: none;
+        padding: 0px 20px; }
 
 @media screen and (min-width: 1560px) {
   .container {

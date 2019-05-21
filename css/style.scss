@@ -2318,6 +2318,149 @@ footer {
     }
 }
 
+.more-posts {
+    overflow-x: hidden;
+    padding: $section;
+    h2 {
+        &:after {
+            content:'.';
+            color: $secondair;
+        }
+    }
+    .post-carousel {
+        width:135%;
+        margin-left: -15px;
+    }
+    .container {
+        position:relative;
+        &:before {
+            content: '';
+            top: -30px;
+            right: 0;
+            width: 200%;
+            height: calc(100% + 60px);
+            position: absolute;
+            background: #f8f8f8;
+            border-radius: 10px;
+            padding: 19px;
+        }
+    }
+    .slick-list {
+        padding:10px 0px;
+    }
+    .more {
+        position: relative;
+        @include small-btn-normal;
+    }
+    .post-items {
+        display:flex;
+        align-items:center;
+        .inner {
+            p {
+                padding-right:15px;
+                font-family: $content;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 28px;/* or 175% */
+                letter-spacing: -0.02em;
+                color: #4F4F4F;
+            }
+            @include small-btn-normal-left;
+        }
+    }
+    .post-item {
+        margin:0px 15px;
+        .inner {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: $boxshadow;
+            .post-img {
+                width:100%;
+                height: 150px;
+                border-radius: 10px 10px 0px 0px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .information {
+                padding: 15px;
+                .date {
+                    display:block;
+                    font-family: $names;
+                    font-size: 14px;
+                    color: $secondair;
+                    padding-bottom:5px;
+                }
+                .title {
+                    font-family: $headings;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $main;
+
+                }
+            }
+        }
+    }
+    .more-posts-btn {
+        width: 52px;
+        height: 52px;
+        background-color: $secondair;
+        border-radius: 10px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        padding:0px;
+        cursor: pointer;
+        overflow:hidden;
+        -webkit-transform: translateX(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        &:before {
+            content:'';
+            position: absolute;
+            background: $secondair;
+            width:100%;
+            height:100%;
+            z-index: -2;
+            left:0;
+            top:0;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            min-height: 50px;
+            z-index: -2;
+            left: -50px;
+            bottom: -50px;
+            border-radius: 100%;
+            background: darken($secondair, 5%);
+            -webkit-transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+        &:hover {
+            color: #fff;
+        }
+        &:hover:after {
+            transform: scale(18);
+        }
+    }
+}
+
 #sngl-vacansie {
     padding: 60px 0px;
     section {
@@ -2468,6 +2611,57 @@ footer {
         .btn {
             width:100%;
             margin-bottom:10px;
+        }
+    }
+}
+
+// Faq template
+
+.faq {
+    padding: 60px 0px;
+    .faq-section {
+        margin-bottom:60px;
+    }
+    h2 {
+        &:after {
+            content:'.';
+            color: $secondair
+        }
+    }
+    ul {
+        margin:0;
+        padding:0;
+        list-style: none;
+        li {
+            border: 1px solid #EEEEEE;
+            border-radius: 10px;
+            margin:10px 0px;
+            h4 {
+                padding: 20px;
+                margin:0px;
+                position: relative;
+                cursor: pointer;
+                svg {
+                    top:50%;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    right: 20px;
+                    -webkit-transition: all .3s ease-in-out;
+                    -moz-transition: all .2s ease-in-out;
+                    -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+                }
+            }
+            .open {
+                svg {
+                    transform:rotate(180deg);
+                    transform-origin: center center;
+                }
+            }
+            .faq-info {
+                display:none;
+                padding: 0px 20px;
+            }
         }
     }
 }

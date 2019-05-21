@@ -1,4 +1,6 @@
-<?php if ( is_archive() ) {?>
+<?php if ( is_page() ) {?>
+
+
 
 <?php } else { ?>
     
