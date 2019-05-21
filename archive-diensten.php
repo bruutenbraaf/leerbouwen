@@ -8,9 +8,9 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="offset-md-1 col-md-9">
-                <h1><?php the_field("vacatures_archive_title", "option");?></h1>
-                <?php if (get_field("vacatures_archive_intro", "option")){ ?>
-                    <p><?php the_field("vacatures_archive_intro", "option"); ?></p>
+                <h1><?php the_field("diensten_archive_title", "option");?></h1>
+                <?php if (get_field("diensten_archive_intro", "option")){ ?>
+                    <p><?php the_field("diensten_archive_intro", "option"); ?></p>
                 <?php } ?>
             </div>
         </div>
