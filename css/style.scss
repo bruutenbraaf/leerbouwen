@@ -2641,6 +2641,9 @@ footer {
                 margin:0px;
                 position: relative;
                 cursor: pointer;
+                font-size: 16px;
+                line-height: 20px;
+                color: $main;
                 svg {
                     top:50%;
                     transform: translateY(-50%);
