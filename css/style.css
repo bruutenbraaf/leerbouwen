@@ -1446,6 +1446,73 @@ header {
     .help-needed .secondair:hover {
       color: #03314C; }
 
+#services-overview {
+  padding: 60px 0px; }
+  #services-overview .service {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 16px 0px;
+    flex-wrap: wrap;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0); }
+    #services-overview .service:after {
+      content: '';
+      width: 16px;
+      height: 15px;
+      background-image: url(../img/arrow-b.svg);
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%); }
+    #services-overview .service:hover:after {
+      right: 15px; }
+    #services-overview .service .smallimg {
+      width: 62px;
+      height: 76px;
+      background-color: #FAFAFA;
+      border: 1px solid #EEEEEE;
+      border-radius: 10px;
+      background-size: 60%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 8px 20px 8px 8px;
+      background-size: cover; }
+    #services-overview .service .excerpt {
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: rgba(3, 49, 76, 0.5); }
+    #services-overview .service .image {
+      width: 100%;
+      height: 250px;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center; }
+      #services-overview .service .image .featured {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background: #00A651;
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold; }
+    #services-overview .service span {
+      margin-right: 15px;
+      color: #03314C;
+      opacity: 0.5; }
+  #services-overview .featured:after {
+    bottom: 40px;
+    top: initial; }
+
 #news-overview {
   padding: 60px 0px; }
   #news-overview .news-img {
