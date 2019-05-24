@@ -2562,14 +2562,14 @@ footer {
     border-radius: 10px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; }
+    background-position: center 20%; }
   #static #imgcarousel .the--carousel .next-carousel {
     width: 52px;
     height: 52px;
     background-color: #00A651;
     border-radius: 10px;
     position: absolute;
-    right: 15px;
+    right: 0px;
     top: 50%;
     cursor: pointer;
     overflow: hidden;
