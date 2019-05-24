@@ -479,7 +479,7 @@
                                             <?php endwhile; ?>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="next-slide next-slide-img">
+                                    <div class="next-slide-img next-slide">
                                         <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0 8.06307V4.94019C0 4.50754 0.334338 4.15947 0.749916 4.15947H6.99922V0.782856C6.99922 0.0867145 7.80538 -0.261356 8.28033 0.229847L13.7797 5.94862C14.0734 6.2544 14.0734 6.74885 13.7797 7.05464L8.28033 12.7702C7.8085 13.2614 6.99922 12.9133 6.99922 12.2171V8.84379H0.749916C0.334338 8.84379 0 8.49571 0 8.06307Z" fill="white" />
                                         </svg>
@@ -505,7 +505,7 @@
                                 accessibility: false,
                                 appendDots: $('.dots'),
                                 prevArrow: $('.prev-slide'),
-                                nextArrow: $('.next-slide-img'),
+                                nextArrow: $('.next-slide-img next-slide'),
                             })
                         });
                     </script>
