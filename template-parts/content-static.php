@@ -491,25 +491,25 @@
                             <div class="dots"></div>
                         </div>
                     </div>
+                    <script>
+                        jQuery(document).ready(function() {
+                            jQuery('.carousel-inner').slick({
+                                infinite: true,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                autoPlay: false,
+                                dots: true,
+                                fade: true,
+                                autoplay: true,
+                                autoplaySpeed: 2000,
+                                accessibility: false,
+                                appendDots: $('.dots'),
+                                prevArrow: $('.prev-slide'),
+                                nextArrow: $('.next-slide'),
+                            })
+                        });
+                    </script>
                 </section>
-                <script>
-                    jQuery(document).ready(function() {
-                        jQuery('.carousel-inner').slick({
-                            infinite: true,
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            autoPlay: false,
-                            dots: true,
-                            fade: true,
-                            autoplay: true,
-                            autoplaySpeed: 2000,
-                            accessibility: false,
-                            appendDots: $('.dots'),
-                            prevArrow: $('.prev-slide'),
-                            nextArrow: $('.next-slide'),
-                        })
-                    });
-                </script>
             <?php endif; ?>
         <?php endwhile; ?>
     </main>
