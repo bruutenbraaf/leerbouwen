@@ -15,7 +15,7 @@ get_header(); ?>
                                 <div class="offset-md-1 col-md-9">
                                     <h1><?php the_title(); ?></h1>
                                     <?php if (get_sub_field('content_header')) { ?>
-                                        <p><?php the_sub_field('content_header'); ?></p>
+                                        <p><?php the_field( 'tekst_header' ); ?>></p>
                                     <?php } ?>
                                     <?php if (have_rows('knoppen_informatieve')) : ?>
                                         <?php while (have_rows('knoppen_informatieve')) : the_row(); ?>

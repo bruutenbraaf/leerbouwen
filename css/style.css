@@ -1171,8 +1171,37 @@ header {
     .archive-header .container .row p {
       color: #fff; }
 
+.cont-header {
+  background: #F8F8F8;
+  position: relative;
+  z-index: 1; }
+  .cont-header .container .row {
+    min-height: 364px;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    .cont-header .container .row:before {
+      content: '';
+      position: absolute;
+      right: 8%;
+      top: 0px;
+      background: #03314C;
+      height: 100%;
+      width: 100vw;
+      border-radius: 0px 0px 20px 0px; }
+    .cont-header .container .row h1 {
+      margin-top: 90px;
+      color: #fff; }
+      .cont-header .container .row h1:after {
+        content: '.';
+        color: #00A651; }
+    .cont-header .container .row p {
+      color: #fff; }
+
 .breadcrumbs {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
   .breadcrumbs .container {
     position: relative;
     padding: 15px; }
@@ -2484,6 +2513,177 @@ footer {
         letter-spacing: -0.02em;
         color: #00A651;
         display: block; }
+
+#static h2 {
+  padding-bottom: 30px; }
+  #static h2:after {
+    content: '.';
+    color: #00A651; }
+#static #bigimg {
+  overflow: hidden; }
+  #static #bigimg .sngl-bigm {
+    width: 100vw;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center 40%;
+    margin-top: -10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
+#static .inside {
+  width: 100%; }
+#static .right {
+  float: left; }
+#static .left {
+  float: right; }
+#static #full {
+  padding: 60px;
+  position: relative;
+  z-index: 1; }
+#static .colored {
+  background: #03314C; }
+  #static .colored h1, #static .colored h2, #static .colored h3, #static .colored h4, #static .colored h5, #static .colored p, #static .colored strong, #static .colored a {
+    color: #fff; }
+  #static .colored a.secondair {
+    color: #03314C; }
+  #static .colored a:hover {
+    color: #00A651; }
+  #static .colored a.btn:hover {
+    color: #fff; }
+  #static .colored a.secondair:hover {
+    color: #03314C; }
+#static #imgcarousel .container {
+  position: relative; }
+#static #imgcarousel .the--carousel {
+  margin-top: -10px;
+  width: 100vw;
+  position: relative; }
+  #static #imgcarousel .the--carousel .carousel--img {
+    height: 360px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  #static #imgcarousel .the--carousel .next-slide {
+    width: 52px;
+    height: 52px;
+    background-color: #00A651;
+    border-radius: 10px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    transform: translateY(-50%) translateX(50%);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+    #static #imgcarousel .the--carousel .next-slide svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%); }
+    #static #imgcarousel .the--carousel .next-slide:before {
+      content: '';
+      position: absolute;
+      background: #00A651;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      left: 0;
+      top: 0; }
+    #static #imgcarousel .the--carousel .next-slide:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      min-height: 50px;
+      z-index: -2;
+      left: -50px;
+      bottom: -50px;
+      border-radius: 100%;
+      background: #008d45;
+      -webkit-transition: all .4s ease-in-out;
+      -moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out; }
+    #static #imgcarousel .the--carousel .next-slide:hover {
+      color: #fff; }
+    #static #imgcarousel .the--carousel .next-slide:hover:after {
+      transform: scale(18); }
+#static #imgcarousel .the-dots {
+  position: absolute;
+  bottom: 0;
+  z-index: 2; }
+  #static #imgcarousel .the-dots .slick-dots {
+    list-style: none; }
+    #static #imgcarousel .the-dots .slick-dots li {
+      float: left; }
+      #static #imgcarousel .the-dots .slick-dots li button {
+        text-indent: -9999px;
+        width: 8px;
+        height: 8px;
+        border-radius: 3px;
+        border: 1px solid #fff;
+        background: 0 0;
+        padding: 0px;
+        margin: 3px; }
+    #static #imgcarousel .the-dots .slick-dots .slick-active button {
+      background: #fff; }
+#static #imgcarousel .left {
+  float: right; }
+#static #imgcarousel .right {
+  float: left; }
+#static #reviews {
+  padding: 30px 0px; }
+  #static #reviews .review .inner {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; }
+    #static #reviews .review .inner .information {
+      padding: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+      #static #reviews .review .inner .information .name {
+        display: block;
+        font-family: "Muli", sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 20px;
+        color: #03314C;
+        padding-top: 15px; }
+      #static #reviews .review .inner .information .score {
+        float: right;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: right;
+        color: #03314C;
+        font-family: "avenir", sans-serif; }
+      #static #reviews .review .inner .information .function {
+        font-family: "avenir", sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        color: #03314C; }
+      #static #reviews .review .inner .information .rating {
+        width: 100px;
+        height: 20px;
+        max-width: 100px;
+        max-height: 20px;
+        overflow: hidden;
+        background-size: contain;
+        background-image: url(../img/rating.svg); }
+        #static #reviews .review .inner .information .rating .star {
+          width: 18px;
+          height: 17px;
+          margin: 1px 1px;
+          display: inline-block;
+          float: left;
+          background-size: contain;
+          background-image: url(../img/star.svg); }
+    #static #reviews .review .inner .the-review {
+      padding: 20px; }
 
 @media screen and (max-width: 768px) {
   header nav .main-nav {
