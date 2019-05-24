@@ -2344,6 +2344,147 @@ footer {
 
   #news .news {
     width: 120%; } }
+#info {
+  overflow: hidden; }
+  #info .sngl-bigm {
+    float: left;
+    min-width: 100vw;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center 40%;
+    border-radius: 0px 0px 0px 10px;
+    background-repeat: no-repeat; }
+  #info #info_block {
+    background: #03314C;
+    overflow: hidden; }
+    #info #info_block .container:after {
+      background: #fff;
+      position: absolute;
+      width: 100vw; }
+    #info #info_block .container .cont-col {
+      position: relative; }
+      #info #info_block .container .cont-col:after {
+        content: '';
+        background: #fff;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        right: 0px;
+        border-radius: 0px 0px 20px 0px; }
+      #info #info_block .container .cont-col .row {
+        position: relative;
+        z-index: 1; }
+    #info #info_block .container .infcol {
+      padding: 60px 15px; }
+      #info #info_block .container .infcol h2:after {
+        content: '.';
+        color: #00A651; }
+      #info #info_block .container .infcol p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+        color: #4F4F4F; }
+  #info #sec {
+    background: #F8F8F8;
+    font-size: 16px;
+    padding-bottom: 30px; }
+    #info #sec .container--sec {
+      padding: 60px 15px;
+      position: relative; }
+      #info #sec .container--sec:after {
+        content: '';
+        background: #03314C;
+        height: 100%;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        position: absolute;
+        border-radius: 0px 0px 0px 20px; }
+      #info #sec .container--sec .row {
+        position: relative;
+        z-index: 2; }
+    #info #sec .info-col {
+      margin-bottom: 30px; }
+    #info #sec p, #info #sec h1, #info #sec h2, #info #sec h3, #info #sec h4, #info #sec h5, #info #sec h6, #info #sec i, #info #sec strong {
+      color: #fff; }
+    #info #sec h5 {
+      font-size: 16px; }
+    #info #sec p {
+      font-size: 16px; }
+    #info #sec h2.heading {
+      padding-bottom: 20px; }
+      #info #sec h2.heading:after {
+        content: '.';
+        color: #00A651; }
+  #info #services {
+    position: relative; }
+    #info #services .container:before {
+      display: none; }
+    #info #services:before {
+      content: '';
+      top: 0;
+      right: 0px;
+      position: absolute;
+      height: 60%;
+      background: #F8F8F8;
+      width: 100vw; }
+  #info #our-team {
+    padding: 60px 0px; }
+    #info #our-team .small-btn {
+      position: relative;
+      bottom: 0px;
+      margin-bottom: 1rem;
+      font-family: Muli,sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #03314c;
+      float: right; }
+      #info #our-team .small-btn:after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 13px;
+        margin-left: 10px;
+        background-image: url(../img/arrow.svg);
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; }
+      #info #our-team .small-btn:hover {
+        text-decoration: none; }
+      #info #our-team .small-btn:hover:after {
+        margin-left: 14px; }
+    #info #our-team .small-btn {
+      float: left; }
+    #info #our-team .member {
+      text-align: center;
+      margin-bottom: 30px; }
+      #info #our-team .member .profile {
+        margin: 0 auto;
+        width: 77px;
+        height: 77px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center center;
+        margin-bottom: 10px; }
+      #info #our-team .member .information .name {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #03314C;
+        display: block; }
+      #info #our-team .member .information .function {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: #00A651;
+        display: block; }
+
 @media screen and (max-width: 768px) {
   header nav .main-nav {
     display: none; }

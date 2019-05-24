@@ -2767,6 +2767,159 @@ footer {
     }
   }
 
+  #info {
+      overflow: hidden;
+    .sngl-bigm {
+        float: left;
+        min-width: 100vw;
+        min-height: 350px;
+        background-size: cover;
+        background-position: center 40%;
+        border-radius: 0px 0px 0px 10px;
+        background-repeat: no-repeat;
+    }
+    #info_block {
+        background: $main;
+        overflow: hidden;
+        .container {
+            &:after {
+                background:#fff;
+                position: absolute;
+                width:100vw;
+            }
+            .cont-col {
+                position: relative;
+                &:after {
+                    content: '';
+                    background: #fff;
+                    position: absolute;
+                    width: 100vw;
+                    height: 100%;
+                    top: 0;
+                    right: 0px;
+                    border-radius: 0px 0px 20px 0px;
+                }
+                .row {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+            .infcol {
+                padding: 60px 15px;
+                h2 {
+                    &:after {
+                        content:'.';
+                        color: $secondair;
+                    }
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 32px;
+                    letter-spacing: -0.02em;
+                    color: $paragraph;
+                }
+            }
+        }
+    }
+    #sec {
+        background: $creme;
+        font-size: 16px;
+        padding-bottom: 30px;
+        .container--sec {
+            padding: 60px 15px;
+            position: relative;
+            &:after {
+                content:'';
+                background: $main;
+                height:100%;
+                width:100vw;
+                left:0;
+                top:0;
+                position: absolute;
+                border-radius: 0px 0px 0px 20px;
+            }
+            .row {
+                position: relative;
+                z-index: 2;
+            }
+        }
+        .info-col {
+            margin-bottom:30px;
+        }
+        p, h1, h2, h3, h4, h5, h6, i, strong {
+            color: #fff;
+        }
+        h5 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 16px;
+        }
+        h2.heading {
+            &:after {
+                content:'.';
+                color: $secondair;
+            }
+            padding-bottom: 20px;
+        }
+    }
+    #services {
+        position: relative;
+        .container {
+            &:before {
+                display:none;
+            }
+        }
+        &:before {
+            content:'';
+            top:0;
+            right:0px;
+            position:absolute;
+            height: 60%;
+            background: $creme;
+            width:100vw;
+        }
+    }
+    #our-team {
+        padding: 60px 0px;
+        @include small-btn-normal;
+        .small-btn {
+            float:left;
+        }
+        .member {
+            text-align: center;
+            margin-bottom:30px;
+            .profile {
+                margin:0 auto;
+                width: 77px;
+                height: 77px;
+                border-radius: 100%;
+                background-size: cover;
+                background-position: center center;
+                margin-bottom: 10px;
+            }
+            .information {
+                .name {
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $main;
+                    display:block;
+                }
+                .function {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    letter-spacing: -0.02em;
+                    color: $secondair;
+                    display:block;
+                }
+            }
+        }
+    }
+  }
 
 
 @media screen and (max-width: 768px) {
