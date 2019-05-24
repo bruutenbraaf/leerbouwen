@@ -1,6 +1,6 @@
 <?php
 	
-add_image_size( 'home', 920, 500, true );
+add_image_size( 'home', 1920, 600, true );
 add_image_size( 'bigfeatured', 470, 530, true );
 add_image_size( 'ccta', 1000, 300, true );
 add_image_size( 'smallfeatured', 470, 250, true );
