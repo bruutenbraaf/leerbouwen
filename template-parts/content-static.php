@@ -78,8 +78,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <?php $afbeelding = get_sub_field('afbeelding'); ?>
-                                <div class="inner" <?php if ($afbeelding) { ?>style="background-image:url(<?php echo $afbeelding['sizes']['ccta']; ?>);" <?php } ?>>
+                                <?php $afbeelding = get_sub_field( 'afbeelding' ); ?>
+                                <div class="inner" <?php if ($afbeelding) { ?>style="background-image:url(<?php echo $afbeelding['sizes']['cta']; ?>);" <?php } ?>>
                                     <?php if (have_rows('content')) : ?>
                                         <?php while (have_rows('content')) : the_row(); ?>
                                             <div class="row">
