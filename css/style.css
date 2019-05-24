@@ -2563,7 +2563,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
-  #static #imgcarousel .the--carousel .next-slide {
+  #static #imgcarousel .the--carousel .next-carousel {
     width: 52px;
     height: 52px;
     background-color: #00A651;
@@ -2578,12 +2578,12 @@ footer {
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out; }
-    #static #imgcarousel .the--carousel .next-slide svg {
+    #static #imgcarousel .the--carousel .next-carousel svg {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%); }
-    #static #imgcarousel .the--carousel .next-slide:before {
+    #static #imgcarousel .the--carousel .next-carousel:before {
       content: '';
       position: absolute;
       background: #00A651;
@@ -2592,7 +2592,7 @@ footer {
       z-index: -2;
       left: 0;
       top: 0; }
-    #static #imgcarousel .the--carousel .next-slide:after {
+    #static #imgcarousel .the--carousel .next-carousel:after {
       content: '';
       position: absolute;
       width: 50px;
@@ -2606,9 +2606,9 @@ footer {
       -moz-transition: all .4s ease-in-out;
       -o-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out; }
-    #static #imgcarousel .the--carousel .next-slide:hover {
+    #static #imgcarousel .the--carousel .next-carousel:hover {
       color: #fff; }
-    #static #imgcarousel .the--carousel .next-slide:hover:after {
+    #static #imgcarousel .the--carousel .next-carousel:hover:after {
       transform: scale(18); }
 #static #imgcarousel .the-dots {
   position: absolute;
