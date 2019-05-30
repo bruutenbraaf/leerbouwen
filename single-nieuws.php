@@ -182,15 +182,15 @@ get_header(); ?>
                 autoPlay: false,
                 dots: false,
                 accessibility: false,
-                prevArrow: $('.prev-slide'),
-                nextArrow: $('.more-posts-btn'),
+                prevArrow: jQuery('.prev-slide'),
+                nextArrow: jQuery('.more-posts-btn'),
                 responsive: [{
                         breakpoint: 1560,
                         settings: {
                             slidesToShow: 4,
                             slidesToScroll: 1,
-                            prevArrow: $('.prev-slide'),
-                            nextArrow: $('.more-posts-btn'),
+                            prevArrow: jQuery('.prev-slide'),
+                            nextArrow: jQuery('.more-posts-btn'),
                         }
                     },
                     {

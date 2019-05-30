@@ -78,7 +78,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <?php $afbeelding = get_sub_field( 'afbeelding' ); ?>
+                                <?php $afbeelding = get_sub_field('afbeelding'); ?>
                                 <div class="inner" <?php if ($afbeelding) { ?>style="background-image:url(<?php echo $afbeelding['sizes']['ccta']; ?>);" <?php } ?>>
                                     <?php if (have_rows('content')) : ?>
                                         <?php while (have_rows('content')) : the_row(); ?>
@@ -219,8 +219,8 @@
                                             autoPlay: false,
                                             dots: false,
                                             accessibility: false,
-                                            prevArrow: $('.prev-slide'),
-                                            nextArrow: $('.next-slide'),
+                                            prevArrow: jQuery('.prev-slide'),
+                                            nextArrow: jQuery('.next-slide'),
                                             responsive: [{
                                                     breakpoint: 1560,
                                                     settings: {
@@ -503,9 +503,9 @@
                                 autoplay: true,
                                 autoplaySpeed: 2000,
                                 accessibility: false,
-                                appendDots: $('.dots'),
-                                prevArrow: $('.prev-slide'),
-                                nextArrow: $('.next-carousel'),
+                                appendDots: jQuery('.dots'),
+                                prevArrow: jQuery('.prev-slide'),
+                                nextArrow: jQuery('.next-carousel'),
                             })
                         });
                     </script>

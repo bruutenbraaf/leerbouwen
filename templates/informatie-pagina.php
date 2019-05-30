@@ -180,8 +180,8 @@ get_header(); ?>
                                             autoPlay: false,
                                             dots: false,
                                             accessibility: false,
-                                            prevArrow: $('.prev-slide'),
-                                            nextArrow: $('.next-slide'),
+                                            prevArrow: jQuery('.prev-slide'),
+                                            nextArrow: jQuery('.next-slide'),
                                             responsive: [{
                                                     breakpoint: 1560,
                                                     settings: {
