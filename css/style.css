@@ -2384,13 +2384,25 @@ footer {
   position: absolute !important;
   right: 8%;
   top: 0px;
-  opacity: 0.1; }
+  opacity: 0.1;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
 
 .nobtn-header:hover .contact-head {
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
 
 .nobtn-header:hover .acf-map {
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
 
 main#cp {
   padding: 60px 0px; }
