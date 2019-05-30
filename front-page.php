@@ -209,8 +209,8 @@ get_header(); ?>
                                             autoPlay: false,
                                             dots: false,
                                             accessibility: false,
-                                            prevArrow: $('.prev-slide'),
-                                            nextArrow: $('.next-slide'),
+                                            prevArrow: jQuery('.prev-slide'),
+                                            nextArrow: jQuery('.next-slide'),
                                             responsive: [{
                                                     breakpoint: 1560,
                                                     settings: {
@@ -341,8 +341,8 @@ get_header(); ?>
                                             autoPlay: false,
                                             dots: false,
                                             accessibility: false,
-                                            prevArrow: $('.prev-slide'),
-                                            nextArrow: $('.more-reviews'),
+                                            prevArrow: jQuery('.prev-slide'),
+                                            nextArrow: jQuery('.more-reviews'),
                                             responsive: [{
                                                     breakpoint: 1560,
                                                     settings: {
@@ -509,15 +509,15 @@ get_header(); ?>
                             autoPlay: false,
                             dots: false,
                             accessibility: false,
-                            prevArrow: $('.prev-slide'),
-                            nextArrow: $('.more-news'),
+                            prevArrow: jQuery('.prev-slide'),
+                            nextArrow: jQuery('.more-news'),
                             responsive: [{
                                     breakpoint: 1560,
                                     settings: {
                                         slidesToShow: 4,
                                         slidesToScroll: 1,
-                                        prevArrow: $('.prev-slide'),
-                                        nextArrow: $('.more-news'),
+                                        prevArrow: jQuery('.prev-slide'),
+                                        nextArrow: jQuery('.more-news'),
                                     }
                                 },
                                 {

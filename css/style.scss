@@ -1718,6 +1718,7 @@ header {
             border-radius: 100%;
             background-color: #FAFAFA;
             border: 1px solid #EEEEEE;
+            background-size:cover;
             background-position: center center;
             background-repeat: no-repeat;
             margin-right: 20px;
@@ -3181,8 +3182,172 @@ footer {
     }
 }
 
+// Static page with sidebar
 
+#page-sb {
+    padding: 60px 0px;
+    h2 {
+        &:after {
+            content:'.';
+            color: $secondair;
+        }
+    }
+    #c-cta {
+        padding: $sectionbig;
+        .inner {
+            text-align:center;
+            padding: 50px 15px;
+            background-size:cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            overflow:hidden;
+            background-blend-mode: multiply;
+            position:relative;
+            z-index:1;
+            h2 {
+                color: #fff;
+                padding: 15px 0px;
+                font-weight: 900;
+                font-size: 32px;
+                line-height: 40px;
+                color: #FFFFFF;
+                &:after {
+                    content:'.';
+                    color: $secondair;
+                }
+            }
+            .subtitle {
+                color: #fff;
+                font-family: $content;
+            }
+            &:after {
+                content: '';
+                background: #03314c;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                opacity: 0.95;
+                background-blend-mode: multiply;
+            }
+        }
+    }
+    .nf-field-description {
+        width: 100%;
+        -ms-flex-order: 999;
+        order: 9999;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.02em;
+        color: #4F4F4F;
+        margin-top:5px;
+        font-family: $content;
+    }
+    .nice-select .list {
+        width:100%;
+    }
+}
 
+// Forms
+
+.nf-form-title h3 {
+    @include fontstyle;
+    font-family: $headings;
+    font-size: $h2;
+    line-height: 40px;
+    &:after {
+        content:'.';
+        color:$secondair;
+    }
+}
+
+.nf-form-layout {
+    h2 {
+        margin-top: 70px;
+    }
+    .ninja-forms-field {
+        width:100%;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        border: 1px solid #EEEEEE;
+        padding: 15px 20px;
+        color: $main;
+    }
+
+    .nf-field .nice-select {
+        display: block !important;
+        width:100%;
+        border-radius: 10px;
+        border-color: #EEEEEE;
+        padding: 5px 20px;
+        height: 52px;
+    }
+    input::placeholder{
+        color: #E0E0E0;
+    }
+
+    .nf-field-label label {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: $main;
+    }
+
+    .label-above .nf-field-label {
+        margin-bottom: 2px !important;
+    }
+
+    input[type=button] {
+    font-family: $content;
+    font-weight: bold;
+    padding: 15px 32px;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+    background: $secondair;
+    border:none;
+    width: 100% !important;
+    text-align: center;
+    -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        &:hover {
+            background: darken($secondair, 5%);
+            cursor: pointer;
+        }
+    }
+    .pikaday__container, .nice-select {
+        position: relative;
+        &:after {
+            content:'';
+            display:inline-block;
+            width:10px;
+            height: 10px;
+            margin-left: 10px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image:url(../img/dropdown.svg);
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            position: absolute;
+            right:20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            pointer-events: none;
+            border:none;
+            margin-top: 0px !important;
+        }
+    }
+}
 
 @media screen and (max-width: 768px) {
     header nav .main-nav {

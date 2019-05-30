@@ -131,17 +131,17 @@
                             <?php endwhile; ?>
                         </div>
                     <?php endif; ?>
-                    <script type="text/javascript">
-                        $(document).ready(function() {
+                    <script>
+                        jQuery(document).ready(function() {
                             jQuery('select').niceSelect();
-                            $("select").change(function() {
-                                $(this).find("option:selected").each(function() {
-                                    var optionValue = $(this).attr("value");
+                            jQuery("select").change(function() {
+                                jQuery(this).find("option:selected").each(function() {
+                                    var optionValue = jQuery(this).attr("value");
                                     if (optionValue) {
-                                        $(".box").not("." + optionValue).hide();
-                                        $("." + optionValue).show();
+                                        jQuery(".box").not("." + optionValue).hide();
+                                        jQuery("." + optionValue).show();
                                     } else {
-                                        $(".box").hide();
+                                        jQuery(".box").hide();
                                     }
                                 });
                             }).change();

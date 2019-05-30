@@ -10,9 +10,7 @@ add_image_size( 'vacaturesmall', 50, 50, false);
 
 
 function leerbouwen_scripts() {
-  wp_deregister_script('jquery');
-  wp_enqueue_script( 'jquerylib', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', '3.3.1', false);
-  wp_enqueue_script( 'jqueryui', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js', '3.3.1', false);
+	wp_enqueue_script('jquery');
   wp_enqueue_script( 'bootjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'slickslider', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
@@ -207,107 +205,5 @@ function custom_cursussen_column( $column, $post_id ) {
 			break;
     }
 }
-
-
-// Option pages for archive + auto fields (titel, intro)
-function option_page_posttypes() 
-{
-	$args  = array('public'   => true,'_builtin' => false );
-    $excluded_post_types = array('participation', 'partners');
-	$custom_post_types = get_post_types($args);
-    foreach ( $custom_post_types as $custom_post_type ) 
-	{
-        if ( in_array( $custom_post_type, $excluded_post_types ) ) 
-		{
-          
-        } 
-		else 
-		{
-			if(function_exists('acf_add_options_page')) 
-			{
-
-				$formated_string = str_replace('_', " ", $custom_post_type);
-
-				acf_add_options_sub_page(array(
-				  'page_title'     => 'Archive options '.$formated_string.'',
-				  'menu_title'    => 'Archive options '.$formated_string.'',
-				  'parent_slug'    => 'edit.php?post_type='.$custom_post_type.'',
-				));
-
-				$prefix = str_replace("_","-", $custom_post_type);
-				$acf_pre = 'acf-options-archive-options-';
-				$compiled_acf = $acf_pre .= $prefix;
-
-				acf_add_local_field_group(array (
-					'key' => 'archive_options_'.$custom_post_type.'',
-					'title' => 'Archive options '.$formated_string.'',
-					'fields' => array (
-						array (
-						  'key' => ''.$custom_post_type.'_archive_title',
-						  'label' => 'Archief titel',
-						  'name' => ''.$custom_post_type.'_archive_title',
-						  'type' => 'text',
-						  'prefix' => '',
-						  'instructions' => 'Voor de programmeur, dit veld is te plaatsen met the_field("'.$custom_post_type.'_archive_title", "option")',
-						  'required' => 0,
-						  'conditional_logic' => 0,
-						  'wrapper' => array (
-							'width' => '',
-							'class' => '',
-							'id' => '',
-						  ),
-						  'default_value' => '',
-						  'placeholder' => '',
-						  'prepend' => '',
-						  'append' => '',
-						  'maxlength' => '',
-						  'readonly' => 0,
-						  'disabled' => 0,
-						),
-						array (
-						  'key' => ''.$custom_post_type.'_archive_intro',
-						  'label' => 'Archief intro',
-						  'name' => ''.$custom_post_type.'_archive_intro',
-						  'type' => 'wysiwyg',
-						  'prefix' => '',
-						  'instructions' => 'Voor de programmeur, dit veld is te plaatsen met the_field("'.$custom_post_type.'_archive_intro", "option")',
-						  'required' => 0,
-						  'conditional_logic' => 0,
-						  'wrapper' => array (
-							'width' => '',
-							'class' => '',
-							'id' => '',
-						  ),
-						  'default_value' => '',
-						  'placeholder' => '',
-						  'prepend' => '',
-						  'append' => '',
-						  'maxlength' => '',
-						  'readonly' => 0,
-						  'disabled' => 0,
-						),
-					),
-					'location' => array (
-						array (
-						  array (
-							'param' => 'options_page',
-							'operator' => '==',
-							'value' => $compiled_acf,
-						  ),
-						),
-					),
-					'menu_order' => 0,
-					'position' => 'normal',
-					'style' => 'default',
-					'label_placement' => 'top',
-					'instruction_placement' => 'label',
-					'hide_on_screen' => '',
-				));
-			}
-		}
-    }
-}
-add_action( 'init', 'option_page_posttypes');
-
 
 ?>
