@@ -2053,7 +2053,8 @@ footer {
 
 .more-posts {
   overflow-x: hidden;
-  padding: 30px 0px; }
+  padding: 30px 0px;
+  margin-top: 60px; }
   .more-posts h2:after {
     content: '.';
     color: #00A651; }
