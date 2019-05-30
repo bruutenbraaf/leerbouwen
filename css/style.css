@@ -2760,7 +2760,8 @@ footer {
   appearance: none;
   border: 1px solid #EEEEEE;
   padding: 15px 20px;
-  color: #03314C; }
+  color: #03314C;
+  background: none; }
 .nf-form-layout .nf-field .nice-select {
   display: block !important;
   width: 100%;
