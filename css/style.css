@@ -229,8 +229,6 @@ header {
               color: #fff; }
             header nav .ct-btns ul li a.menu-btn:hover:after {
               transform: scale(18); }
-          header nav .ct-btns ul li .singular {
-            border-radius: 0px 0px 10px 10px !important; }
           header nav .ct-btns ul li a.secondair:before {
             content: '';
             position: absolute;
@@ -262,6 +260,8 @@ header {
             border-radius: 0px 0px 0px 10px; }
           header nav .ct-btns ul li:last-child a.menu-btn {
             border-radius: 0px 0px 10px 0px; }
+      header nav .ct-btns .singular li a.menu-btn {
+        border-radius: 0px 0px 10px 10px !important; }
   header nav.ro {
     border-radius: 10px 10px 0px 10px !important; }
   header .reading-progress {

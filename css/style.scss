@@ -349,9 +349,6 @@ header {
                             transform: scale(18);
                         }
                     }
-                    .singular {
-                        border-radius: 0px 0px 10px 10px !important;
-                    }
                     a.secondair {
                         &:before {
                             content:'';
@@ -392,6 +389,9 @@ header {
                         border-radius: 0px 0px 10px 0px;
                     }
                 }
+            }
+            .singular li a.menu-btn {
+                border-radius: 0px 0px 10px 10px !important;
             }
         }
     }
