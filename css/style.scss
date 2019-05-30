@@ -168,10 +168,6 @@ a {
     z-index: 2;
 }
 
-main {
-    padding: 60px 0px;
-}
-
 // NAVIGATIE
 .mobile-navigation {
     display:none;
@@ -2808,41 +2804,44 @@ footer {
 
 // Contactpagina
 
-.contact-p {
-    h2 {
-        &:after {
-            content:'.';
-            color: $secondair;
-        }
-    }
-    p {
-        font-family: $contentfat;
-    }
-    form {
-        p {
-            font-family: $content;
-        }
-    }
-    .company-info {
-        margin: 20px 0px;
-        width:100%;
-        border-top: 1px solid #EDF1F2;
-        border-bottom: 1px solid #EDF1F2;
-        tr {
-            vertical-align: baseline;
-            border-bottom: 1px solid #EDF1F2;
-        }
-        td {
-            padding: 10px 20px;
-            color: $main;
-            &:first-child {
-                color: $main;
-                opacity: .5;
+main#cp {
+    padding: 60px 0px;
+    .contact-p {
+        h2 {
+            &:after {
+                content:'.';
+                color: $secondair;
             }
+        }
+        p {
+            font-family: $contentfat;
+        }
+        form {
             p {
-                margin:0px;
+                font-family: $content;
+            }
+        }
+        .company-info {
+            margin: 20px 0px;
+            width:100%;
+            border-top: 1px solid #EDF1F2;
+            border-bottom: 1px solid #EDF1F2;
+            tr {
+                vertical-align: baseline;
+                border-bottom: 1px solid #EDF1F2;
+            }
+            td {
+                padding: 10px 20px;
                 color: $main;
-                font-family: $subs;
+                &:first-child {
+                    color: $main;
+                    opacity: .5;
+                }
+                p {
+                    margin:0px;
+                    color: $main;
+                    font-family: $subs;
+                }
             }
         }
     }
