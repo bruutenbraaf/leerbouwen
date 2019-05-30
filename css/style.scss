@@ -2805,6 +2805,27 @@ footer {
 
 // Contactpagina
 
+.acf-map {
+    width: 80vw;
+    height: 100%;
+    border: none;
+    border-radius: 0px 0px 20px 0px;
+    overflow: hidden !important;
+    margin: 0px;
+    position: absolute !important;
+    right: 8%;
+    top: 0px;
+    opacity: 0.1;
+}
+
+.nobtn-header:hover .contact-head {
+    opacity: 0;
+}
+
+.nobtn-header:hover .acf-map {
+    opacity: 1;
+}
+
 main#cp {
     padding: 60px 0px;
     .contact-p {

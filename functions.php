@@ -11,7 +11,7 @@ add_image_size( 'vacaturesmall', 50, 50, false);
 
 function leerbouwen_scripts() {
 	wp_enqueue_script('jquery');
-  wp_enqueue_script( 'bootjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '1.0.0', true);
+	wp_enqueue_script( 'bootjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'slickslider', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'niceselect', get_template_directory_uri() . '/js/jquery.nice-select.min.js', array(), '1.0.0', true);
@@ -206,4 +206,11 @@ function custom_cursussen_column( $column, $post_id ) {
     }
 }
 
+
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyBwjs5yVQERqyM-MUa52sJa1a7jeBHiEes');
+}
+
+add_action('acf/init', 'my_acf_init');
 ?>
