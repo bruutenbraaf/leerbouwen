@@ -71,6 +71,9 @@ a {
   left: 0;
   z-index: 2; }
 
+main {
+  padding: 60px 0px; }
+
 .mobile-navigation {
   display: none; }
 
@@ -1195,6 +1198,14 @@ header {
       .cont-header .container .row h1:after {
         content: '.';
         color: #00A651; }
+    .cont-header .container .row a {
+      color: #fff;
+      text-decoration: underline; }
+    .cont-header .container .row .btn {
+      color: #fff;
+      text-decoration: inherit; }
+    .cont-header .container .row .secondair {
+      color: #03314C; }
     .cont-header .container .row p {
       color: #fff; }
 
@@ -2365,6 +2376,32 @@ footer {
         display: none;
         padding: 0px 20px; }
 
+.contact-p h2:after {
+  content: '.';
+  color: #00A651; }
+.contact-p p {
+  font-family: "avenir-medium", sans-serif; }
+.contact-p form p {
+  font-family: "avenir", sans-serif; }
+.contact-p .company-info {
+  margin: 20px 0px;
+  width: 100%;
+  border-top: 1px solid #EDF1F2;
+  border-bottom: 1px solid #EDF1F2; }
+  .contact-p .company-info tr {
+    vertical-align: baseline;
+    border-bottom: 1px solid #EDF1F2; }
+  .contact-p .company-info td {
+    padding: 10px 20px;
+    color: #03314C; }
+    .contact-p .company-info td:first-child {
+      color: #03314C;
+      opacity: .5; }
+    .contact-p .company-info td p {
+      margin: 0px;
+      color: #03314C;
+      font-family: "avenir-medium", sans-serif; }
+
 @media screen and (min-width: 1560px) {
   .container {
     max-width: 70%; }
@@ -2820,6 +2857,10 @@ footer {
     pointer-events: none;
     border: none;
     margin-top: 0px !important; }
+
+form .nf-field-description {
+  order: 999;
+  padding: 5px 0px; }
 
 @media screen and (max-width: 768px) {
   header nav .main-nav {

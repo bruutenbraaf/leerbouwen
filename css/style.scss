@@ -43,6 +43,7 @@ $btns: 'Muli', sans-serif;
 $names: 'Muli', sans-serif;
 $smalltitle: 'Muli', sans-serif;
 $content: 'avenir', sans-serif;
+$contentfat: 'avenir-medium', sans-serif;
 $subs: 'avenir-medium', sans-serif;
 
 @mixin fontstyle {
@@ -165,6 +166,10 @@ a {
     top:0;
     left:0;
     z-index: 2;
+}
+
+main {
+    padding: 60px 0px;
 }
 
 // NAVIGATIE
@@ -1444,6 +1449,17 @@ header {
                     content:'.';
                     color: $secondair;
                 }
+            }
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+            .btn {
+                color: #fff;
+                text-decoration: inherit;
+            }
+            .secondair {
+                color: $main;
             }
             p {
                 color: #fff;
@@ -2790,6 +2806,48 @@ footer {
     }
 }
 
+// Contactpagina
+
+.contact-p {
+    h2 {
+        &:after {
+            content:'.';
+            color: $secondair;
+        }
+    }
+    p {
+        font-family: $contentfat;
+    }
+    form {
+        p {
+            font-family: $content;
+        }
+    }
+    .company-info {
+        margin: 20px 0px;
+        width:100%;
+        border-top: 1px solid #EDF1F2;
+        border-bottom: 1px solid #EDF1F2;
+        tr {
+            vertical-align: baseline;
+            border-bottom: 1px solid #EDF1F2;
+        }
+        td {
+            padding: 10px 20px;
+            color: $main;
+            &:first-child {
+                color: $main;
+                opacity: .5;
+            }
+            p {
+                margin:0px;
+                color: $main;
+                font-family: $subs;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1560px) {
     .container {
         max-width: 70%;
@@ -2970,6 +3028,9 @@ footer {
             content:'.';
             color: $secondair;
         }
+    }
+    p {
+
     }
     #bigimg {
         overflow: hidden;
@@ -3347,6 +3408,13 @@ footer {
             border:none;
             margin-top: 0px !important;
         }
+    }
+}
+
+form {
+    .nf-field-description{
+        order: 999;
+        padding: 5px 0px;
     }
 }
 
