@@ -18,7 +18,7 @@ jQuery(window).scroll(function() {
 });
 
 jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
-  jQuery('select.ninja-forms-field').niceSelect();
+  jQuery('select').niceSelect();
 });
 
 // Opleiding tabs
