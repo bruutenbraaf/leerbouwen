@@ -55,7 +55,10 @@ get_header(); ?>
                                 </div>
                                 <div class="information">
                                     <h4><?php the_title(); ?></h4>
-                                    <span class="function"><?php the_sub_field('functie'); ?></span>
+                                    <?php if (get_sub_field('functie')) { ?>
+                                        <span class="function"><?php the_sub_field('functie'); ?></span>
+                                    <?php } ?>
+                                    <?php the_sub_field('functie'); ?>
                                     <?php if (have_rows('informatie_vacature')) : ?>
                                         <?php while (have_rows('informatie_vacature')) : the_row(); ?>
                                             <?php if (get_sub_field('bedrijfsnaam')) { ?>
