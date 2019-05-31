@@ -3016,11 +3016,12 @@ form .nf-field-description {
     margin: 10px 0px; }
 
   #vacansies .vacansie {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: flex-start;
     padding: 15px; }
     #vacansies .vacansie .information {
-      padding-right: 20px; }
+      padding-right: 20px;
+      width: 74%; }
       #vacansies .vacansie .information .location-va, #vacansies .vacansie .information .hours {
         display: none; }
     #vacansies .vacansie .logo {

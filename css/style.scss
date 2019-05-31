@@ -3581,11 +3581,12 @@ form {
 
     #vacansies {
          .vacansie {
-            flex-wrap:nowrap;
+            flex-wrap:wrap;
             align-items: flex-start;
             padding: 15px;
             .information {
                 padding-right: 20px;
+                width: 74%;
                 .location-va, .hours {
                     display:none;
                 }
