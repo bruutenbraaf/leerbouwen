@@ -855,7 +855,8 @@ header {
     max-height: 50px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    opacity: 0.5; }
+    opacity: 0.5;
+    max-width: 100%; }
 
 #news {
   overflow-x: hidden;
@@ -1119,7 +1120,7 @@ header {
       letter-spacing: -0.02em;
       color: #4F4F4F; }
     #vacancies .vacancie-item .logo-small {
-      width: 52px;
+      min-width: 52px;
       height: 52px;
       background-size: 60%;
       background-position: center center;
@@ -2433,6 +2434,9 @@ main#cp {
         font-family: "avenir-medium", sans-serif; }
 
 @media screen and (min-width: 1560px) {
+  #socket .disclaimer ul li {
+    margin: 4px 0px; }
+
   .container {
     max-width: 70%; }
 
@@ -2893,6 +2897,24 @@ form .nf-field-description {
   padding: 5px 0px; }
 
 @media screen and (max-width: 768px) {
+  h2 {
+    margin-bottom: 20px; }
+
+  #featured_educations .more {
+    margin: 40px 0px 0px 0px; }
+
+  #services p {
+    padding-right: 15px; }
+
+  header {
+    padding: 0px 15px; }
+
+  #counter .count .counters .countitem {
+    line-height: 24px; }
+
+  #counter .count:before {
+    left: 15px; }
+
   header nav .main-nav {
     display: none; }
 
@@ -3019,6 +3041,22 @@ form .nf-field-description {
     .counters:last-child {
       border-bottom: 0px; }
 
+  #b-cta .container {
+    background: #03314c;
+    border-radius: 10px;
+    padding: 30px 0; }
+
+  #reviews .review-items {
+    width: 170vw; }
+
+  #partners {
+    overflow: hidden; }
+    #partners .partners {
+      width: 120vw; }
+
+  .news-items .inner {
+    padding-right: 15px; }
+
   #services .container:before {
     right: 15px; }
   #services .more .small-btn {
@@ -3026,7 +3064,7 @@ form .nf-field-description {
     padding-bottom: 10px;
     display: block; }
   #services .services-main .services-items {
-    width: 150%;
+    width: 160vw;
     margin-left: -15px; }
 
   #b-cta .container {

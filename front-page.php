@@ -301,7 +301,7 @@ get_header(); ?>
                                                         <?php if (have_rows('review')) : ?>
                                                             <?php while (have_rows('review')) : the_row(); ?>
                                                                 <div class="row">
-                                                                    <div class="col-8">
+                                                                    <div class="col-7">
                                                                         <div class="rating">
                                                                             <?php $rating = get_sub_field('ster_waardering');
                                                                             for ($i = 0; $i < $rating; $i++) { ?>
@@ -309,7 +309,7 @@ get_header(); ?>
                                                                             <?php } ?>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-4">
+                                                                    <div class="col-5">
                                                                         <span class="score">
                                                                             <?php the_sub_field('score'); ?> / 10
                                                                         </span>
@@ -360,14 +360,14 @@ get_header(); ?>
                                                 {
                                                     breakpoint: 768,
                                                     settings: {
-                                                        slidesToShow: 1,
+                                                        slidesToShow: 2,
                                                         slidesToScroll: 1
                                                     }
                                                 },
                                                 {
                                                     breakpoint: 480,
                                                     settings: {
-                                                        slidesToShow: 1,
+                                                        slidesToShow: 2,
                                                         slidesToScroll: 1
                                                     }
                                                 }
@@ -434,7 +434,7 @@ get_header(); ?>
                                 {
                                     breakpoint: 768,
                                     settings: {
-                                        slidesToShow: 1,
+                                        slidesToShow: 3,
                                         slidesToScroll: 1,
                                         autoPlay: true,
                                         arrows: false,

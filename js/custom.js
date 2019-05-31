@@ -90,7 +90,7 @@ jQuery(document).ready(function() {
           relativeOffsetY = absoluteOffsetY * 100 / h * 2 * ratio;
       
           el.css({
-            'transform': `rotateY(jQuery{relativeOffsetX}deg) scale(1.04) rotateX(jQuery{relativeOffsetY * -1}deg)`,
+            'transform': `rotateY(${relativeOffsetX}deg) scale(1.04) rotateX(${relativeOffsetY * -1}deg)`,
             'transition': `.1s`,
           });
       
