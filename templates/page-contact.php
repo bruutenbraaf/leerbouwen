@@ -96,7 +96,8 @@ get_header(); ?>
         </div>
     </section>
 </main>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwjs5yVQERqyM-MUa52sJa1a7jeBHiEes"></script>
+<?php $apikey = get_field('api_key', 'option'); ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $apikey ?>"></script>
 <script type="text/javascript">
     (function($) {
         function new_map($el) {
