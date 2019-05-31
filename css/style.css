@@ -2949,7 +2949,8 @@ form .nf-field-description {
           font-style: normal;
           font-weight: 800;
           font-size: 20px;
-          color: #03314C; }
+          color: #03314C;
+          white-space: nowrap; }
           .mobile-navigation ul li a:after {
             content: '.';
             color: #00A651; }

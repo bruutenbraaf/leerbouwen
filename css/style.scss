@@ -3513,6 +3513,7 @@ form {
                     font-weight: 800;
                     font-size: 20px;
                     color: $main;
+                    white-space: nowrap;
                     &:after {
                         content:'.';
                         color: $secondair;
