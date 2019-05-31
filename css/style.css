@@ -1093,54 +1093,106 @@ header {
     #vacancies .vacancies-items .inner .small-btn:hover:after {
       margin-left: 14px; }
   #vacancies .vacancie-item {
-    background: #FFFFFF;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
     position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     display: flex;
     align-items: center;
+    margin: 0px 0px 16px 0px;
+    flex-wrap: wrap;
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out; }
-    #vacancies .vacancie-item .company {
-      font-family: "Muli", sans-serif;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 16px;
-      color: #03314C;
-      display: block; }
-    #vacancies .vacancie-item .function {
-      font-family: "avenir", sans-serif;
-      font-size: 16px;
-      letter-spacing: -0.02em;
-      color: #4F4F4F; }
+    transform: translateZ(0); }
     #vacancies .vacancie-item .logo-small {
       min-width: 52px;
       height: 52px;
+      background-color: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 100%;
       background-size: 60%;
       background-position: center center;
       background-repeat: no-repeat;
-      background-color: #FAFAFA;
-      border: 1px solid #EEEEEE;
-      border-radius: 100%;
-      margin-right: 20px; }
-    #vacancies .vacancie-item:hover {
-      transform: scale(1.01); }
+      margin: 30px 20px; }
     #vacancies .vacancie-item:after {
       content: '';
       width: 16px;
-      height: 16px;
+      height: 15px;
       background-image: url(../img/arrow-b.svg);
       position: absolute;
       right: 20px;
       top: 50%;
-      -webkit-transform: translateX(-50%);
       transform: translateY(-50%); }
+    #vacancies .vacancie-item:hover:after {
+      right: 15px; }
+    #vacancies .vacancie-item .logo {
+      min-width: 52px;
+      height: 52px;
+      background-color: #FAFAFA;
+      border: 1px solid #EEEEEE;
+      border-radius: 100%;
+      background-size: 60%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 30px 20px; }
+    #vacancies .vacancie-item .image {
+      width: 100%;
+      height: 250px;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center; }
+      #vacancies .vacancie-item .image .featured {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background: #00A651;
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold; }
+    #vacancies .vacancie-item span {
+      margin-right: 15px;
+      color: #03314C;
+      opacity: 0.5; }
+    #vacancies .vacancie-item .duration:before {
+      content: '';
+      top: 3px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin-right: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/duration.svg); }
+    #vacancies .vacancie-item .cost:before {
+      content: '';
+      top: 3px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin-right: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/cost.svg); }
+    #vacancies .vacancie-item .location:before {
+      content: '';
+      top: 3px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin-right: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/location.svg); }
   #vacancies .items {
     margin-bottom: -210px; }
 
@@ -1372,7 +1424,7 @@ header {
     #vacansies .vacansie:hover:after {
       right: 15px; }
     #vacansies .vacansie .logo {
-      width: 52px;
+      min-width: 52px;
       height: 52px;
       background-color: #FAFAFA;
       border: 1px solid #EEEEEE;
@@ -1512,7 +1564,7 @@ header {
     #services-overview .service:hover:after {
       right: 15px; }
     #services-overview .service .smallimg {
-      width: 62px;
+      min-width: 62px;
       height: 76px;
       background-color: #FAFAFA;
       border: 1px solid #EEEEEE;
@@ -2219,7 +2271,9 @@ footer {
       transform: scale(18); }
 
 #sngl-vacansie {
-  padding: 60px 0px; }
+  padding-bottom: 60px; }
+  #sngl-vacansie .breadcrumbs {
+    padding-bottom: 60px; }
   #sngl-vacansie section {
     margin: 60px 0px; }
     #sngl-vacansie section:first-child {
@@ -2253,11 +2307,14 @@ footer {
       padding: 0;
       list-style: none; }
       #sngl-vacansie #profile ul li {
+        display: flex;
         color: #03314C;
         padding: 10px 10px 10px 0px;
         border-bottom: 1px solid rgba(3, 49, 76, 0.07); }
         #sngl-vacansie #profile ul li svg {
-          margin-right: 10px; }
+          margin-right: 10px;
+          top: 4px;
+          position: relative; }
         #sngl-vacansie #profile ul li:last-child {
           border-bottom: none; }
   #sngl-vacansie #offer ul {
@@ -2321,7 +2378,7 @@ footer {
           content: '.';
           color: #00A651; }
     #sngl-vacansie .companyinfo .image {
-      width: 52px;
+      min-width: 52px;
       height: 52px;
       background-color: #F8F8F8;
       background-position: center;
@@ -2405,35 +2462,33 @@ footer {
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
-main#cp {
-  padding: 60px 0px; }
-  main#cp .contact-p {
-    padding-top: 60px; }
-    main#cp .contact-p h2:after {
-      content: '.';
-      color: #00A651; }
-    main#cp .contact-p p {
-      font-family: "avenir-medium", sans-serif; }
-    main#cp .contact-p form p {
-      font-family: "avenir", sans-serif; }
-    main#cp .contact-p .company-info {
-      margin: 20px 0px;
-      width: 100%;
-      border-top: 1px solid #EDF1F2;
+main#cp .contact-p {
+  padding-top: 60px; }
+  main#cp .contact-p h2:after {
+    content: '.';
+    color: #00A651; }
+  main#cp .contact-p p {
+    font-family: "avenir-medium", sans-serif; }
+  main#cp .contact-p form p {
+    font-family: "avenir", sans-serif; }
+  main#cp .contact-p .company-info {
+    margin: 20px 0px;
+    width: 100%;
+    border-top: 1px solid #EDF1F2;
+    border-bottom: 1px solid #EDF1F2; }
+    main#cp .contact-p .company-info tr {
+      vertical-align: baseline;
       border-bottom: 1px solid #EDF1F2; }
-      main#cp .contact-p .company-info tr {
-        vertical-align: baseline;
-        border-bottom: 1px solid #EDF1F2; }
-      main#cp .contact-p .company-info td {
-        padding: 10px 20px;
-        color: #03314C; }
-        main#cp .contact-p .company-info td:first-child {
-          color: #03314C;
-          opacity: .5; }
-        main#cp .contact-p .company-info td p {
-          margin: 0px;
-          color: #03314C;
-          font-family: "avenir-medium", sans-serif; }
+    main#cp .contact-p .company-info td {
+      padding: 10px 20px;
+      color: #03314C; }
+      main#cp .contact-p .company-info td:first-child {
+        color: #03314C;
+        opacity: .5; }
+      main#cp .contact-p .company-info td p {
+        margin: 0px;
+        color: #03314C;
+        font-family: "avenir-medium", sans-serif; }
 
 @media screen and (min-width: 1560px) {
   #socket .disclaimer ul li {
@@ -2759,60 +2814,58 @@ main#cp {
     #static #reviews .review .inner .the-review {
       padding: 20px; }
 
-#page-sb {
+#page-sb h2:after {
+  content: '.';
+  color: #00A651; }
+#page-sb #c-cta {
   padding: 60px 0px; }
-  #page-sb h2:after {
-    content: '.';
-    color: #00A651; }
-  #page-sb #c-cta {
-    padding: 60px 0px; }
-    #page-sb #c-cta .inner {
-      text-align: center;
-      padding: 50px 15px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 10px;
-      overflow: hidden;
-      background-blend-mode: multiply;
-      position: relative;
-      z-index: 1; }
-      #page-sb #c-cta .inner h2 {
-        color: #fff;
-        padding: 15px 0px;
-        font-weight: 900;
-        font-size: 32px;
-        line-height: 40px;
-        color: #FFFFFF; }
-        #page-sb #c-cta .inner h2:after {
-          content: '.';
-          color: #00A651; }
-      #page-sb #c-cta .inner .subtitle {
-        color: #fff;
-        font-family: "avenir", sans-serif; }
-      #page-sb #c-cta .inner:after {
-        content: '';
-        background: #03314c;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        opacity: 0.95;
-        background-blend-mode: multiply; }
-  #page-sb .nf-field-description {
-    width: 100%;
-    -ms-flex-order: 999;
-    order: 9999;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: -0.02em;
-    color: #4F4F4F;
-    margin-top: 5px;
-    font-family: "avenir", sans-serif; }
-  #page-sb .nice-select .list {
-    width: 100%; }
+  #page-sb #c-cta .inner {
+    text-align: center;
+    padding: 50px 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+    background-blend-mode: multiply;
+    position: relative;
+    z-index: 1; }
+    #page-sb #c-cta .inner h2 {
+      color: #fff;
+      padding: 15px 0px;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 40px;
+      color: #FFFFFF; }
+      #page-sb #c-cta .inner h2:after {
+        content: '.';
+        color: #00A651; }
+    #page-sb #c-cta .inner .subtitle {
+      color: #fff;
+      font-family: "avenir", sans-serif; }
+    #page-sb #c-cta .inner:after {
+      content: '';
+      background: #03314c;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      opacity: 0.95;
+      background-blend-mode: multiply; }
+#page-sb .nf-field-description {
+  width: 100%;
+  -ms-flex-order: 999;
+  order: 9999;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  color: #4F4F4F;
+  margin-top: 5px;
+  font-family: "avenir", sans-serif; }
+#page-sb .nice-select .list {
+  width: 100%; }
 
 .nf-form-title h3 {
   font-style: normal;
@@ -2905,6 +2958,82 @@ form .nf-field-description {
   padding-bottom: 60px; }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-family: Muli,sans-serif;
+    font-size: 32px;
+    line-height: 38px; }
+
+  h2 {
+    margin-bottom: 20px; }
+
+  .contact-person h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px; }
+
+  #services-overview .service {
+    flex-wrap: nowrap; }
+
+  #services-overview .service {
+    align-items: flex-start;
+    padding: 15px; }
+    #services-overview .service .information {
+      padding-right: 30px; }
+
+  #services-overview .service .smallimg {
+    min-width: 62px;
+    margin: 0px 20px 0px 0px; }
+
+  #sngl-vacansie .companyinfo {
+    margin-bottom: 60px; }
+
+  #sngl-vacansie .companyinfo .heading h2 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0px; }
+
+  .btn {
+    width: 100%;
+    text-align: center; }
+
+  footer .widgets .widget-block {
+    flex-grow: 1;
+    margin: 0px; }
+
+  footer .f-contact {
+    display: flex;
+    align-items: center;
+    padding: 50px 0px 0 0px; }
+
+  .information-vacansie span {
+    width: 100%;
+    display: block;
+    margin: 10px 0px; }
+
+  #vacansies .vacansie {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 15px; }
+    #vacansies .vacansie .information {
+      padding-right: 20px; }
+      #vacansies .vacansie .information .location-va, #vacansies .vacansie .information .hours {
+        display: none; }
+    #vacansies .vacansie .logo {
+      margin: 0px;
+      margin-right: 15px; }
+
+  #vacancies .vacancie-item {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 15px; }
+    #vacancies .vacancie-item .location-va, #vacancies .vacancie-item .hours {
+      display: none; }
+    #vacancies .vacancie-item .logo-small {
+      margin: 0px;
+      margin-right: 15px; }
+
   #socket .disclaimer ul li {
     margin: 5px 0px;
     display: block; }
@@ -2935,13 +3064,6 @@ form .nf-field-description {
     width: 100%;
     display: block;
     margin: 10px 0px; }
-
-  h1 {
-    font-style: normal;
-    font-weight: 800;
-    font-family: Muli,sans-serif;
-    font-size: 32px;
-    line-height: 38px; }
 
   .thereviews {
     width: 170vw; }
@@ -2986,9 +3108,6 @@ form .nf-field-description {
     margin-left: 15px;
     border-radius: 0px 0px 0px 10px;
     z-index: 2; }
-
-  h2 {
-    margin-bottom: 20px; }
 
   .archive-header .container .row {
     padding: 30px 0px 10px 0px; }
@@ -3211,7 +3330,7 @@ form .nf-field-description {
   #vacancies .vac-row:before {
     right: 15px; }
   #vacancies .vacancie-item .info {
-    padding-right: 15px; }
+    padding-right: 20px; }
   #vacancies .vacancies-items {
     order: 1; }
     #vacancies .vacancies-items .inner p {

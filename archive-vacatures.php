@@ -55,6 +55,7 @@ get_header(); ?>
                                 </div>
                                 <div class="information">
                                     <h4><?php the_title(); ?></h4>
+                                    <span class="function"><?php the_sub_field('functie'); ?></span>
                                     <?php if (have_rows('informatie_vacature')) : ?>
                                         <?php while (have_rows('informatie_vacature')) : the_row(); ?>
                                             <?php if (get_sub_field('bedrijfsnaam')) { ?>
@@ -138,31 +139,7 @@ get_header(); ?>
                     <?php endif; ?>
                 </div>
                 <div class="col-md-5 side">
-                    <?php if (have_rows('vacature_hulp_nodig_widget', 'option')) : ?>
-                        <?php while (have_rows('vacature_hulp_nodig_widget', 'option')) : the_row(); ?>
-                            <?php if (get_sub_field('toon_de_widget') == 1) { ?>
-                                <div class="help-needed">
-                                    <div class="heading">
-                                        <?php $werknemerwidget = get_sub_field('opleiding_afbeelding_werknemer'); ?>
-                                        <?php if ($werknemerwidget) { ?>
-                                            <div class="image" style="background-image:url(<?php if ($werknemerwidget) { ?><?php echo $werknemerwidget['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
-                                            </div>
-                                        <?php } ?>
-                                        <h3><?php the_sub_field('titel'); ?></h3>
-                                    </div>
-                                    <?php the_sub_field('tekst'); ?>
-                                    <?php if (have_rows('knoppen')) : ?>
-                                        <?php while (have_rows('knoppen')) : the_row(); ?>
-                                            <?php $knop = get_sub_field('knop'); ?>
-                                            <?php if ($knop) { ?>
-                                                <a class="btn<?php if (get_sub_field('secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
-                                            <?php } ?>
-                                        <?php endwhile; ?>
-                                    <?php endif; ?>
-                                </div>
-                            <?php } ?>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
+                    <?php get_template_part('template-parts/widget', 'helparchive'); ?>
                 </div>
             </div>
         </div>

@@ -46,6 +46,106 @@ $content: 'avenir', sans-serif;
 $contentfat: 'avenir-medium', sans-serif;
 $subs: 'avenir-medium', sans-serif;
 
+
+
+$h1: 42px;
+$h2: 32px;
+$h3: 28px;
+$h4: 18px;
+
+// Styles
+
+$borderradius: 10px;
+
+// Paddings
+$section: 30px 0px;
+$sectionbig: 60px 0px;
+$partners: 50px 0 80px;
+
+// Nav 
+
+$menu: 'Muli', sans-serif;
+
+$boxshadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+// Mixins 
+
+@mixin before {
+    content:'';
+    top: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin small-btn {
+    .small-btn {
+        position: absolute;
+        right: 15px;
+        bottom: 0px;
+        margin-bottom: 1rem;
+        font-family: Muli,sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #03314c;
+        &:after {
+            content:'';
+            display:inline-block;
+            width:14px;
+            height: 13px;
+            margin-left: 10px;
+            background-image:url(../img/arrow.svg);
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+        &:hover:after{
+            margin-left: 14px;
+        }
+    }
+}
+
+@mixin small-btn-normal-left {
+    .small-btn {
+        position: relative;
+        bottom: 0px;
+        margin-bottom: 1rem;
+        font-family: Muli,sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #03314c;
+        &:after {
+            content:'';
+            display:inline-block;
+            width:14px;
+            height: 13px;
+            margin-left: 10px;
+            background-image:url(../img/arrow.svg);
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+        &:hover:after{
+            margin-left: 14px;
+        }
+    }
+}
+
 @mixin fontstyle {
     font-style: normal;
     font-weight: 800;
@@ -72,25 +172,29 @@ $subs: 'avenir-medium', sans-serif;
     }
 }
 
-$h1: 42px;
-$h2: 32px;
-$h3: 28px;
-$h4: 18px;
+@mixin inner {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background: #fff;
+    padding: 15px;
+    margin: 15px;
+    border-radius: $borderradius;
+    z-index: 1;
+    border:1px solid #fff;
+}
 
-// Styles
-
-$borderradius: 10px;
-
-// Paddings
-$section: 30px 0px;
-$sectionbig: 60px 0px;
-$partners: 50px 0 80px;
-
-// Nav 
-
-$menu: 'Muli', sans-serif;
-
-$boxshadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+@mixin span__after {
+    content:'';
+    position: relative;
+    display: inline-block;
+    height: 16px;
+    width: 1px;
+    background-image:url(../img/seperator.svg);
+    margin:0px 6px;
+    top: 2px;
+}
 
 // BODY & MAIN
 
@@ -533,62 +637,6 @@ header {
 }
 
 // Populaire opleidingen
-
-@mixin small-btn {
-    .small-btn {
-        position: absolute;
-        right: 15px;
-        bottom: 0px;
-        margin-bottom: 1rem;
-        font-family: Muli,sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
-        color: #03314c;
-        &:after {
-            content:'';
-            display:inline-block;
-            width:14px;
-            height: 13px;
-            margin-left: 10px;
-            background-image:url(../img/arrow.svg);
-            -webkit-transition: all .2s ease-in-out;
-            -moz-transition: all .2s ease-in-out;
-            -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-        }
-        &:hover {
-            text-decoration: none;
-        }
-        &:hover:after{
-            margin-left: 14px;
-        }
-    }
-}
-
-@mixin inner {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    background: #fff;
-    padding: 15px;
-    margin: 15px;
-    border-radius: $borderradius;
-    z-index: 1;
-    border:1px solid #fff;
-}
-
-@mixin span__after {
-    content:'';
-    position: relative;
-    display: inline-block;
-    height: 16px;
-    width: 1px;
-    background-image:url(../img/seperator.svg);
-    margin:0px 6px;
-    top: 2px;
-}
 
 #featured_educations {
     padding: $sectionbig;
@@ -1113,37 +1161,6 @@ header {
     }
 }
 
-@mixin small-btn-normal-left {
-    .small-btn {
-        position: relative;
-        bottom: 0px;
-        margin-bottom: 1rem;
-        font-family: Muli,sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
-        color: #03314c;
-        &:after {
-            content:'';
-            display:inline-block;
-            width:14px;
-            height: 13px;
-            margin-left: 10px;
-            background-image:url(../img/arrow.svg);
-            -webkit-transition: all .2s ease-in-out;
-            -moz-transition: all .2s ease-in-out;
-            -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-        }
-        &:hover {
-            text-decoration: none;
-        }
-        &:hover:after{
-            margin-left: 14px;
-        }
-    }
-}
-
 #news {
     overflow-x: hidden;
     padding: $section;
@@ -1316,58 +1333,94 @@ header {
         }
     }
     .vacancie-item {
-        background: #FFFFFF;
-        box-shadow: $boxshadow;
-        border-radius: 10px;
-        margin-bottom:20px;
-        padding: 20px;
         position: relative;
-        display: flex;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        display:flex;
         align-items: center;
+        margin: 0px 0px 16px 0px;
+        flex-wrap: wrap;
         backface-visibility: hidden;
         -webkit-font-smoothing: subpixel-antialiased;
-        -webkit-transition: all .3s ease-in-out;
-        -moz-transition: all .3s ease-in-out;
-        -o-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
-        .company {
-            font-family: $names;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 16px;
-            color: $main;
-            display: block;
-        }
-        .function {
-            font-family: $content;
-            font-size: 16px;
-            letter-spacing: -0.02em;
-            color: $paragraph;
-        }
+        transform: translateZ(0);
         .logo-small {
-            min-width:52px;
+            min-width: 52px;
             height: 52px;
+            background-color: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 100%;
             background-size: 60%;
             background-position: center center;
             background-repeat: no-repeat;
-            background-color: #FAFAFA;
-            border: 1px solid #EEEEEE;
-            border-radius: 100%;
-            margin-right:20px;
-        }
-        &:hover {
-            transform: scale(1.01);
+            margin: 30px 20px;
         }
         &:after {
             content: '';
             width: 16px;
-            height: 16px;
+            height: 15px;
             background-image: url(../img/arrow-b.svg);
             position: absolute;
             right: 20px;
             top: 50%;
-            -webkit-transform: translateX(-50%);
             transform: translateY(-50%);
+        }
+        &:hover:after {
+            right:15px;
+        }
+        .logo {
+            min-width: 52px;
+            height: 52px;
+            background-color: #FAFAFA;
+            border: 1px solid #EEEEEE;
+            border-radius: 100%;
+            background-size: 60%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin:30px 20px;
+        }
+        .image {
+            width:100%;
+            height: 250px;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            .featured {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                background: $secondair;
+                padding: 8px 10px;
+                border-radius: 8px;
+                font-size: 14px;
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+        span {
+            margin-right: 15px;
+            color: $main;
+            opacity: 0.5;
+        }
+        .duration {
+            &:before {
+                @include before;
+                background-image:url(../img/duration.svg);
+            }
+        }
+        .cost {
+            &:before {
+                @include before;
+                background-image:url(../img/cost.svg);
+            }
+        }
+        .location {
+            &:before {
+                @include before;
+                background-image:url(../img/location.svg);
+            }
         }
     }
     .items {
@@ -1518,19 +1571,6 @@ header {
 
 // Educations overview
 
-@mixin before {
-    content:'';
-    top: 3px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    margin-right: 8px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
 #educations {
     padding: 60px 0px;
     .education {
@@ -1624,7 +1664,7 @@ header {
 
 #vacansies {
     padding: 60px 0px;
-    .vacansie {
+    .vacansie{
         position: relative;
         overflow: hidden;
         background: #fff;
@@ -1651,7 +1691,7 @@ header {
             right:15px;
         }
         .logo {
-            width: 52px;
+            min-width: 52px;
             height: 52px;
             background-color: #FAFAFA;
             border: 1px solid #EEEEEE;
@@ -1799,7 +1839,7 @@ header {
             right:15px;
         }
         .smallimg {
-            width: 62px;
+            min-width: 62px;
             height: 76px;
             background-color: #FAFAFA;
             border: 1px solid #EEEEEE;
@@ -2597,7 +2637,10 @@ footer {
 }
 
 #sngl-vacansie {
-    padding: 60px 0px;
+    padding-bottom: 60px;
+    .breadcrumbs {
+        padding-bottom: 60px;
+    }
     section {
         margin: 60px 0px;
         &:first-child {
@@ -2639,11 +2682,14 @@ footer {
             padding:0;
             list-style: none;
             li {
+                display: flex;
                 color: $main;
                 padding: 10px 10px 10px 0px;
                 border-bottom: 1px solid rgba(3, 49, 76, 0.07);
                 svg {
                     margin-right: 10px;
+                    top: 4px;
+                    position: relative;
                 }
                 &:last-child {
                     border-bottom:none;
@@ -2730,7 +2776,7 @@ footer {
             }
         }
         .image {
-            width:52px;
+            min-width:52px;
             height: 52px;
             background-color: $creme;
             background-position: center;
@@ -2840,7 +2886,6 @@ footer {
 }
 
 main#cp {
-    padding: 60px 0px;
     .contact-p {
         padding-top: 60px;
         h2 {
@@ -3284,7 +3329,6 @@ main#cp {
 // Static page with sidebar
 
 #page-sb {
-    padding: 60px 0px;
     h2 {
         &:after {
             content:'.';
@@ -3465,6 +3509,102 @@ form {
 }
 
 @media screen and (max-width: 768px) {
+    h1 {
+        font-style: normal;
+        font-weight: 800;
+        font-family: Muli,sans-serif;
+        font-size: 32px;
+        line-height: 38px;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .contact-person {
+        h2 {
+            margin:0px;
+            padding:0px;
+            font-size: 20px;
+        }
+    }
+
+    #services-overview .service {
+        flex-wrap:nowrap;
+    }
+
+    #services-overview .service {
+        align-items: flex-start;
+        padding: 15px;
+        .information {
+            padding-right: 30px;
+        }
+    }
+
+    #services-overview .service .smallimg {
+        min-width: 62px;
+        margin: 0px 20px 0px 0px;
+    }
+
+    #sngl-vacansie .companyinfo {
+        margin-bottom: 60px;
+    }
+
+    #sngl-vacansie .companyinfo .heading h2 {
+        color: #fff;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    .btn {
+        width:100%;
+        text-align: center;
+    }
+    footer .widgets .widget-block {
+        flex-grow: 1;
+        margin: 0px;
+    }
+
+    footer .f-contact {
+        display: flex;
+        align-items: center;
+        padding: 50px 0px 0 0px;
+    }
+    .information-vacansie {
+        span {
+            width:100%;
+            display:block;
+            margin: 10px 0px;
+        }
+    }
+
+    #vacansies {
+         .vacansie {
+            flex-wrap:nowrap;
+            align-items: flex-start;
+            padding: 15px;
+            .information {
+                padding-right: 20px;
+                .location-va, .hours {
+                    display:none;
+                }
+            }
+            .logo {
+                margin: 0px;
+                margin-right: 15px;
+            }
+        }
+    }
+    #vacancies .vacancie-item {
+        flex-wrap:nowrap;
+        align-items: flex-start;
+        padding: 15px;
+        .location-va, .hours {
+            display:none;
+        }
+        .logo-small {
+            margin: 0px;
+            margin-right: 15px;
+        }
+    }
     #socket .disclaimer ul li {
         margin: 5px 0px;
         display: block;
@@ -3501,13 +3641,6 @@ form {
         width:100%;
         display:block;
         margin: 10px 0px;
-    }
-    h1 {
-        font-style: normal;
-        font-weight: 800;
-        font-family: Muli,sans-serif;
-        font-size: 32px;
-        line-height: 38px;
     }
     .thereviews {
         width: 170vw;
@@ -3554,9 +3687,6 @@ form {
         margin-left: 15px;
         border-radius: 0px 0px 0px 10px;
         z-index: 2;
-    }
-    h2 {
-        margin-bottom: 20px;
     }
     .archive-header .container .row {
         padding: 30px 0px 10px 0px;
@@ -3838,7 +3968,7 @@ form {
         }
         .vacancie-item {
             .info {
-                padding-right: 15px;
+                padding-right: 20px;
             }
         }
         .vacancies-items {
