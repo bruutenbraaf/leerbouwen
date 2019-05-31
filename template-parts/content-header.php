@@ -3,7 +3,7 @@
     <div class="cont-header">
         <div class="container">
             <div class="row">
-                <div class="offset-md-1 col-md-9">
+                <div class="offset-md-1 col-md-9 col-11 page-heading">
                     <h1><?php the_title();?></h1>
                     <?php if ( have_rows( 'header_static' ) ) : ?>
                         <?php while ( have_rows( 'header_static' ) ) : the_row(); ?>

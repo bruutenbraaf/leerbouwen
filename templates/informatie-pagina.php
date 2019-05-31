@@ -12,7 +12,7 @@ get_header(); ?>
                     <div class="archive-header">
                         <div class="container">
                             <div class="row">
-                                <div class="offset-md-1 col-md-9">
+                                <div class="offset-md-1 col-md-9 col-11 page-heading">
                                     <h1><?php the_title(); ?></h1>
                                     <?php if (get_sub_field('content_header')) { ?>
                                         <p><?php the_sub_field('content_header'); ?></p>
@@ -231,7 +231,7 @@ get_header(); ?>
                             </div>
                             <?php $selecteer_personeeel = get_sub_field('selecteer_personeeel'); ?>
                             <?php if ($selecteer_personeeel) : ?>
-                                <div class="col-md-6 offset-md-1">
+                                <div class="col-md-6 offset-md-1 team">
                                     <div class="row">
                                         <?php $i = 0; ?>
                                         <?php foreach ($selecteer_personeeel as $post) :  ?>

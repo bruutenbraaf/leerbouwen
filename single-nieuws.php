@@ -1,49 +1,48 @@
 <?php
 get_header(); ?>
-
-<div class="single-header">
-    <div class="container">
-        <div class="row">
-            <div class="offset-md-1 col-md-9">
-                <h1><?php the_title(); ?></h1>
-                <div class="information-news">
-                    <div class="author">
-                        <?php if (have_rows('informatie_nieuws')) { ?>
-                            <?php while (have_rows('informatie_nieuws')) : the_row(); ?>
-                                <?php $auteur_afbeelding = get_sub_field('auteur_afbeelding'); ?>
-                                <?php if ($auteur_afbeelding) { ?>
-                                    <img src="<?php echo $auteur_afbeelding['sizes']['vacaturesmall']; ?>" alt="<?php echo $auteur_afbeelding['alt']; ?>" />
-                                <?php } else { ?>
-                                    <?php $author = get_the_author(); ?>
-                                    <?php echo mb_strimwidth($author, 0, 1, ''); ?>
-                                <?php } ?>
-                            <?php endwhile; ?>
-                        <?php } ?>
-                    </div>
-                    <div class="athdat">
-                        <span class="author-name"><?php $author = get_the_author();
-                                                    echo $author ?></span>
-                        <span class="date"><?php the_time('j-n-Y'); ?></span>
+<main id="sngl-news">
+    <div class="single-header">
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-1 col-md-9 col-11 page-heading">
+                    <h1><?php the_title(); ?></h1>
+                    <div class="information-news">
+                        <div class="author">
+                            <?php if (have_rows('informatie_nieuws')) { ?>
+                                <?php while (have_rows('informatie_nieuws')) : the_row(); ?>
+                                    <?php $auteur_afbeelding = get_sub_field('auteur_afbeelding'); ?>
+                                    <?php if ($auteur_afbeelding) { ?>
+                                        <img src="<?php echo $auteur_afbeelding['sizes']['vacaturesmall']; ?>" alt="<?php echo $auteur_afbeelding['alt']; ?>" />
+                                    <?php } else { ?>
+                                        <?php $author = get_the_author(); ?>
+                                        <?php echo mb_strimwidth($author, 0, 1, ''); ?>
+                                    <?php } ?>
+                                <?php endwhile; ?>
+                            <?php } ?>
+                        </div>
+                        <div class="athdat">
+                            <span class="author-name">
+                                <?php $author = get_the_author();
+                                echo $author ?>
+                            </span>
+                            <span class="date"><?php the_time('j-n-Y'); ?></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="breadcrumbs">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <?php if (function_exists('yoast_breadcrumb')) {
-                    yoast_breadcrumb('');
-                } ?>
+    <div class="breadcrumbs offset-btm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('');
+                    } ?>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<main id="sngl-news">
-
     <?php if (have_rows('sections')) : ?>
         <?php while (have_rows('sections')) : the_row(); ?>
             <?php if (get_row_layout() == 'intro_text') : ?>
@@ -67,7 +66,7 @@ get_header(); ?>
                                     <?php } ?>
                                 <?php endwhile; ?>
                             <?php else : ?>
-                                <?php 
+                                <?php
                                 ?>
                             <?php endif; ?>
                         </div>
@@ -89,7 +88,7 @@ get_header(); ?>
                                                 <?php } ?>
                                             <?php endwhile; ?>
                                         <?php else : ?>
-                                            <?php 
+                                            <?php
                                             ?>
                                         <?php endif; ?>
                                     <?php endwhile; ?>

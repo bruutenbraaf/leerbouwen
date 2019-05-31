@@ -856,7 +856,7 @@ header {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     opacity: 0.5;
-    max-width: 100%; }
+    max-width: 90%; }
 
 #news {
   overflow-x: hidden;
@@ -1275,7 +1275,7 @@ header {
     #educations .education:hover:after {
       right: 15px; }
     #educations .education .logo {
-      width: 52px;
+      min-width: 52px;
       height: 52px;
       background-color: #FAFAFA;
       border: 1px solid #EEEEEE;
@@ -1454,7 +1454,7 @@ header {
     align-items: center;
     margin-bottom: 16px; }
     .help-needed .heading .image {
-      width: 52px;
+      min-width: 52px;
       height: 52px;
       border-radius: 100%;
       background-color: #FAFAFA;
@@ -2407,31 +2407,33 @@ footer {
 
 main#cp {
   padding: 60px 0px; }
-  main#cp .contact-p h2:after {
-    content: '.';
-    color: #00A651; }
-  main#cp .contact-p p {
-    font-family: "avenir-medium", sans-serif; }
-  main#cp .contact-p form p {
-    font-family: "avenir", sans-serif; }
-  main#cp .contact-p .company-info {
-    margin: 20px 0px;
-    width: 100%;
-    border-top: 1px solid #EDF1F2;
-    border-bottom: 1px solid #EDF1F2; }
-    main#cp .contact-p .company-info tr {
-      vertical-align: baseline;
+  main#cp .contact-p {
+    padding-top: 60px; }
+    main#cp .contact-p h2:after {
+      content: '.';
+      color: #00A651; }
+    main#cp .contact-p p {
+      font-family: "avenir-medium", sans-serif; }
+    main#cp .contact-p form p {
+      font-family: "avenir", sans-serif; }
+    main#cp .contact-p .company-info {
+      margin: 20px 0px;
+      width: 100%;
+      border-top: 1px solid #EDF1F2;
       border-bottom: 1px solid #EDF1F2; }
-    main#cp .contact-p .company-info td {
-      padding: 10px 20px;
-      color: #03314C; }
-      main#cp .contact-p .company-info td:first-child {
-        color: #03314C;
-        opacity: .5; }
-      main#cp .contact-p .company-info td p {
-        margin: 0px;
-        color: #03314C;
-        font-family: "avenir-medium", sans-serif; }
+      main#cp .contact-p .company-info tr {
+        vertical-align: baseline;
+        border-bottom: 1px solid #EDF1F2; }
+      main#cp .contact-p .company-info td {
+        padding: 10px 20px;
+        color: #03314C; }
+        main#cp .contact-p .company-info td:first-child {
+          color: #03314C;
+          opacity: .5; }
+        main#cp .contact-p .company-info td p {
+          margin: 0px;
+          color: #03314C;
+          font-family: "avenir-medium", sans-serif; }
 
 @media screen and (min-width: 1560px) {
   #socket .disclaimer ul li {
@@ -2896,12 +2898,107 @@ form .nf-field-description {
   order: 999;
   padding: 5px 0px; }
 
+.main-container {
+  padding-top: 60px; }
+
+.offset-btm {
+  padding-bottom: 60px; }
+
 @media screen and (max-width: 768px) {
+  #socket .disclaimer ul li {
+    margin: 5px 0px;
+    display: block; }
+
+  #educations .education span {
+    display: none; }
+
+  #educations .education {
+    flex-wrap: nowrap; }
+    #educations .education .information {
+      padding-right: 50px; }
+
+  #educations .featured {
+    flex-wrap: wrap; }
+
+  .single-header .in-btns {
+    display: flex;
+    flex-wrap: wrap; }
+    .single-header .in-btns .btn {
+      order: 3;
+      width: 100%; }
+    .single-header .in-btns .brochure-btn {
+      order: 1; }
+    .single-header .in-btns a {
+      margin-bottom: 15px; }
+
+  .single-header .container .information span {
+    width: 100%;
+    display: block;
+    margin: 10px 0px; }
+
+  h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-family: Muli,sans-serif;
+    font-size: 32px;
+    line-height: 38px; }
+
+  .thereviews {
+    width: 170vw; }
+    .thereviews .review {
+      margin: 15px;
+      padding: 0px; }
+    .thereviews .c-review {
+      padding-left: 15px; }
+
+  #static #imgcarousel .the--carousel {
+    margin-right: 15px; }
+
+  #static #full {
+    padding: 30px 0px; }
+
+  #static h2 {
+    padding-bottom: 0px; }
+
+  #static #bigimg {
+    margin-top: -10px; }
+
+  .page-heading {
+    padding: 30px 15px; }
+
+  .team {
+    margin-top: 30px; }
+
+  #info_block {
+    margin-top: -10px; }
+
+  .contact-head {
+    display: none; }
+
+  .acf-map {
+    width: 100vw;
+    opacity: 1; }
+
+  .btn {
+    margin-bottom: 15px; }
+
+  .breadcrumbs {
+    margin-left: 15px;
+    border-radius: 0px 0px 0px 10px;
+    z-index: 2; }
+
   h2 {
     margin-bottom: 20px; }
 
+  .archive-header .container .row {
+    padding: 30px 0px 10px 0px; }
+
   #featured_educations .more {
-    margin: 40px 0px 0px 0px; }
+    margin: 40px 0 0 0;
+    order: 999; }
+
+  #full [class*=col-md-] {
+    padding-bottom: 30px; }
 
   #services p {
     padding-right: 15px; }
@@ -2935,14 +3032,14 @@ form .nf-field-description {
     padding: 130px 0px;
     background: rgba(255, 255, 255, 0.94);
     display: none; }
+    .mobile-navigation .container {
+      padding-bottom: 60px; }
     .mobile-navigation ul {
       margin: 0;
       padding: 0px;
       list-style: none; }
       .mobile-navigation ul li {
         border-bottom: 1px solid #e0e0e0;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
         position: relative; }
         .mobile-navigation ul li a {
           font-family: "Muli", sans-serif;
@@ -2950,10 +3047,16 @@ form .nf-field-description {
           font-weight: 800;
           font-size: 20px;
           color: #03314C;
-          white-space: nowrap; }
+          white-space: nowrap;
+          padding: 14px 0px;
+          width: 100%;
+          width: 100%;
+          display: block; }
           .mobile-navigation ul li a:after {
             content: '.';
             color: #00A651; }
+          .mobile-navigation ul li a:hover {
+            text-decoration: none; }
         .mobile-navigation ul li:after {
           content: '';
           right: 15px;
@@ -2962,11 +3065,18 @@ form .nf-field-description {
           height: 12px;
           transform: translateY(-50%);
           position: absolute;
-          background-image: url(../img/arrow-mob.svg); }
+          background-image: url(../img/arrow-mob.svg);
+          pointer-events: none; }
     .mobile-navigation .mt-btns {
-      position: absolute;
+      position: fixed;
+      left: -100vh;
+      width: 100%;
       bottom: 0px;
-      width: 100%; }
+      opacity: 0;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
       .mobile-navigation .mt-btns ul li {
         border: 0px;
         padding: 0;
@@ -2993,6 +3103,10 @@ form .nf-field-description {
 
   .blurred {
     filter: blur(4px); }
+
+  .displayed {
+    left: 0px !important;
+    opacity: 1 !important; }
 
   .first {
     transform: rotate(45deg);

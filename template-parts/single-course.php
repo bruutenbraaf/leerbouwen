@@ -6,7 +6,7 @@
 <div class="single-header">
     <div class="container">
         <div class="row">
-            <div class="offset-md-1 col-md-9">
+            <div class="offset-md-1 col-md-9 col-11 page-heading">
                 <h1><?php the_title(); ?></h1>
                 <div class="information">
                     <?php if (get_field('locatie')) { ?>
