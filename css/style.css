@@ -547,7 +547,8 @@ header {
       transform: translateY(-30px); }
   #services .services-main .services-items {
     width: 130%;
-    margin-left: -15px; }
+    margin-left: -15px;
+    overflow: hidden; }
     #services .services-main .services-items .item {
       margin: 0px 15px;
       height: 385px;
