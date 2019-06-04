@@ -74,7 +74,7 @@ get_header(); ?>
                                 <h2 class="section-title"><?php the_sub_field('titel'); ?></h2>
                                 <?php the_sub_field('tekstueel'); ?>
                             </div>
-                            <div class="col-md-6 more">
+                            <div class="col-md-6 more" data-scroll >
                                 <?php $knop = get_sub_field('knop'); ?>
                                 <?php if ($knop) { ?>
                                     <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
