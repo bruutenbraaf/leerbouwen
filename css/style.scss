@@ -2937,6 +2937,7 @@ main#cp {
     position:fixed;
     right: 4vw;
     bottom: -130px;
+    z-index:999;
     transform-origin: top;
     -webkit-transition: all .4s ease-in-out;
         -moz-transition: all .4s ease-in-out;
