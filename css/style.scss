@@ -65,8 +65,19 @@ $partners: 50px 0 80px;
 // Nav 
 
 $menu: 'Muli', sans-serif;
-
 $boxshadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+// List items 
+ul {
+    li {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: -.02em;
+        color: $paragraph;
+    }
+}
 
 // Mixins 
 

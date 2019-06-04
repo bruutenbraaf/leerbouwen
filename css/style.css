@@ -11,6 +11,14 @@
   font-family: 'avenir-medium', sans-serif;
   src: url("../fonts/AvenirNext-Medium");
   src: url("../fonts/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Medium.woff2") format("woff2"), url("../fonts/AvenirNext-Medium.woff") format("woff"), url("../fonts/AvenirNext-Medium.ttf") format("truetype"); }
+ul li {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -.02em;
+  color: #4F4F4F; }
+
 * {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
