@@ -445,7 +445,7 @@ get_header(); ?>
                     });
                 </script>
             <?php elseif (get_row_layout() == 'nieuws_berichten') : ?>
-                <section id="news">
+                <section id="news" data-scroll >
                     <div class="container">
                         <div class="row">
                             <?php $knop = get_sub_field('knop'); ?>
