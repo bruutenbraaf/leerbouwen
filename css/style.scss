@@ -3527,6 +3527,24 @@ main#cp {
             cursor: pointer;
         }
     }
+
+    input[type=checkbox] {
+        max-width: 10px;
+        max-height: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+        top: 3px;
+    }
+    .nf-checked {
+        background-color: $main;
+        background-image: url(../img/checked.svg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 0px;
+    }
+    
     .pikaday__container, .nice-select {
         position: relative;
         &:after {

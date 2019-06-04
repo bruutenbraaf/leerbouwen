@@ -2975,6 +2975,20 @@ main#cp .contact-p {
   .nf-form-layout input[type=button]:hover {
     background: #008d45;
     cursor: pointer; }
+.nf-form-layout input[type=checkbox] {
+  max-width: 10px;
+  max-height: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  top: 3px; }
+.nf-form-layout .nf-checked {
+  background-color: #03314C;
+  background-image: url(../img/checked.svg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0px; }
 .nf-form-layout .pikaday__container, .nf-form-layout .nice-select {
   position: relative; }
   .nf-form-layout .pikaday__container:after, .nf-form-layout .nice-select:after {
