@@ -295,7 +295,7 @@ get_header(); ?>
                                     <div class="review-items">
                                         <?php foreach ($selected_reviews as $post) :  ?>
                                             <?php setup_postdata($post); ?>
-                                            <div class="review"  data-scroll>
+                                            <div class="review">
                                                 <div class="inner">
                                                     <div class="information">
                                                         <?php if (have_rows('review')) : ?>
