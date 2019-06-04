@@ -211,6 +211,7 @@ $boxshadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     -o-transition: all .4s ease-in;
     transition: all .4s ease-in;
     opacity: 0;
+    transform: translateY(30%);
 }
       
 .sectionv {
@@ -219,6 +220,7 @@ $boxshadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     -o-transition: all .4s ease-in;
     transition: all .4s ease-in;
     opacity: 1;
+    transform: translateY(0%);
 }
 
 // HEADINGS

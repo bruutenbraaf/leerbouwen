@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
       y: 120
     },
     addHeight: false,
-    once: false
+    once: true
   }, document.body, window);
 });
 

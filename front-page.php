@@ -156,7 +156,7 @@ get_header(); ?>
                 </section>
 
             <?php elseif (get_row_layout() == 'diensten') : ?>
-                <section id="services"  >
+                <section id="services" data-scroll>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
@@ -177,13 +177,13 @@ get_header(); ?>
                                     <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                         <?php $i++; ?>
                                     <?php endforeach; ?>
-                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>" data-scroll>
+                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>" data-scroll >
                                         <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                             <?php setup_postdata($post); ?>
                                             <?php if (have_rows('informatie_dienst')) : ?>
                                                 <?php while (have_rows('informatie_dienst')) : the_row(); ?>
                                                     <?php $dienst_afbeelding = get_sub_field('dienst_afbeelding'); ?>
-                                                    <div class="item" <?php if ($dienst_afbeelding) { ?>style="background-image:url(<?php echo $dienst_afbeelding['sizes']['serviceshome']; ?>);" <?php } ?>>
+                                                    <div class="item"<?php if ($dienst_afbeelding) { ?>style="background-image:url(<?php echo $dienst_afbeelding['sizes']['serviceshome']; ?>);" <?php } ?>>
                                                         <div class="inner">
                                                             <h2><?php the_title(); ?></h2>
                                                             <p class="description"><?php the_sub_field('korte_omschrijving'); ?></p>
@@ -283,7 +283,7 @@ get_header(); ?>
                     </div>
                 </section>
             <?php elseif (get_row_layout() == 'reviews') : ?>
-                <section id="reviews">
+                <section id="reviews" data-scroll>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -295,7 +295,7 @@ get_header(); ?>
                                     <div class="review-items">
                                         <?php foreach ($selected_reviews as $post) :  ?>
                                             <?php setup_postdata($post); ?>
-                                            <div class="review" data-scroll>
+                                            <div class="review"  data-scroll>
                                                 <div class="inner">
                                                     <div class="information">
                                                         <?php if (have_rows('review')) : ?>
@@ -540,7 +540,7 @@ get_header(); ?>
                 </script>
             <?php elseif (get_row_layout() == 'vacatures') : ?>
                 <?php $selected_vacatures = get_sub_field('selected_vacatures'); ?><?php if ($selected_vacatures) : ?><?php $items = 0; ?><?php foreach ($selected_vacatures as $post) :  ?><?php $items++ ?><?php endforeach; ?>
-                    <section id="vacancies" class="<?php if ($items > 3) { ?>has_four<?php } ?>"  >
+                    <section id="vacancies" data-scroll class="<?php if ($items > 3) { ?>has_four<?php } ?>"  >
                         <?php wp_reset_postdata(); ?>
                     <?php endif; ?>
                     <div class="container">
