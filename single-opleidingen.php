@@ -28,8 +28,7 @@ get_header(); ?>
                                 <?php $afbeelding_geen_logo = get_field('afbeelding_geen_logo', 'option'); ?>
                                 <div class="item"style="background-image:url(<?php if ($upload_featured_afbeelding) { ?><?php echo $upload_featured_afbeelding['sizes']['serviceshome']; ?>); <?php } else {  ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?> <?php $afbeelding_geen_logo = get_field('afbeelding_geen_logo', 'option'); ?>); background-size: 80%; background-color: white;<?php } ?>">
                                     <div class="inner">
-                                        <h2><?php the_title(); ?></h2>
-                                        <p class="description"><?php the_sub_field('korte_omschrijving'); ?></p>
+                                        <h2 class="title-intress"><?php the_title(); ?></h2>
                                     </div>
                                     <a class="the-link" href="<?php the_permalink(); ?>"></a>
                                 </div>

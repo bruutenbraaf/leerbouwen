@@ -29,8 +29,7 @@ get_header(); ?>
                                         <?php $dienst_afbeelding = get_sub_field('dienst_afbeelding'); ?>
                                         <div class="item" <?php if ($dienst_afbeelding) { ?>style="background-image:url(<?php echo $dienst_afbeelding['sizes']['serviceshome']; ?>);" <?php } ?>>
                                             <div class="inner">
-                                                <h2><?php the_title(); ?></h2>
-                                                <p class="description"><?php the_sub_field('korte_omschrijving'); ?></p>
+                                                <h2 class="title-intress"><?php the_title(); ?></h2>
                                             </div>
                                             <a class="the-link" href="<?php the_permalink(); ?>"></a>
                                         </div>

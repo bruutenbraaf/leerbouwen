@@ -876,6 +876,21 @@ header {
     }
 }
 
+h2.title-intress {
+    &:after {
+        content:'';
+        width: 14px;
+        height: 13px;
+        margin-left: 3px;
+        display:inline-block;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image:url(../img/arrow.svg);
+        margin-left: 10px;
+    }
+}
+
 // Grote CTA
 
 #b-cta {
