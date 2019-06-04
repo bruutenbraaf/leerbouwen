@@ -44,7 +44,7 @@ get_header(); ?>
                     )); ?>
                     <?php if ($loop->have_posts()) : ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <div class="education featured">
+                            <div class="education featured" data-scroll >
                                 <?php $featured = get_field('upload_featured_afbeelding'); ?>
                                 <div class="image" style="background-image:url(<?php if ($featured) { ?><?php echo $featured['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
                                     <div class="featured"><?php _e('Meest gekozen', 'leerbouwen'); ?></div>
@@ -77,7 +77,7 @@ get_header(); ?>
                     )); ?>
                     <?php if ($loop->have_posts()) : ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <div class="education">
+                            <div class="education" data-scroll >
                                 <div class="logo" style="background-image:url(<?php if ($logo) { ?><?php echo $logo['url']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?> <?php } ?>);">
                                 </div>
                                 <div class="information">
@@ -101,7 +101,7 @@ get_header(); ?>
     <?php if (get_field('toon_cta_blok_cursus', 'option') == 1) { ?>
         <?php if (have_rows('cta_blok_cursus', 'option')) : ?>
             <?php while (have_rows('cta_blok_cursus', 'option')) : the_row(); ?>
-                <section id="c-cta" class="overviewcta">
+                <section id="c-cta" class="overviewcta" data-scroll>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
