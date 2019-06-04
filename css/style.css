@@ -2488,6 +2488,58 @@ main#cp .contact-p {
         color: #03314C;
         font-family: "avenir-medium", sans-serif; }
 
+.btp {
+  width: 52px;
+  height: 130px;
+  background-color: #03314C;
+  border-radius: 99px 99px 0px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  position: fixed;
+  right: 4vw;
+  bottom: -130px;
+  transform-origin: top;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+  .btp:before {
+    content: '';
+    position: absolute;
+    background: #03314C;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    top: 0; }
+  .btp:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    min-height: 50px;
+    z-index: -2;
+    left: -50px;
+    bottom: -50px;
+    border-radius: 100%;
+    background: #022133;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .btp:hover {
+    color: #fff; }
+  .btp:hover:after {
+    transform: scale(18); }
+  .btp svg {
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+
+.is--visible {
+  border-radius: 10px;
+  bottom: 30px;
+  height: 52px; }
+
 @media screen and (min-width: 1560px) {
   #socket .disclaimer ul li {
     margin: 4px 0px; }
@@ -2499,7 +2551,7 @@ main#cp .contact-p {
     min-height: 300px; }
 
   #news .news {
-    width: 120%; } }
+    width: 86vw; } }
 #info {
   overflow: hidden; }
   #info .sngl-bigm {

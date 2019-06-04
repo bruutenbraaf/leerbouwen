@@ -17,6 +17,21 @@ jQuery(window).scroll(function() {
   }
 });
 
+
+jQuery(window).scroll(function() {    
+  var scroll = jQuery(window).scrollTop();
+  if (scroll >= 600) {
+      jQuery(".btp").addClass("is--visible");
+  } else {
+      jQuery(".btp").removeClass("is--visible");
+  }
+});
+
+jQuery('.btp').on('click', function(e) {
+  e.preventDefault();
+  jQuery('html, body').animate({scrollTop:0}, '300');
+});
+
 jQuery(document).on( 'nfFormReady', function( e, layoutView ) {
   jQuery('select').niceSelect();
 });

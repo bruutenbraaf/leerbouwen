@@ -2927,6 +2927,66 @@ main#cp {
     }
 }
 
+.btp {
+    width: 52px;
+    height: 130px;
+    background-color: $main;
+    border-radius: 99px 99px 0px 0px;
+    cursor: pointer;
+    overflow: hidden;
+    position:fixed;
+    right: 4vw;
+    bottom: -130px;
+    transform-origin: top;
+    -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    &:before {
+        content:'';
+        position: absolute;
+        background: $main;
+        width:100%;
+        height:100%;
+        z-index: -2;
+        left:0;
+        top:0;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        min-height: 50px;
+        z-index: -2;
+        left: -50px;
+        bottom: -50px;
+        border-radius: 100%;
+        background: darken($main, 5%);
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    &:hover {
+        color: #fff;
+    }
+    &:hover:after {
+        transform: scale(18);
+    }
+    svg {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}
+
+
+.is--visible {
+    border-radius: 10px;
+    bottom: 30px;
+    height: 52px;
+}
+
 @media screen and (min-width: 1560px) {
     #socket .disclaimer ul li {
         margin: 4px 0px;
@@ -2942,7 +3002,7 @@ main#cp {
 
     #news {
         .news {
-            width:120%;
+            width:86vw;
         }
     }
   }
