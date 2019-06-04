@@ -74,7 +74,6 @@
 			</div>
 			<div class="col-md-8 disclaimer">
 				<?php wp_nav_menu(array('theme_location' => 'socket_menu')); ?>
-				<span class="by"><?php _e('Website door:', 'leerbouwen'); ?> <a href="https://bruutenbraaf.nl" target="_blank">Bruut & Braaf</a></span>
 			</div>
 		</div>
 	</div>
