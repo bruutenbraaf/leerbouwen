@@ -67,7 +67,7 @@ get_header(); ?>
     <?php if (have_rows('indeling')) : ?>
         <?php while (have_rows('indeling')) : the_row(); ?>
             <?php if (get_row_layout() == 'populaire_opleidingen') : ?>
-                <section id="featured_educations">
+                <section id="featured_educations"  >
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
@@ -99,7 +99,7 @@ get_header(); ?>
                                 <div class="col-md-6">
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <?php $upload_featured_afbeelding = get_field('upload_featured_afbeelding'); ?>
-                                        <div class="featured-item" <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['smallfeatured']; ?>);" <?php } ?>>
+                                        <div class="featured-item" data-scroll <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['smallfeatured']; ?>);" <?php } ?>>
                                             <div class="inner">
                                                 <h3 class="featured-title"><?php the_title(); ?></h3>
                                                 <div class="featured-info">
@@ -135,7 +135,7 @@ get_header(); ?>
                                 <div class="col-md-6">
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <?php $upload_featured_afbeelding = get_field('upload_featured_afbeelding'); ?>
-                                        <div class="featured-item-big" <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['bigfeatured']; ?>);" <?php } ?>>
+                                        <div class="featured-item-big"  data-scroll <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['bigfeatured']; ?>);" <?php } ?>>
                                             <div class="inner">
                                                 <h3 class="featured-title"><?php the_title(); ?></h3>
                                                 <div class="featured-info">
@@ -156,7 +156,7 @@ get_header(); ?>
                 </section>
 
             <?php elseif (get_row_layout() == 'diensten') : ?>
-                <section id="services">
+                <section id="services"  >
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
@@ -177,7 +177,7 @@ get_header(); ?>
                                     <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                         <?php $i++; ?>
                                     <?php endforeach; ?>
-                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>">
+                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>" data-scroll>
                                         <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                             <?php setup_postdata($post); ?>
                                             <?php if (have_rows('informatie_dienst')) : ?>
@@ -242,7 +242,7 @@ get_header(); ?>
                     </div>
                 </section>
             <?php elseif (get_row_layout() == 'grote_cta') : ?>
-                <section id="b-cta">
+                <section id="b-cta" data-scroll>
                     <div class="container">
                         <div class="col-md-12 cta">
                             <div class="row">
@@ -261,7 +261,7 @@ get_header(); ?>
                     </div>
                 </section>
             <?php elseif (get_row_layout() == 'cta_title') : ?>
-                <section id="c-cta">
+                <section id="c-cta" data-scroll>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -295,7 +295,7 @@ get_header(); ?>
                                     <div class="review-items">
                                         <?php foreach ($selected_reviews as $post) :  ?>
                                             <?php setup_postdata($post); ?>
-                                            <div class="review">
+                                            <div class="review" data-scroll>
                                                 <div class="inner">
                                                     <div class="information">
                                                         <?php if (have_rows('review')) : ?>
@@ -380,7 +380,7 @@ get_header(); ?>
                     </div>
                 </section>
             <?php elseif (get_row_layout() == 'samenwerking') : ?>
-                <section id="partners">
+                <section id="partners" data-scroll>
                     <div class="container">
                         <div class="col-md-12">
                             <div class="partners">
@@ -472,7 +472,7 @@ get_header(); ?>
                                     )); ?>
                                     <?php if ($loop->have_posts()) : ?>
                                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                                            <div class="news-item">
+                                            <div class="news-item" data-scroll>
                                                 <div class="inner">
                                                     <?php if (have_rows('informatie_nieuws')) : ?>
                                                         <?php while (have_rows('informatie_nieuws')) : the_row(); ?>
@@ -540,7 +540,7 @@ get_header(); ?>
                 </script>
             <?php elseif (get_row_layout() == 'vacatures') : ?>
                 <?php $selected_vacatures = get_sub_field('selected_vacatures'); ?><?php if ($selected_vacatures) : ?><?php $items = 0; ?><?php foreach ($selected_vacatures as $post) :  ?><?php $items++ ?><?php endforeach; ?>
-                    <section id="vacancies" class="<?php if ($items > 3) { ?>has_four<?php } ?>">
+                    <section id="vacancies" class="<?php if ($items > 3) { ?>has_four<?php } ?>"  >
                         <?php wp_reset_postdata(); ?>
                     <?php endif; ?>
                     <div class="container">
@@ -570,7 +570,7 @@ get_header(); ?>
                                 <div class="col-md-7 offset-md-1 <?php if ($items > 3) { ?>items<?php } ?>">
                                     <?php foreach ($selected_vacatures as $post) :  ?>
                                         <?php setup_postdata($post); ?>
-                                        <div class="vacancie-item">
+                                        <div class="vacancie-item" data-scroll>
                                             <?php if (have_rows('informatie_vacature')) : ?>
                                                 <?php while (have_rows('informatie_vacature')) : the_row(); ?>
                                                     <?php $logo_bedrijf = get_sub_field('logo_bedrijf'); ?>

@@ -46,7 +46,7 @@ get_header(); ?>
                     )); ?>
                     <?php if ($loop->have_posts()) : ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <div class="vacansie featured">
+                            <div class="vacansie featured" data-scroll>
                                 <?php $featured = get_field('upload_featured_afbeelding'); ?>
                                 <div class="image" style="background-image:url(<?php if ($featured) { ?><?php echo $featured['sizes']['smallfeatured']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['smallfeatured']; ?> <?php } ?>);">
                                     <div class="featured"><?php _e('Aanbevolen', 'leerbouwen'); ?></div>
@@ -98,7 +98,7 @@ get_header(); ?>
                     <?php endif; ?>
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
-                            <div class="vacansie">
+                            <div class="vacansie" data-scroll>
                                 <div class="logo" style="background-image:url(<?php if ($logo) { ?><?php echo $logo['url']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?> <?php } ?>);">
                                 </div>
                                 <div class="information">

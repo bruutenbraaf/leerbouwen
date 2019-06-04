@@ -31,7 +31,7 @@ get_header(); ?>
                 <div class="col-xl-7 col-md-6">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
-                            <div class="service">
+                            <div class="service" data-scroll>
                                 <?php if (have_rows('informatie_dienst')) : ?>
                                     <?php while (have_rows('informatie_dienst')) : the_row(); ?>
                                         <?php $imgService = get_sub_field('dienst_afbeelding'); ?>

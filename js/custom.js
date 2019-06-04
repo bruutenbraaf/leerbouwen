@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', function(){
+  var trigger = new ScrollTrigger({
+    toggle: {
+      visible: 'sectionv',
+      hidden: 'sectionh'
+    },
+    offset: {
+      x: 0,
+      y: 120
+    },
+    addHeight: false,
+    once: false
+  }, document.body, window);
+});
 
 jQuery(window).scroll(function() {    
   var scroll = jQuery(window).scrollTop();

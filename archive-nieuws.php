@@ -34,7 +34,7 @@ get_header(); ?>
                     <div class="row">
                         <?php if (have_posts()) : ?>
                             <?php while (have_posts()) : the_post(); ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6" data-scroll>
                                     <div class="news-item">
                                         <?php if (have_rows('informatie_nieuws')) : ?>
                                             <?php while (have_rows('informatie_nieuws')) : the_row(); ?>
@@ -73,7 +73,7 @@ get_header(); ?>
     <?php if (get_field('toon_cta_blok_news', 'option') == 1) { ?>
         <?php if (have_rows('cta_blok_news', 'option')) : ?>
             <?php while (have_rows('cta_blok_news', 'option')) : the_row(); ?>
-                <section id="c-cta" class="overviewcta">
+                <section id="c-cta" class="overviewcta" data-scroll>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">

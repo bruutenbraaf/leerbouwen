@@ -15,11 +15,13 @@ function leerbouwen_scripts() {
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'slickslider', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'niceselect', get_template_directory_uri() . '/js/jquery.nice-select.min.js', array(), '1.0.0', true);
+	wp_enqueue_script( 'scrolltriggerjs', get_template_directory_uri() . '/js/ScrollTrigger.min.js', array(), '1.0.0', true);
 	
 	
 	wp_enqueue_style( 'bootcss', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'niceselectcss', get_template_directory_uri() . '/css/nice-select.css' );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'wowcss', get_template_directory_uri() . '/css/animate.css' );
 }
 add_action('wp_enqueue_scripts', 'leerbouwen_scripts');
 
