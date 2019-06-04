@@ -30,7 +30,7 @@ get_header(); ?>
     <section class="faq">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-xl-7 col-md-6">
                     <?php if (have_rows('faq_sections')) : ?>
                         <?php while (have_rows('faq_sections')) : the_row(); ?>
                             <section class="faq-section">
@@ -54,7 +54,7 @@ get_header(); ?>
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
-                <div class="col-md-5 offset-md-1 side">
+                <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side">
                     <?php if (get_field('extra_hulp_zijkant') == 1) { ?>
                         <?php if (have_rows('zijkant_widget')) : ?>
                             <?php while (have_rows('zijkant_widget')) : the_row(); ?>

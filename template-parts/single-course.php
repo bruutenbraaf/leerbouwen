@@ -5,7 +5,7 @@
 <section id="education-info">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-xl-7 col-md-6">
                 <?php if (have_rows('over_de_opleiding')) : ?>
                     <?php while (have_rows('over_de_opleiding')) : the_row(); ?>
                         <?php if (get_sub_field('titel')) { ?>
@@ -53,7 +53,7 @@
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-            <div class="col-md-5 offset-md-1 side">
+            <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side">
                 <?php if (get_field('toon_kosten') == 1) { ?>
                     <?php if (have_rows('kosten_opleidingcursus')) : ?>
                         <select class="cost-select">

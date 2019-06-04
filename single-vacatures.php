@@ -66,7 +66,7 @@ get_header(); ?>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-xl-7 col-md-6">
                 <?php if (have_rows('sections')) : ?>
                     <?php while (have_rows('sections')) : the_row(); ?>
                         <?php if (get_row_layout() == 'over_het_bedrijf') : ?>
@@ -155,7 +155,7 @@ get_header(); ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-            <div class="offset-md-1 col-md-5">
+            <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1">
                 <div class="contact-person">
                     <div class="heading">
                         <?php $afbeelding_contactpersoon = get_field('afbeelding_contactpersoon'); ?>

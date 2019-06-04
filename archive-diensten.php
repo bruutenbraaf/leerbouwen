@@ -28,7 +28,7 @@ get_header(); ?>
     <section id="services-overview">
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-xl-7 col-md-6">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="service">
@@ -53,7 +53,7 @@ get_header(); ?>
                         <?php wp_reset_postdata(); ?>
                     <?php endif; ?>
                 </div>
-                <div class="col-md-5 side">
+                <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side">
                     <?php get_template_part('template-parts/widget', 'helparchive'); ?>
                 </div>
             </div>

@@ -39,7 +39,7 @@ get_header(); ?>
     </div>
     <div class="container main-container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-xl-7 col-md-6">
                 <?php if (have_rows('sections')) : ?>
                     <?php while (have_rows('sections')) : the_row(); ?>
                         <?php if (get_row_layout() == 'aanmeldformulier__contactformulier') : ?>
@@ -92,7 +92,7 @@ get_header(); ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-            <div class="col-md-5 offset-md-1 side">
+            <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side">
                 <?php if (have_rows('sidebar_hulp_nodig_widget')) : ?>
                     <?php while (have_rows('sidebar_hulp_nodig_widget')) : the_row(); ?>
                         <?php if (get_sub_field('toon_de_widget') == 1) { ?>
