@@ -53,7 +53,7 @@ get_header(); ?>
                         <?php wp_reset_postdata(); ?>
                     <?php endif; ?>
                 </div>
-                <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side">
+                <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side" data-scroll>
                     <?php get_template_part('template-parts/widget', 'helparchive'); ?>
                 </div>
             </div>
