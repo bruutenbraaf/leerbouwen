@@ -38,7 +38,7 @@ get_header(); ?>
                                 <ul>
                                     <?php if (have_rows('veelgestelde_vragen_items')) : ?>
                                         <?php while (have_rows('veelgestelde_vragen_items')) : the_row(); ?>
-                                            <li>
+                                            <li data-scroll>
                                                 <h4 class="faq-title">
                                                     <?php the_sub_field('titel_faq_item'); ?>
                                                     <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@ get_header(); ?>
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
-                <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side">
+                <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side" data-scroll>
                     <?php if (get_field('extra_hulp_zijkant') == 1) { ?>
                         <?php if (have_rows('zijkant_widget')) : ?>
                             <?php while (have_rows('zijkant_widget')) : the_row(); ?>
