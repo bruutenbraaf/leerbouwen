@@ -206,22 +206,28 @@ $boxshadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sectionh {
-    -webkit-transition: all .4s ease-in;
-    -moz-transition: all .4s ease-in;
-    -o-transition: all .4s ease-in;
-    transition: all .4s ease-in;
-    opacity: 0;
+    opacity:0;
     transform: translateY(30%);
 }
       
 .sectionv {
-    -webkit-transition: all .4s ease-in;
-    -moz-transition: all .4s ease-in;
-    -o-transition: all .4s ease-in;
-    transition: all .4s ease-in;
-    opacity: 1;
-    transform: translateY(0%);
+    opacity:0;
+    transform: translateY(30%);
+    animation: slideIn;
+	animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
+
+@keyframes slideIn {
+    0% {
+        opacity:0;
+        transform: translateY(30%);
+    }
+    100% {
+        opacity:1;
+        transform: translateY(0%);
+    }
+  }
 
 // HEADINGS
 
