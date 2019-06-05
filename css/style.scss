@@ -774,11 +774,10 @@ header {
         }
     }
     .services-main {
-        overflow:hidden;
         .services-items {
             width: 130%;
             margin-left: -15px;
-            overflow:hidden;
+            overflow-x:hidden;
             .item {
                 margin: 0px 15px;
                 height: 385px;
