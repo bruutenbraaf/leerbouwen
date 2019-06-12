@@ -464,7 +464,7 @@ get_header(); ?>
                                 </div>
                             </div>
                             <div class="col-md-9">
-                                <div class="news">
+                                <div class="news" data-scroll>
                                     <?php $loop = new WP_Query(array(
                                         'post_type' => 'nieuws',
                                         'posts_per_page' => 8,
@@ -472,7 +472,7 @@ get_header(); ?>
                                     )); ?>
                                     <?php if ($loop->have_posts()) : ?>
                                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                                            <div class="news-item" data-scroll>
+                                            <div class="news-item">
                                                 <div class="inner">
                                                     <?php if (have_rows('informatie_nieuws')) : ?>
                                                         <?php while (have_rows('informatie_nieuws')) : the_row(); ?>

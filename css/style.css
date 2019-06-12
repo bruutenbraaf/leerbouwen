@@ -18,6 +18,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+section ul {
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  font-weight: 500;
+  font-family: "avenir", sans-serif;
+  color: #4F4F4F;
+  margin-bottom: 30px; }
+
 .sectionh {
   opacity: 0;
   transform: translateY(30%); }
