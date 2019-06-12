@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     },
     offset: {
       x: 0,
-      y: 120
+      y: 80
     },
     addHeight: false,
     once: true

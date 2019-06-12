@@ -184,6 +184,8 @@ header {
                 color: #03314C; }
                 header nav .main-nav ul li ul.sub-menu li a:hover {
                   color: #00A651 !important; }
+            header nav .main-nav ul li ul.sub-menu .current-menu-item a {
+              color: #00A651; }
             header nav .main-nav ul li ul.sub-menu:hover > .menu-item-has-children a {
               color: blue !important; }
           header nav .main-nav ul li a {
@@ -195,6 +197,8 @@ header {
             transition: all .2 ease-in-out; }
             header nav .main-nav ul li a:hover {
               text-decoration: none; }
+        header nav .main-nav ul .current-menu-parent, header nav .main-nav ul .current-menu-item a {
+          color: #00A651; }
         header nav .main-nav ul .menu-item-has-children:hover {
           color: #00A651;
           z-index: 4; }
@@ -1546,8 +1550,8 @@ h2.title-intress:after {
     align-items: center;
     margin-bottom: 16px; }
     .help-needed .heading .image {
-      min-width: 52px;
-      height: 52px;
+      min-width: 60px;
+      height: 60px;
       border-radius: 100%;
       background-color: #FAFAFA;
       border: 1px solid #EEEEEE;
