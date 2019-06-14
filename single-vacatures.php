@@ -75,8 +75,8 @@ get_header(); ?>
                             <?php the_sub_field('beschrijving'); ?>
                         </section>
                         <section id="profile">
-                            <h4><?php _e('Ons vacature', 'leerbouwen'); ?></h4>
-                            <h2><?php _e('Informatie', 'leerbouwen'); ?></h2>
+                            <h4><?php _e('Informatie', 'leerbouwen'); ?></h4>
+                            <h2><?php _e('Onze vacature', 'leerbouwen'); ?></h2>
                             <ul>
                                 <?php if (get_sub_field('branche')) { ?>
                                     <li>
