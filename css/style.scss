@@ -145,6 +145,13 @@ $boxshadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 }
 
+a {
+    color: $main;
+    &:hover {
+        color: $main;
+    }
+}
+
 @mixin fontstyle {
     font-style: normal;
     font-weight: 800;

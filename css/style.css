@@ -11,6 +11,11 @@
   font-family: 'avenir-medium', sans-serif;
   src: url("../fonts/AvenirNext-Medium");
   src: url("../fonts/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Medium.woff2") format("woff2"), url("../fonts/AvenirNext-Medium.woff") format("woff"), url("../fonts/AvenirNext-Medium.ttf") format("truetype"); }
+a {
+  color: #03314C; }
+  a:hover {
+    color: #03314C; }
+
 * {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
