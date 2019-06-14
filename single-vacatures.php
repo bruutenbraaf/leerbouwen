@@ -142,10 +142,10 @@ get_header(); ?>
                                 </div>
                                 <h2><?php the_sub_field('bedrijfsnaam'); ?></h2>
                             </div>
-                            <p><?php the_sub_field('adres_bedrijf'); ?></p>
-                            <?php the_sub_field('postcode'); ?>,
-                             <?php the_sub_field('provincie'); ?>
-
+                            <p><?php the_sub_field('adres_bedrijf'); ?>
+                                <?php the_sub_field('postcode'); ?>,
+                                <?php the_sub_field('provincie'); ?>
+                            </p>
                             <a class="btn secondair" href="<?php the_sub_field('website'); ?>" target="_blank"><?php _e('Bekijk website', 'leerbouwen'); ?></a>
                             <a class="btn" href="<?php the_sub_field('sollicitatielink'); ?>" target="_blank"><?php _e('Direct solliciteren', 'leerbouwen'); ?></a>
                         <?php endwhile; ?>
