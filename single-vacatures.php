@@ -83,7 +83,7 @@ get_header(); ?>
                                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.3457 3.51783L17.7232 3.1566L17.3457 2.79536L16.1371 1.63876L15.7916 1.30809L15.4459 1.6386L6.71403 9.98709L3.55383 6.97018L3.20815 6.64018L2.86287 6.97061L1.6543 8.12721L1.27683 8.48844L1.6543 8.84968L6.36858 13.3612L6.71429 13.6921L7.05999 13.3612L17.3457 3.51783Z" fill="#00A651" stroke="#00A651" />
                                         </svg>
-                                        <b><?php _e('Branche', 'leerbouwen'); ?></b>:</b> <?php the_sub_field('branche'); ?>
+                                        <b><?php _e('Branche', 'leerbouwen'); ?></b>: <?php the_sub_field('branche'); ?>
                                     </li>
                                 <?php } ?>
                                 <?php if (get_sub_field('werklocatie')) { ?>
@@ -91,7 +91,7 @@ get_header(); ?>
                                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.3457 3.51783L17.7232 3.1566L17.3457 2.79536L16.1371 1.63876L15.7916 1.30809L15.4459 1.6386L6.71403 9.98709L3.55383 6.97018L3.20815 6.64018L2.86287 6.97061L1.6543 8.12721L1.27683 8.48844L1.6543 8.84968L6.36858 13.3612L6.71429 13.6921L7.05999 13.3612L17.3457 3.51783Z" fill="#00A651" stroke="#00A651" />
                                         </svg>
-                                        <b><?php _e('Werklocatie', 'leerbouwen'); ?>:</b> <?php the_sub_field('werklocatie'); ?>
+                                        <b><?php _e('Werklocatie', 'leerbouwen'); ?></b>: <?php the_sub_field('werklocatie'); ?>
                                     </li>
                                 <?php } ?>
                                 <?php if (get_sub_field('provincie')) { ?>
@@ -99,7 +99,7 @@ get_header(); ?>
                                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.3457 3.51783L17.7232 3.1566L17.3457 2.79536L16.1371 1.63876L15.7916 1.30809L15.4459 1.6386L6.71403 9.98709L3.55383 6.97018L3.20815 6.64018L2.86287 6.97061L1.6543 8.12721L1.27683 8.48844L1.6543 8.84968L6.36858 13.3612L6.71429 13.6921L7.05999 13.3612L17.3457 3.51783Z" fill="#00A651" stroke="#00A651" />
                                         </svg>
-                                        <b><?php _e('Provincie', 'leerbouwen'); ?>:</b> <?php the_sub_field('provincie'); ?>
+                                        <b><?php _e('Provincie', 'leerbouwen'); ?></b>: <?php the_sub_field('provincie'); ?>
                                     </li>
                                 <?php } ?>
                                 <?php if (get_sub_field('postcode')) { ?>
@@ -107,7 +107,7 @@ get_header(); ?>
                                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.3457 3.51783L17.7232 3.1566L17.3457 2.79536L16.1371 1.63876L15.7916 1.30809L15.4459 1.6386L6.71403 9.98709L3.55383 6.97018L3.20815 6.64018L2.86287 6.97061L1.6543 8.12721L1.27683 8.48844L1.6543 8.84968L6.36858 13.3612L6.71429 13.6921L7.05999 13.3612L17.3457 3.51783Z" fill="#00A651" stroke="#00A651" />
                                         </svg>
-                                        <b><?php _e('Postcode', 'leerbouwen'); ?>:</b> <?php the_sub_field('postcode'); ?>
+                                        <b><?php _e('Postcode', 'leerbouwen'); ?></b>: <?php the_sub_field('postcode'); ?>
                                     </li>
                                 <?php } ?>
                                 <?php if (get_sub_field('opleidingsniveau')) { ?>
@@ -115,7 +115,7 @@ get_header(); ?>
                                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.3457 3.51783L17.7232 3.1566L17.3457 2.79536L16.1371 1.63876L15.7916 1.30809L15.4459 1.6386L6.71403 9.98709L3.55383 6.97018L3.20815 6.64018L2.86287 6.97061L1.6543 8.12721L1.27683 8.48844L1.6543 8.84968L6.36858 13.3612L6.71429 13.6921L7.05999 13.3612L17.3457 3.51783Z" fill="#00A651" stroke="#00A651" />
                                         </svg>
-                                        <b><?php _e('Opleidingsniveau', 'leerbouwen'); ?>:</b> <?php the_sub_field('opleidingsniveau'); ?>
+                                        <b><?php _e('Opleidingsniveau', 'leerbouwen'); ?></b>: <?php the_sub_field('opleidingsniveau'); ?>
                                     </li>
                                 <?php } ?>
                                 <?php if (get_sub_field('salaris_indicatie')) { ?>
@@ -123,7 +123,7 @@ get_header(); ?>
                                         <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.3457 3.51783L17.7232 3.1566L17.3457 2.79536L16.1371 1.63876L15.7916 1.30809L15.4459 1.6386L6.71403 9.98709L3.55383 6.97018L3.20815 6.64018L2.86287 6.97061L1.6543 8.12721L1.27683 8.48844L1.6543 8.84968L6.36858 13.3612L6.71429 13.6921L7.05999 13.3612L17.3457 3.51783Z" fill="#00A651" stroke="#00A651" />
                                         </svg>
-                                        <b><?php _e('Salaris indicatie', 'leerbouwen'); ?>:</b> <?php the_sub_field('salaris_indicatie'); ?>
+                                        <b><?php _e('Salaris indicatie', 'leerbouwen'); ?></b>: <?php the_sub_field('salaris_indicatie'); ?>
                                     </li>
                                 <?php } ?>
                             </ul>
