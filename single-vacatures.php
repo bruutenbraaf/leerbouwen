@@ -142,7 +142,7 @@ get_header(); ?>
                                 </div>
                                 <h2><?php the_sub_field('bedrijfsnaam'); ?></h2>
                             </div>
-                            <p><?php the_sub_field('adres_bedrijf'); ?>
+                            <p><?php the_sub_field('adres_bedrijf'); ?><br>
                                 <?php the_sub_field('postcode'); ?>,
                                 <?php the_sub_field('provincie'); ?>
                             </p>
