@@ -143,7 +143,7 @@ get_header(); ?>
                                 <h2><?php the_sub_field('bedrijfsnaam'); ?></h2>
                             </div>
                             <p><?php the_sub_field('adres_bedrijf'); ?><br>
-                                <?php the_sub_field('postcode'); ?>,
+                                <?php the_sub_field('postcode'); ?><br>
                                 <?php the_sub_field('provincie'); ?>
                             </p>
                             <a class="btn secondair" href="<?php the_sub_field('website'); ?>" target="_blank"><?php _e('Bekijk website', 'leerbouwen'); ?></a>
