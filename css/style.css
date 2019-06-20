@@ -3244,7 +3244,8 @@ form .nf-field-description {
 @media screen and (max-width: 768px) {
   .cookie-notice {
     right: 15px;
-    bottom: 15px; }
+    bottom: 15px;
+    left: 15px; }
 
   h1 {
     font-style: normal;
