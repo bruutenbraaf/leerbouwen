@@ -67,14 +67,14 @@ get_header(); ?>
     <?php if (have_rows('indeling')) : ?>
         <?php while (have_rows('indeling')) : the_row(); ?>
             <?php if (get_row_layout() == 'populaire_opleidingen') : ?>
-                <section id="featured_educations">
+                <section id="featured_educations" data-scroll>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
                                 <h2 class="section-title"><?php the_sub_field('titel'); ?></h2>
                                 <?php the_sub_field('tekstueel'); ?>
                             </div>
-                            <div class="col-md-6 more" data-scroll>
+                            <div class="col-md-6 more">
                                 <?php $knop = get_sub_field('knop'); ?>
                                 <?php if ($knop) { ?>
                                     <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
@@ -177,7 +177,7 @@ get_header(); ?>
                                     <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                         <?php $i++; ?>
                                     <?php endforeach; ?>
-                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>" data-scroll>
+                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>">
                                         <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                             <?php setup_postdata($post); ?>
                                             <?php if (have_rows('informatie_dienst')) : ?>
@@ -464,7 +464,7 @@ get_header(); ?>
                                 </div>
                             </div>
                             <div class="col-md-9">
-                                <div class="news" data-scroll>
+                                <div class="news">
                                     <?php $loop = new WP_Query(array(
                                         'post_type' => 'nieuws',
                                         'posts_per_page' => 8,
@@ -539,7 +539,7 @@ get_header(); ?>
                     });
                 </script>
             <?php elseif (get_row_layout() == 'seo_tekst') : ?>
-                <section id="inf">
+                <section id="inf" data-scroll>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -591,7 +591,7 @@ get_header(); ?>
                                 <div class="col-md-7 offset-md-1 <?php if ($items > 3) { ?>items<?php } ?>">
                                     <?php foreach ($selected_vacatures as $post) :  ?>
                                         <?php setup_postdata($post); ?>
-                                        <div class="vacancie-item" data-scroll>
+                                        <div class="vacancie-item">
                                             <?php if (have_rows('informatie_vacature')) : ?>
                                                 <?php while (have_rows('informatie_vacature')) : the_row(); ?>
                                                     <?php $logo_bedrijf = get_sub_field('logo_bedrijf'); ?>
