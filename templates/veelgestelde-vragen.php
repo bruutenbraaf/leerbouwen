@@ -31,18 +31,21 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-md-6">
-                <div class="inf-sng">
-                        <h2><?php the_field('titel_extra'); ?></h2>
-                        <?php the_field('content_extra'); ?>
-                        <?php if (have_rows('knoppen_extra')) : ?>
-                            <?php while (have_rows('knoppen_extra')) : the_row(); ?>
-                                <?php $knop = get_sub_field('knop'); ?>
-                                <?php if ($knop) { ?>
-                                    <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
-                                <?php } ?>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
+                    <?php $cnt = get_field('content_extra_cursus', 'option'); ?>
+                    <?php if ($cnt) { ?>
+                        <div class="inf-sng">
+                            <h2><?php the_field('titel_extra_cursus'); ?></h2>
+                            <?php the_field('content_extra_cursus'); ?>
+                            <?php if (have_rows('knoppen_extra_cursus')) : ?>
+                                <?php while (have_rows('knoppen_extra_cursus')) : the_row(); ?>
+                                    <?php $knop = get_sub_field('knop'); ?>
+                                    <?php if ($knop) { ?>
+                                        <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                    <?php } ?>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php } ?>
                     <?php if (have_rows('faq_sections')) : ?>
                         <?php while (have_rows('faq_sections')) : the_row(); ?>
                             <section class="faq-section">

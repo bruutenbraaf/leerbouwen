@@ -6,8 +6,8 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="offset-md-1 col-md-9 col-11 page-heading">
-                    <h1><?php the_field("diensten_archive_title", "option"); ?></h1>
-                    <?php if (get_field("diensten_archive_intro", "option")) { ?>
+                    <h1><?php the_field("samenwerkingen_archive_title", "option"); ?></h1>
+                    <?php if (get_field("samenwerkingen_archive_intro", "option")) { ?>
                         <p><?php the_field("diensten_archive_intro", "option"); ?></p>
                     <?php } ?>
                 </div>
@@ -29,13 +29,13 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-md-6">
-                    <?php $cnt = get_field('content_extra_diensten', 'option'); ?>
+                    <?php $cnt = get_field('content_extra_samenwerking', 'option'); ?>
                     <?php if ($cnt) { ?>
                         <div class="inf-sng">
-                            <h2><?php the_field('titel_extra_diensten', 'option'); ?></h2>
-                            <?php the_field('content_extra_diensten', 'option'); ?>
-                            <?php if (have_rows('knoppen_extra_diensten', 'option')) : ?>
-                                <?php while (have_rows('knoppen_extra_diensten', 'option')) : the_row(); ?>
+                            <h2><?php the_field('titel_extra_samenwerking', 'option'); ?></h2>
+                            <?php the_field('content_extra_samenwerking', 'option'); ?>
+                            <?php if (have_rows('knoppen_extra_samenwerking', 'option')) : ?>
+                                <?php while (have_rows('knoppen_extra_samenwerking', 'option')) : the_row(); ?>
                                     <?php $knop = get_sub_field('knop'); ?>
                                     <?php if ($knop) { ?>
                                         <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
@@ -44,28 +44,31 @@ get_header(); ?>
                             <?php endif; ?>
                         </div>
                     <?php } ?>
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
-                            <div class="service" data-scroll>
-                                <?php if (have_rows('informatie_dienst')) : ?>
-                                    <?php while (have_rows('informatie_dienst')) : the_row(); ?>
-                                        <?php $imgService = get_sub_field('dienst_afbeelding'); ?>
-                                        <div class="smallimg" style="background-image:url(<?php if ($imgService) { ?><?php echo $imgService['sizes']['serviceshome']; ?> <?php } else { ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?> <?php } ?>);">
-                                        </div>
-                                        <div class="information">
-                                            <h4><?php the_title(); ?></h4>
-                                            <span class="excerpt">
-                                                <?php
-                                                $omschrijving = get_sub_field('korte_omschrijving');
-                                                echo mb_strimwidth($omschrijving, 0, 50, '...'); ?>
-                                            </span>
-                                        </div>
-                                        <a href="<?php the_permalink(); ?>" class="the-link"></a>
-                                    <?php endwhile; ?>
-                                <?php endif; ?>
-                            </div>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
+                    <?php $loop = new WP_Query(array(
+                        'post_type' => 'samenwerkingen',
+                        'posts_per_page' => 12,
+                        'order' => 'DESC'
+                    )); ?>
+                    <?php if ($loop->have_posts()) : ?>
+                        <div class="row">
+                            <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                                <div class="col-md-6">
+                                    <?php if (have_rows('informatie_samenwerkingen')) : ?>
+                                        <?php while (have_rows('informatie_samenwerkingen')) : the_row(); ?>
+                                            <?php $logo_bedrijf = get_sub_field('logo_bedrijf'); ?>
+                                            <?php if ($logo_bedrijf) { ?>
+                                                <div class="company-partner">
+                                                    <a href="<?php the_permalink(); ?>">
+                                                        <img class="logo-company" src="<?php echo $logo_bedrijf['url']; ?>" alt="<?php echo $logo_bedrijf['alt']; ?>" />
+                                                    </a>
+                                                </div>
+                                            <?php } ?>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </div>
                     <?php endif; ?>
                 </div>
                 <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side" data-scroll>
