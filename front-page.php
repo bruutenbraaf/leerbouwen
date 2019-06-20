@@ -67,14 +67,14 @@ get_header(); ?>
     <?php if (have_rows('indeling')) : ?>
         <?php while (have_rows('indeling')) : the_row(); ?>
             <?php if (get_row_layout() == 'populaire_opleidingen') : ?>
-                <section id="featured_educations"  >
+                <section id="featured_educations">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
                                 <h2 class="section-title"><?php the_sub_field('titel'); ?></h2>
                                 <?php the_sub_field('tekstueel'); ?>
                             </div>
-                            <div class="col-md-6 more" data-scroll >
+                            <div class="col-md-6 more" data-scroll>
                                 <?php $knop = get_sub_field('knop'); ?>
                                 <?php if ($knop) { ?>
                                     <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
@@ -135,7 +135,7 @@ get_header(); ?>
                                 <div class="col-md-6">
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <?php $upload_featured_afbeelding = get_field('upload_featured_afbeelding'); ?>
-                                        <div class="featured-item-big"  data-scroll <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['bigfeatured']; ?>);" <?php } ?>>
+                                        <div class="featured-item-big" data-scroll <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['bigfeatured']; ?>);" <?php } ?>>
                                             <div class="inner">
                                                 <h3 class="featured-title"><?php the_title(); ?></h3>
                                                 <div class="featured-info">
@@ -177,13 +177,13 @@ get_header(); ?>
                                     <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                         <?php $i++; ?>
                                     <?php endforeach; ?>
-                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>" data-scroll >
+                                    <div class="services-items <?php if ($i <= 4) { ?> is_four <?php } ?>" data-scroll>
                                         <?php foreach ($selecteer_diensten_om_te_tonen as $post) :  ?>
                                             <?php setup_postdata($post); ?>
                                             <?php if (have_rows('informatie_dienst')) : ?>
                                                 <?php while (have_rows('informatie_dienst')) : the_row(); ?>
                                                     <?php $dienst_afbeelding = get_sub_field('dienst_afbeelding'); ?>
-                                                    <div class="item"<?php if ($dienst_afbeelding) { ?>style="background-image:url(<?php echo $dienst_afbeelding['sizes']['serviceshome']; ?>);" <?php } ?>>
+                                                    <div class="item" <?php if ($dienst_afbeelding) { ?>style="background-image:url(<?php echo $dienst_afbeelding['sizes']['serviceshome']; ?>);" <?php } ?>>
                                                         <div class="inner">
                                                             <h2><?php the_title(); ?></h2>
                                                             <p class="description"><?php the_sub_field('korte_omschrijving'); ?></p>
@@ -445,7 +445,7 @@ get_header(); ?>
                     });
                 </script>
             <?php elseif (get_row_layout() == 'nieuws_berichten') : ?>
-                <section id="news" data-scroll >
+                <section id="news" data-scroll>
                     <div class="container">
                         <div class="row">
                             <?php $knop = get_sub_field('knop'); ?>
@@ -538,9 +538,30 @@ get_header(); ?>
                         });
                     });
                 </script>
+            <?php elseif (get_row_layout() == 'seo_tekst') : ?>
+                <section id="inf">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="inner">
+                                    <div class="row">
+                                        <div class="offset-md-2 col-md-8">
+                                            <span class="title"><?php the_sub_field('titel'); ?></span>
+                                            <?php the_sub_field('seo_tekst'); ?>
+                                            <?php $knop = get_sub_field('knop'); ?>
+                                            <?php if ($knop) { ?>
+                                                <a class="small-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             <?php elseif (get_row_layout() == 'vacatures') : ?>
                 <?php $selected_vacatures = get_sub_field('selected_vacatures'); ?><?php if ($selected_vacatures) : ?><?php $items = 0; ?><?php foreach ($selected_vacatures as $post) :  ?><?php $items++ ?><?php endforeach; ?>
-                    <section id="vacancies" data-scroll class="<?php if ($items > 3) { ?>has_four<?php } ?>"  >
+                    <section id="vacancies" data-scroll class="<?php if ($items > 3) { ?>has_four<?php } ?>">
                         <?php wp_reset_postdata(); ?>
                     <?php endif; ?>
                     <div class="container">
