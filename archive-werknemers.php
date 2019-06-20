@@ -54,7 +54,7 @@ get_header(); ?>
                 )); ?>
                 <?php if ($loop->have_posts()) : ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                        <div class="col-md-4 single-member">
+                        <div class="col-lg-4 col-md-6 single-member">
                             <?php $profielfoto_werknemer = get_field('profielfoto_werknemer'); ?>
                             <?php if ($profielfoto_werknemer) { ?>
                                 <div class="member-img" style="background-image:url(<?php echo $profielfoto_werknemer['sizes']['medium']; ?>);">
