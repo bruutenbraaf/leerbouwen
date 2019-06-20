@@ -30,6 +30,18 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-md-6">
+                    <div class="inf-sng">
+                        <h2><?php the_field('titel_extra', 'option'); ?></h2>
+                        <?php the_field('content_extra', 'option'); ?>
+                        <?php if (have_rows('knoppen_extra', 'option')) : ?>
+                            <?php while (have_rows('knoppen_extra', 'option')) : the_row(); ?>
+                                <?php $knop = get_sub_field('knop'); ?>
+                                <?php if ($knop) { ?>
+                                    <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                <?php } ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                     <?php
                     $loop = new WP_Query(array(
                         'post_type' => array('opleidingen'),

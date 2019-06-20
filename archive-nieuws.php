@@ -30,6 +30,20 @@ get_header(); ?>
     <section id="news-overview">
         <div class="container">
             <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <div class="inf-sng">
+                        <h2><?php the_field('titel_extra', 'option'); ?></h2>
+                        <?php the_field('content_extra', 'option'); ?>
+                        <?php if (have_rows('knoppen_extra', 'option')) : ?>
+                            <?php while (have_rows('knoppen_extra', 'option')) : the_row(); ?>
+                                <?php $knop = get_sub_field('knop'); ?>
+                                <?php if ($knop) { ?>
+                                    <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                <?php } ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
                 <div class="offset-md-1 col-md-10">
                     <div class="row">
                         <?php if (have_posts()) : ?>

@@ -30,7 +30,19 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-xl-7 col-md-6">
-                    <?php do_shortcode("[uitzendplaats_vacancy_index per_page='10']");?>
+                    <div class="inf-sng">
+                        <h2><?php the_field('titel_extra', 'option'); ?></h2>
+                        <?php the_field('content_extra', 'option'); ?>
+                        <?php if (have_rows('knoppen_extra', 'option')) : ?>
+                            <?php while (have_rows('knoppen_extra', 'option')) : the_row(); ?>
+                                <?php $knop = get_sub_field('knop'); ?>
+                                <?php if ($knop) { ?>
+                                    <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                <?php } ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                    <?php do_shortcode("[uitzendplaats_vacancy_index per_page='10']" );?>
                 </div>
                 <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side" data-scroll>
                     <?php get_template_part('template-parts/widget', 'helparchive'); ?>
