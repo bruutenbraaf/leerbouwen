@@ -57,7 +57,7 @@ get_header(); ?>
                         <div class="col-lg-4 col-md-6 single-member">
                             <?php $profielfoto_werknemer = get_field('profielfoto_werknemer'); ?>
                             <?php if ($profielfoto_werknemer) { ?>
-                                <div class="member-img" style="background-image:url(<?php echo $profielfoto_werknemer['sizes']['medium']; ?>);">
+                                <div class="member-img" style="background-image:url(<?php echo $profielfoto_werknemer['sizes']['bigfeatured']; ?>);">
                                     <div class="content-member">
                                         <div class="inner">
                                             <?php the_field('tekst_van_werknemer'); ?>
