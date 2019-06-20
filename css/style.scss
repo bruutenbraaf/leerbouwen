@@ -3835,6 +3835,9 @@ form {
 }
 
 @media screen and (max-width: 768px) {
+  .cookie-notice {
+    max-width: calc(100% - 15px);
+  }
   h1 {
     font-style: normal;
     font-weight: 800;
