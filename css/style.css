@@ -32,7 +32,7 @@ section ul {
   color: #4f4f4f;
   margin-bottom: 30px; }
   section ul li {
-    font-size: 18px; }
+    font-size: 16px; }
 
 .sectionh {
   opacity: 0;
@@ -2894,7 +2894,7 @@ main#cp .contact-p {
       #info #info_block .container .infcol p {
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 32px;
         letter-spacing: -0.02em;
         color: #4f4f4f; }
