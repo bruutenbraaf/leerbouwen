@@ -43,6 +43,14 @@ acf_add_options_page( array(
 }
 add_action('init', 'my_cpt_support_author');
 
+/**
+ * Add HTML5 theme support.
+ */
+function wpdocs_after_setup_theme() {
+    add_theme_support( 'html5', array( 'search-form' ) );
+}
+add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
+
 
 if (!function_exists('get_archive_link')) {
   function get_archive_link( $post_type ) {
@@ -319,4 +327,12 @@ function option_page_posttypes()
 }
 add_action( 'init', 'option_page_posttypes');
 
-?>
+
+// adds shortcode for social media
+add_shortcode('mailchimp','mailchimp');
+function mailchimp() {
+  ob_start();
+	get_template_part( 'template-parts/mailchimp' );
+  $output = ob_get_clean();
+  return $output;
+}

@@ -143,8 +143,15 @@
                                                                     </span>
                                                                 </div>
                                                                 <div class="col-12">
-                                                                    <span class="name"><?php the_title(); ?></span>
-                                                                    <span class="function"><?php the_sub_field('functie'); ?></span>
+                                                                    <div class="reviewer">
+                                                                        <?php $afbeelding_kandidaat = get_sub_field('afbeelding_kandidaat'); ?>
+                                                                        <div class="rev-img<?php if (!$afbeelding_kandidaat) { ?> cimg<?php } ?>" style="background-image:url(<?php $afbeelding_kandidaat = get_sub_field('afbeelding_kandidaat'); ?><?php if ($afbeelding_kandidaat) { ?><?php echo $afbeelding_kandidaat['sizes']['vacaturesmall']; ?> <?php } else {  ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?><?php } ?>);">
+                                                                        </div>
+                                                                        <div class="rev-inf">
+                                                                            <span class="name"><?php the_title(); ?></span>
+                                                                            <span class="function"><?php the_sub_field('functie'); ?></span>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         <?php endwhile; ?>

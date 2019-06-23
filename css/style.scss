@@ -1157,7 +1157,6 @@ h2.title-intress {
             font-size: 16px;
             line-height: 20px;
             color: $main;
-            padding-top: 15px;
           }
           .score {
             float: right;
@@ -1192,6 +1191,22 @@ h2.title-intress {
               float: left;
               background-size: contain;
               background-image: url(../img/star.svg);
+            }
+          }
+          .reviewer {
+            display: flex;
+            align-items: center;
+            padding-top: 15px;
+            .rev-img {
+              background-color: $creme;
+              min-width: 50px;
+              min-height: 50px;
+              max-width: 50px;
+              max-height: 50px;
+              border-radius: 100%;
+              margin-right: 10px;
+              background-size: cover;
+              background-repeat: no-repeat;
             }
           }
         }
@@ -3220,6 +3235,109 @@ main#cp {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
   }
+}
+
+.cimg {
+  background-size: 70% !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+// 404 zoeken
+
+.search-form {
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-form label {
+  margin-bottom: 0px;
+}
+
+.search-field {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  height: 55px;
+  min-width: 20vw;
+  color: $paragraph;
+}
+
+.search-submit {
+  background: $secondair;
+  border-radius: 10px;
+  height: 55px;
+  margin-left: -20px;
+  padding: 15px 30px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  position: relative;
+  top: 0px;
+  line-height: 0;
+  &:hover {
+    background: darken($secondair, 5%);
+  }
+}
+
+.search-results {
+  article {
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 0px;
+    h2 {
+      margin-bottom: 0px !important;
+      padding-bottom: 10px !important;
+    }
+    p {
+      margin-bottom: 0px !important;
+      padding-bottom: 0px !important;
+    }
+  }
+}
+
+#mc_embed_signup_scroll {
+  display: flex;
+  form {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  .emailchimp {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    height: 55px;
+    min-width: 20vw;
+    color: $paragraph;
+  }
+  .mailchimpbtn {
+    background: $secondair;
+    border-radius: 10px;
+    height: 55px;
+    margin-left: -20px;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    position: relative;
+    top: 0px;
+    line-height: 0;
+    &:hover {
+      background: darken($secondair, 5%);
+    }
+  }
+}
+
+#mc_embed_signup div.mce_inline_error {
+  background-color: none !important;
+  text-align: left;
+  color: white;
 }
 
 @media screen and (min-width: 1560px) {

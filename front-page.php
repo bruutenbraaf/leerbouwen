@@ -271,10 +271,13 @@ get_header(); ?>
                                         <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                                             <span class="subtitle"><?php the_sub_field('subtitel'); ?></span>
                                             <h2><?php the_sub_field('grote_titel'); ?></h2>
-                                            <?php $knop = get_sub_field('knop'); ?>
-                                            <?php if ($knop) { ?>
-                                                <a class="btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
+                                            <?php if (get_sub_field('aanmeld_formulier_mailchimp_tonen') == 0) { ?>
+                                                <?php $knop = get_sub_field('knop'); ?>
+                                                <?php if ($knop) { ?>
+                                                    <a class="btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
+                                                <?php } ?>
                                             <?php } ?>
+                                            <?php if (get_sub_field('aanmeld_formulier_mailchimp_tonen') == 1) { ?> <?php echo do_shortcode('[mailchimp]'); ?><?php } ?>
                                         </div>
                                     </div>
                                 </div>
@@ -315,8 +318,15 @@ get_header(); ?>
                                                                         </span>
                                                                     </div>
                                                                     <div class="col-12">
-                                                                        <span class="name"><?php the_title(); ?></span>
-                                                                        <span class="function"><?php the_sub_field('functie'); ?></span>
+                                                                        <div class="reviewer">
+                                                                            <?php $afbeelding_kandidaat = get_sub_field('afbeelding_kandidaat'); ?>
+                                                                            <div class="rev-img<?php if (!$afbeelding_kandidaat) { ?> cimg<?php } ?>" style="background-image:url(<?php $afbeelding_kandidaat = get_sub_field('afbeelding_kandidaat'); ?><?php if ($afbeelding_kandidaat) { ?><?php echo $afbeelding_kandidaat['sizes']['vacaturesmall']; ?> <?php } else {  ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?><?php } ?>);">
+                                                                            </div>
+                                                                            <div class="rev-inf">
+                                                                                <span class="name"><?php the_title(); ?></span>
+                                                                                <span class="function"><?php the_sub_field('functie'); ?></span>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             <?php endwhile; ?>
