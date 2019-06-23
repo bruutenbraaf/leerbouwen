@@ -31,6 +31,8 @@ section ul {
   font-family: "avenir", sans-serif;
   color: #4f4f4f;
   margin-bottom: 30px; }
+  section ul li {
+    font-size: 18px; }
 
 .sectionh {
   opacity: 0;

@@ -215,6 +215,9 @@ section ul {
   font-family: $content;
   color: $paragraph;
   margin-bottom: 30px;
+  li {
+    font-size: 18px;
+  }
 }
 
 .sectionh {
