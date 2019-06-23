@@ -2537,7 +2537,8 @@ footer {
         cursor: pointer;
         font-size: 16px;
         line-height: 20px;
-        color: #03314c; }
+        color: #03314c;
+        font-weight: 400; }
         .faq ul li h4 svg {
           top: 50%;
           transform: translateY(-50%);
@@ -2890,7 +2891,7 @@ main#cp .contact-p {
         color: #00a651; }
       #info #info_block .container .infcol p {
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 18px;
         line-height: 32px;
         letter-spacing: -0.02em;

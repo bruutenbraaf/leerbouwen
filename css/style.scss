@@ -2960,6 +2960,7 @@ footer {
         font-size: 16px;
         line-height: 20px;
         color: $main;
+        font-weight: 400;
         svg {
           top: 50%;
           transform: translateY(-50%);
@@ -3407,7 +3408,7 @@ main#cp {
         }
         p {
           font-style: normal;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 18px;
           line-height: 32px;
           letter-spacing: -0.02em;
