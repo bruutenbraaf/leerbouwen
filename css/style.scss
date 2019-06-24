@@ -1564,6 +1564,12 @@ h2.title-intress {
         background-image: url(../img/location.svg);
       }
     }
+    .branches {
+      &:before {
+        @include before;
+        background-image: url(../img/branches.svg);
+      }
+    }
   }
   .items {
     margin-bottom: -210px;
@@ -1817,6 +1823,9 @@ h2.title-intress {
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
     transform: translateZ(0);
+    .inner {
+      padding: 20px;
+    }
     &:after {
       content: "";
       width: 16px;
@@ -1881,6 +1890,18 @@ h2.title-intress {
       &:before {
         @include before;
         background-image: url(../img/location.svg);
+      }
+    }
+    .branches {
+      &:before {
+        @include before;
+        background-image: url(../img/branches.svg);
+      }
+    }
+    .education {
+      &:before {
+        @include before;
+        background-image: url(../img/education.svg);
       }
     }
   }

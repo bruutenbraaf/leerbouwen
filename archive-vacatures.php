@@ -45,7 +45,7 @@ get_header(); ?>
                             <?php endif; ?>
                         </div>
                     <?php } ?>
-                    <?php do_shortcode("[uitzendplaats_vacancy_index per_page='10']"); ?>
+                    <?php echo do_shortcode("[uitzendplaats_vacancy_index per_page='10']"); ?>
                 </div>
                 <div class="col-xl-4 offset-xl-1 col-md-5 offset-md-1 side" data-scroll>
                     <?php get_template_part('template-parts/widget', 'helparchive'); ?>

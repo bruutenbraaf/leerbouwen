@@ -1315,6 +1315,18 @@ h2.title-intress:after {
       background-repeat: no-repeat;
       background-position: center center;
       background-image: url(../img/location.svg); }
+    #vacancies .vacancie-item .branches:before {
+      content: "";
+      top: 3px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin-right: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/branches.svg); }
   #vacancies .items {
     margin-bottom: -210px; }
 
@@ -1534,6 +1546,8 @@ h2.title-intress:after {
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
     transform: translateZ(0); }
+    #vacansies .vacansie .inner {
+      padding: 20px; }
     #vacansies .vacansie:after {
       content: "";
       width: 16px;
@@ -1612,6 +1626,30 @@ h2.title-intress:after {
       background-repeat: no-repeat;
       background-position: center center;
       background-image: url(../img/location.svg); }
+    #vacansies .vacansie .branches:before {
+      content: "";
+      top: 3px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin-right: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/branches.svg); }
+    #vacansies .vacansie .education:before {
+      content: "";
+      top: 3px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      margin-right: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/education.svg); }
   #vacansies .featured:after {
     bottom: 40px;
     top: initial; }
