@@ -13,10 +13,11 @@ function leerbouwen_scripts() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'bootjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
+	wp_enqueue_script( 'readmore', get_template_directory_uri() . '/js/readmore.min.js', array(), '1.0.0', false);
+	wp_enqueue_script( 'dropzonejs', get_template_directory_uri() . '/js/dropzone.js', array(), '1.0.0', false);
 	wp_enqueue_script( 'slickslider', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'niceselect', get_template_directory_uri() . '/js/jquery.nice-select.min.js', array(), '1.0.0', true);
 	wp_enqueue_script( 'scrolltriggerjs', get_template_directory_uri() . '/js/ScrollTrigger.min.js', array(), '1.0.0', true);
-	
 	
 	wp_enqueue_style( 'bootcss', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'niceselectcss', get_template_directory_uri() . '/css/nice-select.css' );
@@ -333,6 +334,15 @@ add_shortcode('mailchimp','mailchimp');
 function mailchimp() {
   ob_start();
 	get_template_part( 'template-parts/mailchimp' );
+  $output = ob_get_clean();
+  return $output;
+}
+
+
+add_shortcode('contactpersoon','contactpersoon');
+function contactpersoon() {
+  ob_start();
+	get_template_part( 'templates/contactpersoon' );
   $output = ob_get_clean();
   return $output;
 }

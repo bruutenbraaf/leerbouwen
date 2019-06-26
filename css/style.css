@@ -23,6 +23,9 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.fullwidth {
+  width: 100%; }
+
 section ul {
   margin: 0;
   margin-left: 20px;
@@ -97,10 +100,25 @@ h3.featured-title:after {
 
 p {
   font-family: "avenir", sans-serif;
-  color: #4f4f4f; }
+  color: #4f4f4f;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.02em; }
 
 a {
   font-family: "Muli", sans-serif; }
+
+.readmore {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: #00a651; }
+  .readmore:hover {
+    color: #00a651;
+    text-decoration: underline; }
 
 .the-link {
   position: absolute;
@@ -1533,126 +1551,128 @@ h2.title-intress:after {
 
 #vacansies {
   padding: 60px 0px; }
-  #vacansies .vacansie {
+
+.vacansie {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 16px 0px;
+  flex-wrap: wrap;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform: translateZ(0); }
+  .vacansie .inner {
+    padding: 20px; }
+  .vacansie:after {
+    content: "";
+    width: 16px;
+    height: 15px;
+    background-image: url(../img/arrow-b.svg);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); }
+  .vacansie:hover:after {
+    right: 15px; }
+  .vacansie .logo {
+    min-width: 52px;
+    height: 52px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 100%;
+    background-size: 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 30px 20px; }
+  .vacansie .image {
+    width: 100%;
+    height: 250px;
     position: relative;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    margin: 0px 0px 16px 0px;
-    flex-wrap: wrap;
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
-    transform: translateZ(0); }
-    #vacansies .vacansie .inner {
-      padding: 20px; }
-    #vacansies .vacansie:after {
-      content: "";
-      width: 16px;
-      height: 15px;
-      background-image: url(../img/arrow-b.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; }
+    .vacansie .image .featured {
       position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%); }
-    #vacansies .vacansie:hover:after {
-      right: 15px; }
-    #vacansies .vacansie .logo {
-      min-width: 52px;
-      height: 52px;
-      background-color: #fafafa;
-      border: 1px solid #eeeeee;
-      border-radius: 100%;
-      background-size: 60%;
-      background-position: center center;
-      background-repeat: no-repeat;
-      margin: 30px 20px; }
-    #vacansies .vacansie .image {
-      width: 100%;
-      height: 250px;
-      position: relative;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center; }
-      #vacansies .vacansie .image .featured {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        background: #00a651;
-        padding: 8px 10px;
-        border-radius: 8px;
-        font-size: 14px;
-        color: #fff;
-        font-weight: bold; }
-    #vacansies .vacansie span {
-      margin-right: 15px;
-      color: #03314c;
-      opacity: 0.5; }
-    #vacansies .vacansie .duration:before {
-      content: "";
-      top: 3px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      margin-right: 8px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url(../img/duration.svg); }
-    #vacansies .vacansie .cost:before {
-      content: "";
-      top: 3px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      margin-right: 8px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url(../img/cost.svg); }
-    #vacansies .vacansie .location:before {
-      content: "";
-      top: 3px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      margin-right: 8px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url(../img/location.svg); }
-    #vacansies .vacansie .branches:before {
-      content: "";
-      top: 3px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      margin-right: 8px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url(../img/branches.svg); }
-    #vacansies .vacansie .education:before {
-      content: "";
-      top: 3px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      margin-right: 8px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url(../img/education.svg); }
-  #vacansies .featured:after {
-    bottom: 40px;
-    top: initial; }
+      right: 15px;
+      top: 15px;
+      background: #00a651;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold; }
+  .vacansie span {
+    margin-right: 15px;
+    color: #03314c;
+    opacity: 0.5; }
+  .vacansie .duration:before {
+    content: "";
+    top: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/duration.svg); }
+  .vacansie .cost:before {
+    content: "";
+    top: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/cost.svg); }
+  .vacansie .location:before {
+    content: "";
+    top: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/location.svg); }
+  .vacansie .branches:before {
+    content: "";
+    top: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/branches.svg); }
+  .vacansie .education:before {
+    content: "";
+    top: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/education.svg); }
+
+.featured:after {
+  bottom: 40px;
+  top: initial; }
 
 .overviewcta {
   padding-top: 0px !important; }
@@ -2030,6 +2050,16 @@ footer {
     background: #ebebeb; }
   .secondair:hover {
     color: #03314c; }
+
+.blue {
+  color: #f8f8f8;
+  margin-bottom: 10px; }
+  .blue:before {
+    background: #03314c; }
+  .blue:after {
+    background: #022133; }
+  .blue:hover {
+    color: #f8f8f8; }
 
 .single-header {
   background: #f8f8f8; }
@@ -2446,6 +2476,8 @@ footer {
     z-index: 2;
     position: relative;
     padding: 40px 0px; }
+    #sngl-vacansie #profile .inner .btn {
+      margin-top: 30px; }
     #sngl-vacansie #profile h4 {
       font-family: "avenir-medium", sans-serif;
       font-weight: 600;
@@ -2479,6 +2511,22 @@ footer {
           position: relative; }
         #sngl-vacansie #profile ul li:last-child {
           border-bottom: none; }
+    #sngl-vacansie #profile table {
+      width: 100%; }
+      #sngl-vacansie #profile table tbody {
+        width: 100%;
+        display: inherit; }
+        #sngl-vacansie #profile table tbody tr {
+          font-size: 16px;
+          letter-spacing: -0.02em;
+          color: #03314c;
+          padding: 10px 0px;
+          border-bottom: 1px solid rgba(3, 49, 76, 0.07); }
+        #sngl-vacansie #profile table tbody th {
+          display: block;
+          padding: 10px 0px; }
+        #sngl-vacansie #profile table tbody svg {
+          margin-right: 10px; }
   #sngl-vacansie #offer ul {
     margin: 0;
     padding: 0;
@@ -2880,6 +2928,79 @@ main#cp .contact-p {
   background-color: none !important;
   text-align: left;
   color: white; }
+
+.description-vacansie {
+  margin-bottom: 60px; }
+
+.vacansiedetail {
+  position: relative; }
+  .vacansiedetail:before {
+    content: "";
+    background: #f8f8f8;
+    width: 100vw;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px; }
+  .vacansiedetail .inner {
+    position: relative;
+    z-index: 1;
+    padding: 30px 0px 60px 0px; }
+
+.vacansie_form label {
+  width: 100%;
+  display: block; }
+.vacansie_form input {
+  color: #03314c;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  height: 52px;
+  padding: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+.vacansie_form input:focus {
+  outline: none;
+  border: 1px solid #00a651; }
+.vacansie_form input::placeholder {
+  color: #E0E0E0; }
+.vacansie_form textarea {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 10px; }
+.vacansie_form .uploadfield {
+  position: relative;
+  display: inline-block;
+  width: 100%; }
+.vacansie_form .upload {
+  height: 52px;
+  pointer-events: none;
+  position: absolute; }
+.vacansie_form input[type="file"] {
+  padding-left: 16px;
+  padding-top: 11px;
+  color: #03314c; }
+.vacansie_form input[type="checkbox"] {
+  height: auto; }
+.vacansie_form label {
+  font-weight: 600 !important;
+  padding-top: 5px !important;
+  margin: 0px;
+  padding: 5px 0px;
+  color: #03314c; }
+.vacansie_form input[type="checkbox"] {
+  margin-left: initial;
+  width: 20px;
+  height: 15px;
+  top: 10px !important;
+  position: relative;
+  margin-right: 4px; }
 
 @media screen and (min-width: 1560px) {
   #socket .disclaimer ul li {
@@ -3427,6 +3548,9 @@ form .nf-field-description {
   .btn {
     width: 100%;
     text-align: center; }
+
+  .upload {
+    width: auto; }
 
   footer .widgets .widget-block {
     flex-grow: 1;

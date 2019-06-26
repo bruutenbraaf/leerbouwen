@@ -207,6 +207,10 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fullwidth {
+  width: 100%;
+}
+
 section ul {
   margin: 0;
   margin-left: 20px;
@@ -299,10 +303,27 @@ h3.featured-title {
 p {
   font-family: $content;
   color: $paragraph;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
 }
 
 a {
   font-family: $links;
+}
+
+.readmore {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: $secondair;
+  &:hover {
+    color: $secondair;
+    text-decoration: underline;
+  }
 }
 
 .the-link {
@@ -1810,106 +1831,107 @@ h2.title-intress {
 
 #vacansies {
   padding: 60px 0px;
-  .vacansie {
+}
+
+.vacansie {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 16px 0px;
+  flex-wrap: wrap;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform: translateZ(0);
+  .inner {
+    padding: 20px;
+  }
+  &:after {
+    content: "";
+    width: 16px;
+    height: 15px;
+    background-image: url(../img/arrow-b.svg);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:hover:after {
+    right: 15px;
+  }
+  .logo {
+    min-width: 52px;
+    height: 52px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 100%;
+    background-size: 60%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 30px 20px;
+  }
+  .image {
+    width: 100%;
+    height: 250px;
     position: relative;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    margin: 0px 0px 16px 0px;
-    flex-wrap: wrap;
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
-    transform: translateZ(0);
-    .inner {
-      padding: 20px;
-    }
-    &:after {
-      content: "";
-      width: 16px;
-      height: 15px;
-      background-image: url(../img/arrow-b.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    .featured {
       position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    &:hover:after {
       right: 15px;
-    }
-    .logo {
-      min-width: 52px;
-      height: 52px;
-      background-color: #fafafa;
-      border: 1px solid #eeeeee;
-      border-radius: 100%;
-      background-size: 60%;
-      background-position: center center;
-      background-repeat: no-repeat;
-      margin: 30px 20px;
-    }
-    .image {
-      width: 100%;
-      height: 250px;
-      position: relative;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center;
-      .featured {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        background: $secondair;
-        padding: 8px 10px;
-        border-radius: 8px;
-        font-size: 14px;
-        color: #fff;
-        font-weight: bold;
-      }
-    }
-    span {
-      margin-right: 15px;
-      color: $main;
-      opacity: 0.5;
-    }
-    .duration {
-      &:before {
-        @include before;
-        background-image: url(../img/duration.svg);
-      }
-    }
-    .cost {
-      &:before {
-        @include before;
-        background-image: url(../img/cost.svg);
-      }
-    }
-    .location {
-      &:before {
-        @include before;
-        background-image: url(../img/location.svg);
-      }
-    }
-    .branches {
-      &:before {
-        @include before;
-        background-image: url(../img/branches.svg);
-      }
-    }
-    .education {
-      &:before {
-        @include before;
-        background-image: url(../img/education.svg);
-      }
+      top: 15px;
+      background: $secondair;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
     }
   }
-  .featured {
-    &:after {
-      bottom: 40px;
-      top: initial;
+  span {
+    margin-right: 15px;
+    color: $main;
+    opacity: 0.5;
+  }
+  .duration {
+    &:before {
+      @include before;
+      background-image: url(../img/duration.svg);
     }
+  }
+  .cost {
+    &:before {
+      @include before;
+      background-image: url(../img/cost.svg);
+    }
+  }
+  .location {
+    &:before {
+      @include before;
+      background-image: url(../img/location.svg);
+    }
+  }
+  .branches {
+    &:before {
+      @include before;
+      background-image: url(../img/branches.svg);
+    }
+  }
+  .education {
+    &:before {
+      @include before;
+      background-image: url(../img/education.svg);
+    }
+  }
+}
+.featured {
+  &:after {
+    bottom: 40px;
+    top: initial;
   }
 }
 
@@ -2364,6 +2386,20 @@ footer {
   }
 }
 
+.blue {
+  color: $creme;
+  margin-bottom: 10px;
+  &:before {
+    background: $main;
+  }
+  &:after {
+    background: darken($main, 5%);
+  }
+  &:hover {
+    color: $creme;
+  }
+}
+
 // Single header
 
 .single-header {
@@ -2813,6 +2849,11 @@ footer {
     z-index: 2;
     position: relative;
     padding: 40px 0px;
+    .inner {
+      .btn {
+        margin-top: 30px;
+      }
+    }
     h4 {
       font-family: $subs;
       font-weight: 600;
@@ -2852,6 +2893,27 @@ footer {
         }
         &:last-child {
           border-bottom: none;
+        }
+      }
+    }
+    table {
+      width: 100%;
+      tbody {
+        width: 100%;
+        display: inherit;
+        tr {
+          font-size: 16px;
+          letter-spacing: -0.02em;
+          color: $main;
+          padding: 10px 0px;
+          border-bottom: 1px solid rgba(3, 49, 76, 0.07);
+        }
+        th {
+          display: block;
+          padding: 10px 0px;
+        }
+        svg {
+          margin-right: 10px;
         }
       }
     }
@@ -3363,6 +3425,101 @@ main#cp {
   background-color: none !important;
   text-align: left;
   color: white;
+}
+
+.description-vacansie {
+  margin-bottom: 60px;
+}
+
+.vacansiedetail {
+  position: relative;
+  &:before {
+    content: "";
+    background: $creme;
+    width: 100vw;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  .inner {
+    position: relative;
+    z-index: 1;
+    padding: 30px 0px 60px 0px;
+  }
+}
+
+// Vacansie form
+.vacansie_form {
+  label {
+    width: 100%;
+    display: block;
+  }
+  input {
+    color: $main;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    height: 52px;
+    padding: 15px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  input:focus {
+    outline: none;
+    border: 1px solid $secondair;
+  }
+  input::placeholder {
+    color: #E0E0E0;
+  }
+  textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+  }
+
+  .uploadfield {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .upload {
+    height: 52px;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  input[type="file"] {
+    padding-left: 16px;
+    padding-top: 11px;
+    color: $main;
+  }
+
+  input[type="checkbox"] {
+    height: auto;
+  }
+  label {
+    font-weight: 600 !important;
+    padding-top: 5px !important;
+    margin: 0px;
+    padding: 5px 0px;
+    color: $main;
+  }
+  input[type="checkbox"] {
+    margin-left: initial;
+    width: 20px;
+    height: 15px;
+    top: 10px !important;
+    position: relative;
+    margin-right: 4px;
+  }
 }
 
 @media screen and (min-width: 1560px) {
@@ -4034,6 +4191,9 @@ form {
   .btn {
     width: 100%;
     text-align: center;
+  }
+  .upload {
+    width: auto;
   }
   footer .widgets .widget-block {
     flex-grow: 1;
