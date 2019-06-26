@@ -2783,6 +2783,7 @@ main#cp .contact-p {
       border-radius: 10px;
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center 20%;
       position: relative;
       overflow: hidden; }
       #members .single-member .member-img .content-member {
