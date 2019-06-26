@@ -3504,6 +3504,9 @@ form .nf-field-description {
   padding-bottom: 60px; }
 
 @media screen and (max-width: 768px) {
+  .member-img {
+    min-height: 450px; }
+
   .cookie-notice {
     right: 15px;
     bottom: 15px;
