@@ -3001,6 +3001,8 @@ main#cp .contact-p {
   top: 10px !important;
   position: relative;
   margin-right: 4px; }
+.vacansie_form .f-privacy {
+  color: #00a651; }
 
 @media screen and (min-width: 1560px) {
   #socket .disclaimer ul li {

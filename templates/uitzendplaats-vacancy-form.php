@@ -74,7 +74,7 @@
 		<div class="uzp__checkbox">
 			<label>
 				<input type="checkbox" name="accept_terms" value="true" id="acceptTerms" />
-				<?php _e('De persoonlijke gegevens die u in dit formulier hebt ingevoerd, worden alleen gebruikt voor doeleinden die de wetgever toestaat. Wanneer u dit formulier verzendt, geeft u toestemming om de door u verstrekte gegevens te verwerken. Zie onze <a href=/privacybeleid/" target=_blank>privacyverklaring</a> voor meer informatie.', 'uitzendplaats'); ?>
+				<?php _e('De persoonlijke gegevens die u in dit formulier hebt ingevoerd, worden alleen gebruikt voor doeleinden die de wetgever toestaat. Wanneer u dit formulier verzendt, geeft u toestemming om de door u verstrekte gegevens te verwerken. Zie onze <a class="f-privacy" href=/privacybeleid/" target=_blank>privacyverklaring</a> voor meer informatie.', 'uitzendplaats'); ?>
 			</label>
 		</div>
 		<p class="uzp__help-block" data-validate-for="accept_terms"></p>
