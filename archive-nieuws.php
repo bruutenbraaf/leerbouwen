@@ -100,14 +100,13 @@ get_header(); ?>
                                         <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                                             <span class="subtitle"><?php the_sub_field('subtitel'); ?></span>
                                             <h2><?php the_sub_field('tekst'); ?></h2>
-                                            <?php if (have_rows('knoppen')) : ?>
-                                                <?php while (have_rows('knoppen')) : the_row(); ?>
-                                                    <?php $knop = get_sub_field('knop'); ?>
-                                                    <?php if ($knop) { ?>
-                                                        <a class="btn<?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
-                                                    <?php } ?>
-                                                <?php endwhile; ?>
-                                            <?php endif; ?>
+                                            <?php if (get_sub_field('toon_mailchimp_aanmeldformulier') == 0) { ?>
+                                                <?php $knop = get_sub_field('knop'); ?>
+                                                <?php if ($knop) { ?>
+                                                    <a class="btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
+                                                <?php } ?>
+                                            <?php } ?>
+                                            <?php if (get_sub_field('toon_mailchimp_aanmeldformulier') == 1) { ?> <?php echo do_shortcode('[mailchimp]'); ?><?php } ?>
                                         </div>
                                     </div>
                                 </div>

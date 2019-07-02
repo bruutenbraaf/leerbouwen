@@ -43,9 +43,9 @@ $content: "avenir", sans-serif;
 $contentfat: "avenir-medium", sans-serif;
 $subs: "avenir-medium", sans-serif;
 
-$h1: 42px;
-$h2: 32px;
-$h3: 28px;
+$h1: 2vw;
+$h2: 1.8vw;
+$h3: 1.6vw;
 $h4: 18px;
 
 // Styles
@@ -2610,7 +2610,7 @@ footer {
         }
         .content-title {
           font-family: $subs;
-          font-size: 600;
+          font-weight: 500;
           padding: 10px 10px 10px 0px;
           width: 100%;
           cursor: pointer;
@@ -3476,7 +3476,7 @@ main#cp {
     border: 1px solid $secondair;
   }
   input::placeholder {
-    color: #E0E0E0;
+    color: #e0e0e0;
   }
   textarea {
     width: 100%;
@@ -4138,7 +4138,7 @@ form {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .member-img {
     min-height: 450px !important;
   }
@@ -4518,19 +4518,6 @@ form {
     }
   }
 
-  .counters {
-    border-right: 0px !important;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 25px;
-    text-align: center;
-    max-width: 70%;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    &:last-child {
-      border-bottom: 0px;
-    }
-  }
-
   #b-cta {
     .container {
       background: #03314c;
@@ -4705,6 +4692,21 @@ form {
           margin-top: 40px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .counters {
+    border-right: 0px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding-bottom: 25px;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    &:last-child {
+      border-bottom: 0px;
     }
   }
 }
