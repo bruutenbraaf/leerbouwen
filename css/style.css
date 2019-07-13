@@ -3942,13 +3942,16 @@ form .nf-field-description {
     font-size: 8vw; }
 
   h2 {
-    font-size: 6vw; }
+    font-size: 6vw;
+    margin-bottom: 5px; }
 
   h3 {
-    font-size: 4vw; }
+    font-size: 4vw;
+    margin-bottom: 5px; }
 
   h4 {
-    font-size: 3vw; }
+    font-size: 3vw;
+    margin-bottom: 5px; }
 
   .counters {
     border-right: 0px !important;
