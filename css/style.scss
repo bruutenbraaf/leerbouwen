@@ -43,10 +43,15 @@ $content: "avenir", sans-serif;
 $contentfat: "avenir-medium", sans-serif;
 $subs: "avenir-medium", sans-serif;
 
-$h1: 2vw;
-$h2: 1.8vw;
-$h3: 1.6vw;
+$h1: 42px;
+$h2: 32px;
+$h3: 28px;
 $h4: 18px;
+
+$h1Mobile: 8vw;
+$h2Mobile: 6vw;
+$h3Mobile: 4vw;
+$h4Mobile: 3vw;
 
 // Styles
 
@@ -4697,6 +4702,18 @@ form {
 }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: $h1Mobile;
+  }
+  h2 {
+    font-size: $h2Mobile;
+  }
+  h3 {
+    font-size: $h3Mobile;
+  }
+  h4 {
+    font-size: $h4Mobile;
+  }
   .counters {
     border-right: 0px !important;
     border-bottom: 1px solid #e0e0e0 !important;

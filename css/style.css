@@ -67,14 +67,14 @@ h1 {
   font-style: normal;
   font-weight: 800;
   font-family: "Muli", sans-serif;
-  font-size: 2vw;
+  font-size: 42px;
   line-height: 50px; }
 
 h2 {
   font-style: normal;
   font-weight: 800;
   font-family: "Muli", sans-serif;
-  font-size: 1.8vw;
+  font-size: 32px;
   line-height: 40px; }
 
 h2.section-title:after {
@@ -85,7 +85,7 @@ h3 {
   font-style: normal;
   font-weight: 800;
   font-family: "Muli", sans-serif;
-  font-size: 1.6vw;
+  font-size: 28px;
   line-height: 36px; }
 
 h4 {
@@ -3401,7 +3401,7 @@ main#cp .contact-p {
   font-style: normal;
   font-weight: 800;
   font-family: "Muli", sans-serif;
-  font-size: 1.8vw;
+  font-size: 32px;
   line-height: 40px; }
   .nf-form-title h3:after {
     content: ".";
@@ -3938,6 +3938,18 @@ form .nf-field-description {
     footer .f-contact .fbtn:first-child {
       margin-top: 40px; } }
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 8vw; }
+
+  h2 {
+    font-size: 6vw; }
+
+  h3 {
+    font-size: 4vw; }
+
+  h4 {
+    font-size: 3vw; }
+
   .counters {
     border-right: 0px !important;
     border-bottom: 1px solid #e0e0e0 !important;
