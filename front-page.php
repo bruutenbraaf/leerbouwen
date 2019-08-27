@@ -352,6 +352,7 @@ get_header(); ?>
                                             slidesToScroll: 1,
                                             autoPlay: false,
                                             dots: false,
+                                            adaptiveHeight: true,
                                             accessibility: false,
                                             prevArrow: jQuery('.prev-slide'),
                                             nextArrow: jQuery('.more-reviews'),
