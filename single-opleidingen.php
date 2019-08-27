@@ -8,7 +8,7 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="section-title"><?php _e('Ook intressante opleidingen','leerbouwen');?></h2>
+                    <h2 class="section-title"><?php _e('Ook interessante opleidingen','leerbouwen');?></h2>
                 </div>
                 <?php $loop = new WP_Query(array(
                     'post_type' => 'opleidingen',

@@ -372,6 +372,9 @@ header {
         font-weight: 900;
         padding-bottom: 10px;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+        .hp-header .hp-header-co .inner h1:after {
+          content: ".";
+          color: #00a651; }
       .hp-header .hp-header-co .inner p {
         font-family: "avenir", sans-serif;
         font-weight: 500;

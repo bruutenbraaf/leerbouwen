@@ -65,7 +65,7 @@ jQuery('ul li h4.faq-title').click(function(){
 
 
 jQuery( "body" ).on('click', '.hamburger', function() {
-  jQuery('.mobile-navigation').animate({'width': 'toggle'}, 200);
+  jQuery('.mobile-navigation').slideToggle(300);
   jQuery('main').toggleClass('blurred');
   jQuery('.mt-btns').toggleClass('displayed');
   jQuery('.hamburger div:nth-child(1)').toggleClass('first');

@@ -403,7 +403,7 @@ get_header(); ?>
                                                 <?php while (have_rows('informatie_samenwerkingen')) : the_row(); ?>
                                                     <?php $logo_bedrijf = get_sub_field('logo_bedrijf'); ?>
                                                     <?php if ($logo_bedrijf) { ?>
-                                                        <img src="<?php echo $logo_bedrijf['url']; ?>" alt="<?php echo $logo_bedrijf['alt']; ?>" />
+                                                        <a href="<?php the_permalink();?>"><img src="<?php echo $logo_bedrijf['url']; ?>" alt="<?php echo $logo_bedrijf['alt']; ?>" /></a>
                                                     <?php } ?>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
@@ -422,6 +422,7 @@ get_header(); ?>
                             slidesToShow: 4,
                             slidesToScroll: 1,
                             autoPlay: true,
+                            autoplaySpeed: 2000,
                             accessibility: false,
                             responsive: [{
                                     breakpoint: 1560,
