@@ -304,19 +304,21 @@ get_header(); ?>
                                                         <?php if (have_rows('review')) : ?>
                                                             <?php while (have_rows('review')) : the_row(); ?>
                                                                 <div class="row">
-                                                                    <div class="col-7">
-                                                                        <div class="rating">
-                                                                            <?php $rating = get_sub_field('ster_waardering');
-                                                                            for ($i = 0; $i < $rating; $i++) { ?>
-                                                                                <span class="star"></span>
-                                                                            <?php } ?>
+                                                                    <?php if (get_sub_field('ster_waardering')) { ?>
+                                                                        <div class="col-7">
+                                                                            <div class="rating">
+                                                                                <?php $rating = get_sub_field('ster_waardering');
+                                                                                for ($i = 0; $i < $rating; $i++) { ?>
+                                                                                    <span class="star"></span>
+                                                                                <?php } ?>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-5">
-                                                                        <span class="score">
-                                                                            <?php the_sub_field('score'); ?> / 10
-                                                                        </span>
-                                                                    </div>
+                                                                        <div class="col-5">
+                                                                            <span class="score">
+                                                                                <?php the_sub_field('score'); ?> / 10
+                                                                            </span>
+                                                                        </div>
+                                                                    <?php } ?>
                                                                     <div class="col-12">
                                                                         <div class="reviewer">
                                                                             <?php $afbeelding_kandidaat = get_sub_field('afbeelding_kandidaat'); ?>
