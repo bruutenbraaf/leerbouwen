@@ -991,6 +991,9 @@ h2.title-intress:after {
     #reviews .more-reviews:hover:after {
       margin-left: 14px; }
 
+.ntp {
+  padding-top: 0px !important; }
+
 #partners {
   padding: 50px 0 80px; }
   #partners .partners .item img {

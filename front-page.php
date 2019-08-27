@@ -320,7 +320,7 @@ get_header(); ?>
                                                                         </div>
                                                                     <?php } ?>
                                                                     <div class="col-12">
-                                                                        <div class="reviewer">
+                                                                                <div class="reviewer<?php if (empty(get_sub_field('ster_waardering'))) { ?> ntp<?php }?>">
                                                                             <?php $afbeelding_kandidaat = get_sub_field('afbeelding_kandidaat'); ?>
                                                                             <div class="rev-img<?php if (!$afbeelding_kandidaat) { ?> cimg<?php } ?>" style="background-image:url(<?php $afbeelding_kandidaat = get_sub_field('afbeelding_kandidaat'); ?><?php if ($afbeelding_kandidaat) { ?><?php echo $afbeelding_kandidaat['sizes']['vacaturesmall']; ?> <?php } else {  ?> <?php echo $afbeelding_geen_logo['sizes']['vacaturesmall']; ?><?php } ?>);">
                                                                             </div>
