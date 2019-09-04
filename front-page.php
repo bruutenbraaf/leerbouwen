@@ -70,11 +70,11 @@ get_header(); ?>
                 <section id="featured_educations" data-scroll>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-sm-6">
                                 <h2 class="section-title"><?php the_sub_field('titel'); ?></h2>
                                 <?php the_sub_field('tekstueel'); ?>
                             </div>
-                            <div class="col-md-6 more">
+                            <div class="col-sm-6 more">
                                 <?php $knop = get_sub_field('knop'); ?>
                                 <?php if ($knop) { ?>
                                     <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" <?php } ?>><?php echo $knop['title']; ?></a>
@@ -96,7 +96,7 @@ get_header(); ?>
                                 ),
                             )); ?>
                             <?php if ($loop->have_posts()) : ?>
-                                <div class="col-md-6">
+                                <div class="col-sm-6 c">
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <?php $upload_featured_afbeelding = get_field('upload_featured_afbeelding'); ?>
                                         <div class="featured-item" data-scroll <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['smallfeatured']; ?>);" <?php } ?>>
@@ -564,7 +564,7 @@ get_header(); ?>
                                             <?php the_sub_field('seo_tekst'); ?>
                                             <?php $knop = get_sub_field('knop'); ?>
                                             <?php if ($knop) { ?>
-                                                <a class="small-btn" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                            <a class="small-btn" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?> target="<?php echo $knop['target']; ?>"<?php } ?>><?php echo $knop['title']; ?></a>
                                             <?php } ?>
                                         </div>
                                     </div>

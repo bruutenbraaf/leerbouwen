@@ -41,12 +41,13 @@ section ul {
   opacity: 0;
   transform: translateY(30%); }
 
-.sectionv {
+#news-overview .sectionv {
   opacity: 0;
   transform: translateY(30%);
   animation: slideIn;
   animation-duration: 1s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  margin-bottom: 30px; }
 
 @keyframes slideIn {
   0% {
@@ -1572,7 +1573,7 @@ h2.title-intress:after {
   -webkit-font-smoothing: subpixel-antialiased;
   transform: translateZ(0); }
   .vacansie .inner {
-    padding: 20px; }
+    padding: 20px 60px 20px 20px; }
   .vacansie:after {
     content: "";
     width: 16px;
@@ -1614,7 +1615,8 @@ h2.title-intress:after {
   .vacansie span {
     margin-right: 15px;
     color: #03314c;
-    opacity: 0.5; }
+    opacity: 0.5;
+    white-space: nowrap; }
   .vacansie .duration:before {
     content: "";
     top: 3px;
@@ -1809,7 +1811,7 @@ h2.title-intress:after {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
     #news-overview .news-item .information {
       position: relative;
-      padding: 20px; }
+      padding: 20px 20px 0px 20px; }
       #news-overview .news-item .information h4 {
         font-weight: bold;
         font-size: 18px;
@@ -3401,7 +3403,11 @@ main#cp .contact-p {
   margin-top: 5px;
   font-family: "avenir", sans-serif; }
 #page-sb .nice-select .list {
-  width: 100%; }
+  width: 100%;
+  margin-left: 0px; }
+
+.label-right .checkbox-wrap .nf-field-label {
+  width: 100% !important; }
 
 .nf-form-title h3 {
   font-style: normal;
@@ -3437,7 +3443,8 @@ main#cp .contact-p {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-  color: #03314c; }
+  color: #03314c;
+  width: 100%; }
 .nf-form-layout .label-above .nf-field-label {
   margin-bottom: 2px !important; }
 .nf-form-layout input[type="button"] {
@@ -3510,6 +3517,13 @@ form .nf-field-description {
   padding-bottom: 60px; }
 
 @media screen and (max-width: 1100px) {
+  #services .more {
+    position: relative;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    padding-right: 60px; }
+
   .member-img {
     min-height: 450px !important; }
 
@@ -3530,6 +3544,9 @@ form .nf-field-description {
 
   #vacansies .vacansie .image {
     margin-bottom: 15px; }
+
+  #vacancies .more .small-btn {
+    margin-right: 15px; }
 
   .contact-person h2 {
     margin: 0px;
@@ -3566,7 +3583,9 @@ form .nf-field-description {
 
   footer .widgets .widget-block {
     flex-grow: 1;
-    margin: 0px; }
+    margin: 0px;
+    width: 50%;
+    float: left; }
 
   footer .f-contact {
     display: flex;
@@ -3680,10 +3699,6 @@ form .nf-field-description {
 
   .archive-header .container .row {
     padding: 30px 0px 10px 0px; }
-
-  #featured_educations .more {
-    margin: 40px 0 0 0;
-    order: 999; }
 
   #full [class*="col-md-"] {
     padding-bottom: 30px; }
@@ -3889,16 +3904,10 @@ form .nf-field-description {
     right: 15px; }
   #vacancies .vacancie-item .info {
     padding-right: 20px; }
-  #vacancies .vacancies-items {
-    order: 1; }
-    #vacancies .vacancies-items .inner p {
-      padding-right: 15px; }
-    #vacancies .vacancies-items .inner .small-btn {
-      display: none; }
-  #vacancies .more {
-    order: 2; }
-    #vacancies .more .small-btn {
-      float: left; }
+  #vacancies .vacancies-items .inner p {
+    padding-right: 15px; }
+  #vacancies .vacancies-items .inner .small-btn {
+    display: none; }
   #vacancies .items {
     order: 3; }
 
@@ -3913,14 +3922,6 @@ form .nf-field-description {
     margin: 20px 0px; }
   #socket .disclaimer .by {
     float: left; }
-
-  #featured_educations .more .small-btn {
-    position: initial;
-    padding-bottom: 10px;
-    display: block; }
-  #featured_educations .featured-item-big {
-    min-height: 250px;
-    margin-top: 20px; }
 
   #news .container:before {
     border-radius: 10px;
@@ -3943,7 +3944,41 @@ form .nf-field-description {
     margin-top: 10px; }
     footer .f-contact .fbtn:first-child {
       margin-top: 40px; } }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 468px) {
+  footer .widgets .widget-block {
+    flex-grow: 1;
+    margin: 0px;
+    width: 50%;
+    float: left;
+    display: block;
+    margin-bottom: 30px;
+    padding-right: 10px; }
+
+  footer .widgets {
+    padding: 50px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100; }
+
+  #vacancies .more {
+    order: 2; }
+    #vacancies .more .small-btn {
+      float: left; }
+  #vacancies .vacancie-items {
+    order: 1; }
+
+  #featured_educations .more {
+    margin: 40px 0 0 0;
+    order: 999; }
+
+  #featured_educations .more .small-btn {
+    position: initial;
+    padding-bottom: 10px;
+    display: block; }
+  #featured_educations .featured-item-big {
+    min-height: 250px;
+    margin-top: 20px; }
+
   h1 {
     font-size: 8vw; }
 

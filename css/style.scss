@@ -234,12 +234,13 @@ section ul {
   transform: translateY(30%);
 }
 
-.sectionv {
+#news-overview .sectionv {
   opacity: 0;
   transform: translateY(30%);
   animation: slideIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  margin-bottom: 30px;
 }
 
 @keyframes slideIn {
@@ -1860,7 +1861,7 @@ h2.title-intress {
   -webkit-font-smoothing: subpixel-antialiased;
   transform: translateZ(0);
   .inner {
-    padding: 20px;
+    padding: 20px 60px 20px 20px;
   }
   &:after {
     content: "";
@@ -1909,6 +1910,7 @@ h2.title-intress {
     margin-right: 15px;
     color: $main;
     opacity: 0.5;
+    white-space:nowrap;
   }
   .duration {
     &:before {
@@ -2106,7 +2108,7 @@ h2.title-intress {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     .information {
       position: relative;
-      padding: 20px;
+      padding: 20px 20px 0px 20px;
       h4 {
         font-weight: bold;
         font-size: 18px;
@@ -4015,7 +4017,12 @@ main#cp {
   }
   .nice-select .list {
     width: 100%;
+    margin-left: 0px;
   }
+}
+
+.label-right .checkbox-wrap .nf-field-label {
+  width: 100% !important;
 }
 
 // Forms
@@ -4063,6 +4070,7 @@ main#cp {
     font-size: 16px;
     line-height: 20px;
     color: $main;
+    width: 100%;
   }
 
   .label-above .nf-field-label {
@@ -4152,6 +4160,13 @@ form {
 }
 
 @media screen and (max-width: 1100px) {
+  #services .more {
+    position: relative;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    padding-right: 60px;
+  }
   .member-img {
     min-height: 450px !important;
   }
@@ -4172,6 +4187,10 @@ form {
   }
   #vacansies .vacansie .image {
     margin-bottom: 15px;
+  }
+
+  #vacancies .more .small-btn {
+    margin-right: 15px;
   }
   .contact-person {
     h2 {
@@ -4218,6 +4237,8 @@ form {
   footer .widgets .widget-block {
     flex-grow: 1;
     margin: 0px;
+    width: 50%;
+    float: left;
   }
 
   footer .f-contact {
@@ -4350,10 +4371,6 @@ form {
   }
   .archive-header .container .row {
     padding: 30px 0px 10px 0px;
-  }
-  #featured_educations .more {
-    margin: 40px 0 0 0;
-    order: 999;
   }
   #full [class*="col-md-"] {
     padding-bottom: 30px;
@@ -4618,7 +4635,6 @@ form {
       }
     }
     .vacancies-items {
-      order: 1;
       .inner {
         p {
           padding-right: 15px;
@@ -4626,12 +4642,6 @@ form {
         .small-btn {
           display: none;
         }
-      }
-    }
-    .more {
-      order: 2;
-      .small-btn {
-        float: left;
       }
     }
     .items {
@@ -4657,19 +4667,6 @@ form {
       .by {
         float: left;
       }
-    }
-  }
-  #featured_educations {
-    .more {
-      .small-btn {
-        position: initial;
-        padding-bottom: 10px;
-        display: block;
-      }
-    }
-    .featured-item-big {
-      min-height: 250px;
-      margin-top: 20px;
     }
   }
   #news {
@@ -4709,7 +4706,51 @@ form {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 468px) {
+  footer .widgets .widget-block {
+    flex-grow: 1;
+    margin: 0px;
+    width: 50%;
+    float: left;
+    display: block;
+    margin-bottom: 30px;
+    padding-right: 10px;
+  }
+  footer .widgets {
+    padding: 50px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100;
+
+}
+  #vacancies {
+    .more {
+      order: 2;
+      .small-btn {
+        float: left;
+      }
+    }
+    .vacancie-items {
+      order: 1;
+    }
+  }
+  #featured_educations .more {
+    margin: 40px 0 0 0;
+    order: 999;
+  }
+  #featured_educations {
+    .more {
+      .small-btn {
+        position: initial;
+        padding-bottom: 10px;
+        display: block;
+      }
+    }
+    .featured-item-big {
+      min-height: 250px;
+      margin-top: 20px;
+    }
+  }
   h1 {
     font-size: $h1Mobile;
   }
