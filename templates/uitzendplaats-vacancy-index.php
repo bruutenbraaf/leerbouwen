@@ -67,11 +67,5 @@ if ($_POST && array_key_exists('uzp_vacancy_search', $_POST) && (!empty($search_
 				</div>
 			</article>
 		<?php } ?>
-		<?php
-		// Pagination
-		if ($pagination) {
-			include uitzendplaats_get_template('partials/pagination');
-		}
-		?>
 	<?php } ?>
 <?php } ?>

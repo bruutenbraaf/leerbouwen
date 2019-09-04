@@ -597,7 +597,7 @@ get_header(); ?>
                                 </div>
                             </div>
                             <div class="col-md-7 offset-md-1 <?php if ($items > 3) { ?>items<?php } ?>">
-                                <?php echo do_shortcode('[uitzendplaats_vacancy_index per_page="3"]'); ?>
+                                <?php echo do_shortcode("[uitzendplaats_latest_vacancies per_page='3']"); ?>
                             </div>
                         </div>
                     </div>
