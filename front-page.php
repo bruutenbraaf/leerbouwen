@@ -38,7 +38,7 @@ get_header(); ?>
                             <?php while (have_rows('eerste_counter')) : the_row(); ?>
                                 <div class="col-md-4 counters">
                                     <span class="countnumber"><?php the_sub_field('getal'); ?></span>
-                                    <span class="countitem"><?php the_sub_field('beschrijving'); ?></span>
+                                    <h6 class="countitem"><?php the_sub_field('beschrijving'); ?></span>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -46,7 +46,7 @@ get_header(); ?>
                             <?php while (have_rows('Tweede_counter')) : the_row(); ?>
                                 <div class="col-md-4 counters">
                                     <span class="countnumber"><?php the_sub_field('getal'); ?></span>
-                                    <span class="countitem"><?php the_sub_field('beschrijving'); ?></span>
+                                    <h6 class="countitem"><?php the_sub_field('beschrijving'); ?></span>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -54,7 +54,7 @@ get_header(); ?>
                             <?php while (have_rows('derde_counter')) : the_row(); ?>
                                 <div class="col-md-4 counters">
                                     <span class="countnumber"><?php the_sub_field('getal'); ?></span>
-                                    <span class="countitem"><?php the_sub_field('beschrijving'); ?></span>
+                                    <h6 class="countitem"><?php the_sub_field('beschrijving'); ?></span>
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>

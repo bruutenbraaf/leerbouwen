@@ -437,7 +437,8 @@ header {
       #counter .count .counters .countitem {
         color: #03314c;
         display: block;
-        line-height: 10px; }
+        line-height: 10px;
+        font-weight: normal; }
 
 #featured_educations {
   padding: 60px 0px; }
@@ -803,6 +804,28 @@ h2.title-intress:after {
     font-family: "avenir", sans-serif;
     font-size: 16px;
     line-height: 28px; }
+  #b-cta .cta h2 {
+    font-family: Muli, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 50px;
+    color: #fff; }
+  #b-cta .cta h2 span {
+    z-index: 1;
+    color: #fff;
+    font-weight: 900;
+    position: relative;
+    text-decoration: none !important; }
+    #b-cta .cta h2 span:after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      left: 0;
+      bottom: 2px;
+      background: #00a651;
+      position: absolute;
+      z-index: -1; }
   #b-cta .cta .small-btn {
     color: #fff;
     font-weight: bold; }
@@ -2973,7 +2996,7 @@ main#cp .contact-p {
   -moz-transition: all 0.2s ease-in-out !important;
   -o-transition: all 0.2s ease-in-out !important;
   transition: all 0.2s ease-in-out !important; }
-.vacansie_form input[type=file] {
+.vacansie_form input[type="file"] {
   padding: 11px 15px !important; }
 .vacansie_form input:focus {
   outline: none;

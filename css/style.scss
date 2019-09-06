@@ -711,6 +711,7 @@ header {
         color: $main;
         display: block;
         line-height: 10px;
+        font-weight: normal;
       }
     }
   }
@@ -1053,6 +1054,31 @@ h2.title-intress {
       font-family: $content;
       font-size: 16px;
       line-height: 28px;
+    }
+    h2 {
+      font-family: Muli, sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 50px;
+      color: #fff;
+    }
+    h2 span {
+      z-index: 1;
+      color: #fff;
+      font-weight: 900;
+      position: relative;
+      text-decoration: none !important;
+      &:after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        left: 0;
+        bottom: 2px;
+        background: $secondair;
+        position: absolute;
+        z-index: -1;
+      }
     }
     .small-btn {
       color: #fff;
@@ -1910,7 +1936,7 @@ h2.title-intress {
     margin-right: 15px;
     color: $main;
     opacity: 0.5;
-    white-space:nowrap;
+    white-space: nowrap;
   }
   .duration {
     &:before {
@@ -3486,7 +3512,7 @@ main#cp {
     -o-transition: all 0.2s ease-in-out !important;
     transition: all 0.2s ease-in-out !important;
   }
-  input[type=file] {
+  input[type="file"] {
     padding: 11px 15px !important;
   }
   input:focus {
@@ -3554,7 +3580,7 @@ main#cp {
     position: relative !important;
     z-index: 2 !important;
     overflow: hidden !important;
-    border:none !important; 
+    border: none !important;
     line-height: initial !important;
     height: initial !important;
     font-size: 18px !important;
@@ -4772,8 +4798,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     width: 100;
-
-}
+  }
   #vacancies {
     .more {
       order: 2;
