@@ -39,7 +39,7 @@ get_header(); ?>
                                 <?php while (have_rows('knoppen_extra_opleidingen', 'option')) : the_row(); ?>
                                     <?php $knop = get_sub_field('knop'); ?>
                                     <?php if ($knop) { ?>
-                                        <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" target="<?php echo $knop['target']; ?>"><?php echo $knop['title']; ?></a>
+                                        <a class="btn <?php if (get_sub_field('is_secondair') == 1) { ?> secondair<?php } ?>" href="<?php echo $knop['url']; ?>" <?php if ($knop['target']) { ?>target="<?php echo $knop['target']; ?>" rel="noopener"<?php } ?>><?php echo $knop['title']; ?></a>
                                     <?php } ?>
                                 <?php endwhile; ?>
                             <?php endif; ?>
