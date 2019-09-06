@@ -33,6 +33,10 @@ function noOpener(){
   }
 }
 
+jQuery(document).ready(function() {
+  noOpener()
+});
+
 jQuery(window).scroll(function() {    
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 100) {
