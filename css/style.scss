@@ -973,7 +973,7 @@ header {
     background: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    span.title {
+    .title {
       margin-bottom: 40px;
       display: block;
       strong {
@@ -3474,17 +3474,20 @@ main#cp {
     display: block;
   }
   input {
-    color: $main;
-    width: 100%;
-    background: #ffffff;
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
-    height: 52px;
-    padding: 15px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    color: $main !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid #eeeeee !important;
+    border-radius: 10px !important;
+    height: 52px !important;
+    padding: 15px !important;
+    -webkit-transition: all 0.2s ease-in-out !important;
+    -moz-transition: all 0.2s ease-in-out !important;
+    -o-transition: all 0.2s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+  input[type=file] {
+    padding: 11px 15px !important;
   }
   input:focus {
     outline: none;
@@ -3494,10 +3497,10 @@ main#cp {
     color: #e0e0e0;
   }
   textarea {
-    width: 100%;
-    background: #ffffff;
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
+    width: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid #eeeeee !important;
+    border-radius: 10px !important;
   }
 
   .uploadfield {
@@ -3514,12 +3517,11 @@ main#cp {
 
   input[type="file"] {
     padding-left: 16px;
-    padding-top: 11px;
+    padding-top: 11px !important;
     color: $main;
   }
-
   input[type="checkbox"] {
-    height: auto;
+    height: auto !important;
   }
   label {
     font-weight: 600 !important;
@@ -3538,6 +3540,55 @@ main#cp {
   }
   .f-privacy {
     color: $secondair;
+  }
+  a {
+    color: $secondair !important;
+  }
+  button {
+    font-family: $content !important;
+    font-weight: bold !important;
+    width: auto !important;
+    padding: 15px 32px !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    position: relative !important;
+    z-index: 2 !important;
+    overflow: hidden !important;
+    border:none !important; 
+    line-height: initial !important;
+    height: initial !important;
+    font-size: 18px !important;
+    &:before {
+      content: "";
+      position: absolute;
+      background: $secondair;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      left: 0;
+      top: 0;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      min-height: 50px;
+      z-index: -2;
+      left: -50px;
+      bottom: -50px;
+      border-radius: 100%;
+      background: darken($secondair, 5%);
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover:after {
+      transform: scale(25);
+    }
   }
 }
 

@@ -740,15 +740,15 @@ header {
     background: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px; }
-    #inf .inner span.title {
+    #inf .inner .title {
       margin-bottom: 40px;
       display: block; }
-      #inf .inner span.title strong {
+      #inf .inner .title strong {
         z-index: 1;
         color: #03314c;
         font-weight: 900;
         position: relative; }
-        #inf .inner span.title strong:after {
+        #inf .inner .title strong:after {
           content: "";
           height: 2px;
           width: 100%;
@@ -2962,27 +2962,29 @@ main#cp .contact-p {
   width: 100%;
   display: block; }
 .vacansie_form input {
-  color: #03314c;
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 10px;
-  height: 52px;
-  padding: 15px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  color: #03314c !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  border: 1px solid #eeeeee !important;
+  border-radius: 10px !important;
+  height: 52px !important;
+  padding: 15px !important;
+  -webkit-transition: all 0.2s ease-in-out !important;
+  -moz-transition: all 0.2s ease-in-out !important;
+  -o-transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important; }
+.vacansie_form input[type=file] {
+  padding: 11px 15px !important; }
 .vacansie_form input:focus {
   outline: none;
   border: 1px solid #00a651; }
 .vacansie_form input::placeholder {
   color: #e0e0e0; }
 .vacansie_form textarea {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 10px; }
+  width: 100% !important;
+  background: #ffffff !important;
+  border: 1px solid #eeeeee !important;
+  border-radius: 10px !important; }
 .vacansie_form .uploadfield {
   position: relative;
   display: inline-block;
@@ -2993,10 +2995,10 @@ main#cp .contact-p {
   position: absolute; }
 .vacansie_form input[type="file"] {
   padding-left: 16px;
-  padding-top: 11px;
+  padding-top: 11px !important;
   color: #03314c; }
 .vacansie_form input[type="checkbox"] {
-  height: auto; }
+  height: auto !important; }
 .vacansie_form label {
   font-weight: 600 !important;
   padding-top: 5px !important;
@@ -3012,6 +3014,49 @@ main#cp .contact-p {
   margin-right: 4px; }
 .vacansie_form .f-privacy {
   color: #00a651; }
+.vacansie_form a {
+  color: #00a651 !important; }
+.vacansie_form button {
+  font-family: "avenir", sans-serif !important;
+  font-weight: bold !important;
+  width: auto !important;
+  padding: 15px 32px !important;
+  border-radius: 10px !important;
+  color: #fff !important;
+  position: relative !important;
+  z-index: 2 !important;
+  overflow: hidden !important;
+  border: none !important;
+  line-height: initial !important;
+  height: initial !important;
+  font-size: 18px !important; }
+  .vacansie_form button:before {
+    content: "";
+    position: absolute;
+    background: #00a651;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    top: 0; }
+  .vacansie_form button:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    min-height: 50px;
+    z-index: -2;
+    left: -50px;
+    bottom: -50px;
+    border-radius: 100%;
+    background: #008d45;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  .vacansie_form button:hover {
+    color: #fff; }
+  .vacansie_form button:hover:after {
+    transform: scale(25); }
 
 @media screen and (min-width: 1560px) {
   #socket .disclaimer ul li {

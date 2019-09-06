@@ -561,7 +561,7 @@ get_header(); ?>
                                 <div class="inner">
                                     <div class="row">
                                         <div class="offset-md-2 col-md-8">
-                                            <span class="title"><?php the_sub_field('titel'); ?></span>
+                                            <div class="title"><?php the_sub_field('titel'); ?></div>
                                             <?php the_sub_field('seo_tekst'); ?>
                                             <?php $knop = get_sub_field('knop'); ?>
                                             <?php if ($knop) { ?>

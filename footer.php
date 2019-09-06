@@ -10,7 +10,9 @@
 			<div class="col-md-7">
 				<?php if (have_rows('contactgegevens', 'option')) : ?>
 					<?php while (have_rows('contactgegevens', 'option')) : the_row(); ?>
-						<?php if (get_sub_field('telefoonnummer')) { ?><a class="fbtn" href="tel:<?php the_sub_field('telefoonnummer'); ?>"><?php the_sub_field('telefoonnummer'); ?></a><?php } ?>
+						<?php if (get_sub_field('telefoonnummer')) { ?>
+							<?php $tel = get_sub_field('telefoonnummer');?>
+							<a class="fbtn" href="tel:<?php echo str_replace(' ', '', $tel); ?>"><?php the_sub_field('telefoonnummer'); ?></a><?php } ?>
 						<?php if (get_sub_field('emailadres')) { ?><a class="fbtn" href="mailto:<?php the_sub_field('emailadres'); ?>"><?php the_sub_field('emailadres'); ?></a><?php } ?>
 					<?php endwhile; ?>
 				<?php endif; ?>
