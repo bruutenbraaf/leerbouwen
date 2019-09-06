@@ -13,6 +13,26 @@ document.addEventListener('DOMContentLoaded', function(){
   }, document.body, window);
 });
 
+function noOpener(){
+  //get elements
+  var e = document.querySelectorAll('a[target="_blank"]:not([rel~="noopener"])');
+  if(e.length){
+      //loop through
+      for (i = 0; i < e.length; ++i){
+          //check for existing rel
+          var rel = e[i].getAttribute('rel');
+          if(rel){
+              //we don't want doubel noreferrer
+              rel = rel.replace('noreferrer','');
+              e[i].setAttribute('rel',rel+' noopener noreferrer');
+          }else{
+              e[i].setAttribute('rel','noopener noreferrer');   
+          }
+          
+      }
+  }
+}
+
 jQuery(window).scroll(function() {    
   var scroll = jQuery(window).scrollTop();
   if (scroll >= 100) {
