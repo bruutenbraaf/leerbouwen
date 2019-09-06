@@ -96,10 +96,10 @@ get_header(); ?>
                                 ),
                             )); ?>
                             <?php if ($loop->have_posts()) : ?>
-                                <div class="col-sm-6 c">
+                                <div class="col-sm-6 c data-scroll">
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <?php $upload_featured_afbeelding = get_field('upload_featured_afbeelding'); ?>
-                                        <div class="featured-item" data-scroll <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['smallfeatured']; ?>);" <?php } ?>>
+                                        <div class="featured-item" <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['smallfeatured']; ?>);" <?php } ?>>
                                             <div class="inner">
                                                 <h3 class="featured-title"><?php the_title(); ?></h3>
                                                 <div class="featured-info">
@@ -132,10 +132,10 @@ get_header(); ?>
                                 ),
                             )); ?>
                             <?php if ($loop->have_posts()) : ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6 data-scroll">
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <?php $upload_featured_afbeelding = get_field('upload_featured_afbeelding'); ?>
-                                        <div class="featured-item-big" data-scroll <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['bigfeatured']; ?>);" <?php } ?>>
+                                        <div class="featured-item-big" <?php if ($upload_featured_afbeelding) { ?>style="background-image:url(<?php echo $upload_featured_afbeelding['sizes']['bigfeatured']; ?>);" <?php } ?>>
                                             <div class="inner">
                                                 <h3 class="featured-title"><?php the_title(); ?></h3>
                                                 <div class="featured-info">

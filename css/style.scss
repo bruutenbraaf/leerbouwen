@@ -229,12 +229,16 @@ section ul {
   }
 }
 
-.sectionh {
+#news-overview .sectionv {
   opacity: 0;
   transform: translateY(30%);
+  animation: slideIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin-bottom: 30px;
 }
 
-#news-overview .sectionv {
+.featured-item .sectionv {
   opacity: 0;
   transform: translateY(30%);
   animation: slideIn;
@@ -247,10 +251,18 @@ section ul {
   0% {
     opacity: 0;
     transform: translateY(30%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   100% {
     opacity: 1;
     transform: translateY(0%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -3616,6 +3628,24 @@ main#cp {
       transform: scale(25);
     }
   }
+}
+
+
+.sectionh {
+  opacity: 0;
+  transform: translateY(30%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section.sectionv {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 1560px) {

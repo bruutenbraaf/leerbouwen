@@ -1,17 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
-  var trigger = new ScrollTrigger({
-    toggle: {
-      visible: 'sectionv',
-      hidden: 'sectionh'
-    },
-    offset: {
-      x: 0,
-      y: 80
-    },
-    addHeight: false,
-    once: true
-  }, document.body, window);
-});
+
 
 function noOpener(){
   //get elements
@@ -157,3 +144,19 @@ jQuery(document).ready(function() {
       
       })();
   });
+
+
+  document.addEventListener('DOMContentLoaded', function(){
+  var trigger = new ScrollTrigger({
+    toggle: {
+      visible: 'sectionv',
+      hidden: 'sectionh'
+    },
+    offset: {
+      x: 0,
+      y: 80
+    },
+    addHeight: false,
+    once: true
+  }, document.body, window);
+});
