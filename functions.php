@@ -52,6 +52,26 @@ function wpdocs_after_setup_theme() {
 }
 add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
 
+function noOpener(){
+    //get elements
+    var e = document.querySelectorAll('a[target="_blank"]:not([rel~="noopener"])');
+    if(e.length){
+        //loop through
+        for (i = 0; i < e.length; ++i){
+            //check for existing rel
+            var rel = e[i].getAttribute('rel');
+            if(rel){
+                //we don't want doubel noreferrer
+                rel = rel.replace('noreferrer','');
+                e[i].setAttribute('rel',rel+' noopener noreferrer');
+            }else{
+                e[i].setAttribute('rel','noopener noreferrer');   
+            }
+            
+        }
+    }
+}
+
 
 if (!function_exists('get_archive_link')) {
   function get_archive_link( $post_type ) {
