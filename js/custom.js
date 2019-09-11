@@ -11,7 +11,7 @@ function noOpener(){
           if(rel){
               //we don't want doubel noreferrer
               rel = rel.replace('noreferrer','');
-              e[i].setAttribute('rel',rel+' noopener noreferrer');
+              e[i].setAttribute('rel',rel+' noopener noreferrer nofollow');
           }else{
               e[i].setAttribute('rel','noopener noreferrer');   
           }

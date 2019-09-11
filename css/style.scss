@@ -2143,6 +2143,7 @@ h2.title-intress {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    height: 100%;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     .information {
       position: relative;
@@ -3526,6 +3527,7 @@ main#cp {
   }
   input[type="file"] {
     padding: 11px 15px !important;
+    height: auto !important;
   }
   input:focus {
     outline: none;
@@ -3627,6 +3629,9 @@ main#cp {
     &:hover:after {
       transform: scale(25);
     }
+  }
+  #acceptTerms {
+    width: auto !important;
   }
 }
 
