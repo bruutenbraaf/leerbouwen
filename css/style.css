@@ -1130,7 +1130,8 @@ h2.title-intress:after {
     #news .news-item .inner {
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      position: relative; }
       #news .news-item .inner .news-img {
         width: 100%;
         height: 150px;
