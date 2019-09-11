@@ -1089,40 +1089,42 @@ h2.title-intress:after {
   #news .news-items {
     display: flex;
     align-items: center; }
-    #news .news-items .inner p {
-      padding-right: 15px;
-      font-family: "avenir", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 28px;
-      /* or 175% */
-      letter-spacing: -0.02em;
-      color: #4f4f4f; }
-    #news .news-items .inner .small-btn {
-      position: relative;
-      bottom: 0px;
-      margin-bottom: 1rem;
-      font-family: Muli, sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 20px;
-      color: #03314c; }
-      #news .news-items .inner .small-btn:after {
-        content: "";
-        display: inline-block;
-        width: 14px;
-        height: 13px;
-        margin-left: 10px;
-        background-image: url(../img/arrow.svg);
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out; }
-      #news .news-items .inner .small-btn:hover {
-        text-decoration: none; }
-      #news .news-items .inner .small-btn:hover:after {
-        margin-left: 14px; }
+    #news .news-items .inner {
+      position: relative; }
+      #news .news-items .inner p {
+        padding-right: 15px;
+        font-family: "avenir", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 175% */
+        letter-spacing: -0.02em;
+        color: #4f4f4f; }
+      #news .news-items .inner .small-btn {
+        position: relative;
+        bottom: 0px;
+        margin-bottom: 1rem;
+        font-family: Muli, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #03314c; }
+        #news .news-items .inner .small-btn:after {
+          content: "";
+          display: inline-block;
+          width: 14px;
+          height: 13px;
+          margin-left: 10px;
+          background-image: url(../img/arrow.svg);
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+        #news .news-items .inner .small-btn:hover {
+          text-decoration: none; }
+        #news .news-items .inner .small-btn:hover:after {
+          margin-left: 14px; }
   #news .news-item {
     margin: 0px 15px; }
     #news .news-item .inner {
