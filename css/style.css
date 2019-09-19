@@ -4109,8 +4109,10 @@ form .nf-field-description {
 .nf-response-msg {
   padding: 4px;
   background: #00a651;
-  padding: 4px; }
+  border-radius: 10px; }
   .nf-response-msg p {
-    color: #ffffff !important; }
+    color: #fff !important;
+    padding: 10px;
+    margin: 0px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3637,7 +3637,6 @@ main#cp {
   }
 }
 
-
 .sectionh {
   opacity: 0;
   transform: translateY(30%);
@@ -4896,8 +4895,10 @@ form {
 .nf-response-msg {
   padding: 4px;
   background: #00a651;
-  padding: 4px;
+  border-radius: 10px;
   p {
-  color: #ffffff !important;
+    color: #fff !important;
+    padding: 10px;
+    margin: 0px;
   }
 }
