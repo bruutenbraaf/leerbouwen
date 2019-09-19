@@ -4106,5 +4106,11 @@ form .nf-field-description {
     margin-bottom: 15px; }
     .counters:last-child {
       border-bottom: 0px; } }
+.nf-response-msg {
+  padding: 4px;
+  background: #00a651;
+  padding: 4px; }
+  .nf-response-msg p {
+    color: #ffffff !important; }
 
 /*# sourceMappingURL=style.css.map */
