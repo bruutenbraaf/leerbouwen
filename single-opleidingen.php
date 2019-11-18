@@ -59,7 +59,7 @@ get_header(); ?>
                                         }
                                     },
                                     {
-                                        breakpoint: 991,
+                                        breakpoint: 1240,
                                         settings: {
                                             slidesToShow: 3,
                                             slidesToScroll: 1
