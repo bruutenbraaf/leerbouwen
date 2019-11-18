@@ -152,6 +152,17 @@ a {
   }
 }
 
+ol {
+  li {
+    font-family: $content;
+    color: $paragraph;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -.02em;
+  }
+}
+
 @mixin fontstyle {
   font-style: normal;
   font-weight: 800;

@@ -16,6 +16,14 @@ a {
   a:hover {
     color: #03314c; }
 
+ol li {
+  font-family: "avenir", sans-serif;
+  color: #4f4f4f;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -.02em; }
+
 * {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
