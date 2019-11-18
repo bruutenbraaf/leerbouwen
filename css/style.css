@@ -24,14 +24,16 @@ a {
   -moz-osx-font-smoothing: grayscale; }
 
 ol {
-  margin-bottom: 20px; }
+  margin-bottom: 15px !important;
+  display: block; }
   ol li {
     font-family: "avenir", sans-serif;
-    color: #4f4f4f;
+    color: #4f4f4f !important;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
-    letter-spacing: -.02em; }
+    letter-spacing: -.02em;
+    border-bottom: 0px !important; }
 
 .fullwidth {
   width: 100%; }
