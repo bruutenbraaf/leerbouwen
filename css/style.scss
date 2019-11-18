@@ -152,18 +152,6 @@ a {
   }
 }
 
-ol {
-  margin-bottom: 20px;
-  li {
-    font-family: $content;
-    color: $paragraph;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-    letter-spacing: -.02em;
-  }
-}
-
 @mixin fontstyle {
   font-style: normal;
   font-weight: 800;
@@ -222,6 +210,19 @@ ol {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+ol {
+  margin-bottom: 20px;
+  li {
+    font-family: $content;
+    color: $paragraph;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -.02em;
+  }
 }
 
 .fullwidth {

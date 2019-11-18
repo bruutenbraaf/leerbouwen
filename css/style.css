@@ -16,6 +16,13 @@ a {
   a:hover {
     color: #03314c; }
 
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 ol {
   margin-bottom: 20px; }
   ol li {
@@ -25,13 +32,6 @@ ol {
     font-size: 18px;
     line-height: 32px;
     letter-spacing: -.02em; }
-
-* {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
 
 .fullwidth {
   width: 100%; }
